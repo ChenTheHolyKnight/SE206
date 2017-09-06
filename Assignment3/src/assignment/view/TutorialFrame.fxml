@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.TutorialFrameController">
+   <children>
+      <Button layoutX="78.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="140.0" text="Back" />
+      <Button layoutX="397.0" layoutY="521.0" mnemonicParsing="false" onAction="#handleContinue" prefHeight="50.0" prefWidth="140.0" text="Continue" />
+      <ImageView fx:id="_imageView" fitHeight="393.0" fitWidth="468.0" layoutX="56.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

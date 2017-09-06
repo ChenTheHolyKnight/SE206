@@ -22,7 +22,7 @@
             <Font size="44.0" />
          </font>
       </Label>
-      <Button layoutX="231.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="140.0" text="Tutorial" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="229.0">
+      <Button layoutX="231.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleTutorialButton" prefHeight="50.0" prefWidth="140.0" text="Tutorial" AnchorPane.leftAnchor="231.0" AnchorPane.rightAnchor="229.0">
          <font>
             <Font size="25.0" />
          </font>

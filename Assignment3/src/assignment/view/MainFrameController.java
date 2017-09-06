@@ -17,6 +17,10 @@ public class MainFrameController {
 		_mainApp.showExitDialog();
 	}
 	
+	@FXML
+	public void handleTutorialButton() {
+		_mainApp.showTutorialFrame();
+	}
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}
