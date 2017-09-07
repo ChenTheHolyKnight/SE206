@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.UserNameSceneController">
+   <children>
+      <VBox alignment="CENTER" layoutX="124.0" layoutY="44.0" prefHeight="481.0" prefWidth="359.0" spacing="20.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="380.0" text="PLease eneter a name to cotinue :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="_textField" prefHeight="40.0" prefWidth="492.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="_button" mnemonicParsing="false" onAction="#handleButton" text="Continue">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

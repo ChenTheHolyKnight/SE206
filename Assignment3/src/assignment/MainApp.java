@@ -6,9 +6,13 @@ import assignment.view.DeletionDialogController;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
 import assignment.view.TutorialFrameController;
+import assignment.view.UserNameSceneController;
 import javafx.application.Application;
+import javafx.beans.binding.BooleanBinding;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -34,8 +38,6 @@ public class MainApp extends Application{
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/MainFrame.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
-
-
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
@@ -72,6 +74,38 @@ public class MainApp extends Application{
 		}
 	}
 
+	//Enter name frame
+	public void showUserNameFrame() {
+
+		try {
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/UserNameScene.fxml"));
+			AnchorPane anchorPane= (AnchorPane) loader.load();
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			UserNameSceneController controller = loader.getController();
+			controller.setMainApp(this);
+			/*TextField text=controller.getText();
+			BooleanBinding bb=new BooleanBinding() {
+				{
+					super.bind(text.textProperty());
+				}
+				@Override
+				protected boolean computeValue() {
+					return text.getText().isEmpty();
+				}
+				
+			};
+			Button button =controller.getButton();
+			button.disabledProperty().bind(bb);
+			System.out.println("Not working");*/
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	//Level Layout
 	public void showLevelLayout() {

@@ -8,7 +8,8 @@ public class MainFrameController {
 	
 	@FXML
 	public void handleStartButton() {
-		_mainApp.showLevelLayout();
+		//_mainApp.showLevelLayout();
+		_mainApp.showUserNameFrame();
 		
 	}
 	
