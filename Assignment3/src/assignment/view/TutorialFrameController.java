@@ -5,6 +5,7 @@ import java.util.List;
 
 import assignment.MainApp;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -16,10 +17,14 @@ public class TutorialFrameController {
 	private ImageView _imageView;
 	
 	@FXML
+	private Button _backButton;
+	
+	@FXML
 	public void initialize() {
 		loadImages();
 		Image image=new Image(getClass().getClassLoader().getResource("resources/tutorial1.jpg").toString());
-		getImageView().setImage(image);
+		_imageView.setImage(image);
+		_backButton.setDisable(true);
 	}
 	
 	
@@ -51,6 +56,20 @@ public class TutorialFrameController {
 		}		
 	}
 	
+	@FXML
+	public void setKeyRealseReaction() {
+		//need to implement 
+		if(_mainApp.getCounter()>0) {
+			//System.out.println("enable");
+			_backButton.setDisable(false);
+		}else {
+			_backButton.setDisable(true);
+		}
+		
+		
+	}
+	
+	
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}
@@ -61,8 +80,4 @@ public class TutorialFrameController {
 		
 	}
 	
-	public ImageView getImageView() {
-		return _imageView;
-		
-	}
 }

@@ -8,8 +8,8 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.TutorialFrameController">
    <children>
-      <Button layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBack" prefHeight="50.0" prefWidth="50.0" text="&lt;" />
-      <Button layoutX="542.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleContinue" prefHeight="50.0" prefWidth="50.0" text="&gt;" />
+      <Button fx:id="_backButton" layoutX="14.0" layoutY="257.0" mnemonicParsing="false" onAction="#handleBack" onMouseReleased="#setKeyRealseReaction" prefHeight="50.0" prefWidth="50.0" text="&lt;" />
+      <Button layoutX="542.0" layoutY="256.0" mnemonicParsing="false" onAction="#handleContinue" onMouseClicked="#setKeyRealseReaction" prefHeight="50.0" prefWidth="50.0" text="&gt;" />
       <ImageView fx:id="_imageView" fitHeight="393.0" fitWidth="468.0" layoutX="68.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToMainMenu" prefHeight="40.0" prefWidth="40.0" text="&lt;">
          <font>
