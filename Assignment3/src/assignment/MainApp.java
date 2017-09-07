@@ -69,7 +69,6 @@ public class MainApp extends Application{
 			dialog.showAndWait();
 
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -86,20 +85,6 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			UserNameSceneController controller = loader.getController();
 			controller.setMainApp(this);
-			/*TextField text=controller.getText();
-			BooleanBinding bb=new BooleanBinding() {
-				{
-					super.bind(text.textProperty());
-				}
-				@Override
-				protected boolean computeValue() {
-					return text.getText().isEmpty();
-				}
-				
-			};
-			Button button =controller.getButton();
-			button.disabledProperty().bind(bb);
-			System.out.println("Not working");*/
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

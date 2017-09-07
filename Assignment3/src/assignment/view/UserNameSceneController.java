@@ -16,6 +16,11 @@ public class UserNameSceneController {
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}
+	
+	@FXML
+	public void initialize() {
+		_button.setDisable(true);
+	}
 
 	@FXML
 	public void handleButton() {
@@ -24,15 +29,16 @@ public class UserNameSceneController {
 			_mainApp.showLevelLayout();
 		}
 	}
-
-	public Button getButton() {
-		return _button;
-
+	
+	@FXML
+	public void setButtonRealsed() {
+		String text=_textField.getText();
+		boolean isDisabled=text.isEmpty()||text.trim().isEmpty();
+		_button.setDisable(isDisabled);
 	}
 
-	public TextField getText() {
-		return _textField;
+	
+	
 
-	}
 
 }
