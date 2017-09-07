@@ -15,13 +15,14 @@ public class TutorialFrameController {
 	@FXML
 	private ImageView _imageView;
 	
-	public TutorialFrameController() {
+	@FXML
+	public void initialize() {
 		loadImages();
+		Image image=new Image(getClass().getClassLoader().getResource("resources/tutorial1.jpg").toString());
+		getImageView().setImage(image);
 	}
 	
-	public void setMainApp(MainApp mainApp) {
-		_mainApp=mainApp;
-	}
+	
 	
 	
 	@FXML
@@ -48,6 +49,10 @@ public class TutorialFrameController {
 			Image image=new Image(_imagePaths.get(_mainApp.getCounter()),true);
 			_imageView.setImage(image);			
 		}		
+	}
+	
+	public void setMainApp(MainApp mainApp) {
+		_mainApp=mainApp;
 	}
 	
 	private void loadImages() {

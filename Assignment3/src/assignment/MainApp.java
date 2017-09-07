@@ -125,8 +125,6 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			TutorialFrameController controller = loader.getController();
 			controller.setMainApp(this);
-			Image image=new Image(getClass().getClassLoader().getResource("resources/tutorial1.jpg").toString());
-			controller.getImageView().setImage(image);
 
 		} catch (IOException e) {
 			e.printStackTrace();
