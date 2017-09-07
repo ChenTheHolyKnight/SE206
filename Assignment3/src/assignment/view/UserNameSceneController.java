@@ -31,6 +31,11 @@ public class UserNameSceneController {
 	}
 	
 	@FXML
+	public void handleBackButton() {
+		_mainApp.initMainFrame();
+	}
+	
+	@FXML
 	public void setButtonRealsed() {
 		String text=_textField.getText();
 		boolean isDisabled=text.isEmpty()||text.trim().isEmpty();

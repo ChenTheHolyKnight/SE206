@@ -7,7 +7,7 @@ public class LevelLayoutController {
 	private MainApp _mainApp;
 	@FXML
 	public void handleEasyButton() {
-		_mainApp.initMainFrame();
+		_mainApp.showUserNameFrame();
 		
 	}
 	
