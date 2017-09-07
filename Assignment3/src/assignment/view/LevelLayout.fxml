@@ -27,7 +27,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Label layoutX="56.0" layoutY="21.0" prefHeight="40.0" prefWidth="185.0" text="Back to Main Menu">
+      <Label layoutX="70.0" layoutY="22.0" prefHeight="40.0" prefWidth="185.0" text="Back to Main Menu">
          <font>
             <Font size="19.0" />
          </font>

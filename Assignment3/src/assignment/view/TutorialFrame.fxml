@@ -13,9 +13,12 @@
       <ImageView fx:id="_imageView" fitHeight="393.0" fitWidth="468.0" layoutX="68.0" layoutY="94.0" pickOnBounds="true" preserveRatio="true" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackToMainMenu" prefHeight="40.0" prefWidth="40.0" text="&lt;">
          <font>
-            <Font size="15.0" />
+            <Font size="19.0" />
          </font>
       </Button>
-      <Label layoutX="56.0" layoutY="15.0" prefHeight="40.0" prefWidth="224.0" text="Back to Main Menu" />
+      <Label layoutX="68.0" layoutY="14.0" prefHeight="40.0" prefWidth="224.0" text="Back to Main Menu">
+         <font>
+            <Font size="19.0" />
+         </font></Label>
    </children>
 </AnchorPane>
