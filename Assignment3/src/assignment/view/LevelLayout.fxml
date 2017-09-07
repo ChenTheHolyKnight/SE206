@@ -22,10 +22,15 @@
             <Font size="34.0" />
          </font>
       </Button>
-      <Button layoutX="32.0" layoutY="517.0" mnemonicParsing="false" onAction="#handleEasyButton" prefHeight="39.0" prefWidth="77.0" text="Back">
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#handleEasyButton" prefHeight="40.0" prefWidth="40.0" text="&lt;">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
+      <Label layoutX="56.0" layoutY="21.0" prefHeight="40.0" prefWidth="185.0" text="Back to Main Menu">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

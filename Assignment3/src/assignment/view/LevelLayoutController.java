@@ -10,6 +10,8 @@ public class LevelLayoutController {
 		_mainApp.initMainFrame();
 		
 	}
+	
+	
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}

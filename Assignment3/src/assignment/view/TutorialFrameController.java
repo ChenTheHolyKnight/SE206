@@ -22,6 +22,14 @@ public class TutorialFrameController {
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}
+	
+	
+	@FXML
+	public void handleBackToMainMenu() {
+		_mainApp.initMainFrame();
+	}
+	
+	
 	@FXML
 	public void handleContinue() {		
 		int counter=_mainApp.getCounter();	
