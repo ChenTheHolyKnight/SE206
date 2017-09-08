@@ -24,8 +24,16 @@ public class ScoreRecorder {
 		return new ScoreRecorder();
 	}
 	
+	
+	public List getRecord() {
+		return _record;
+	}
+	
+	//this method is used for debugging
 	public void displayRecord() {
 		System.out.println(_record);
 	}
+	
+	
 	
 }
