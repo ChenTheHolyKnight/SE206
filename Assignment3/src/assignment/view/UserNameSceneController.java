@@ -41,6 +41,11 @@ public class UserNameSceneController {
 		boolean isDisabled=text.isEmpty()||text.trim().isEmpty();
 		_button.setDisable(isDisabled);
 	}
+	
+	
+	public String getName() {
+		return _textField.getText();
+	}
 
 	
 	

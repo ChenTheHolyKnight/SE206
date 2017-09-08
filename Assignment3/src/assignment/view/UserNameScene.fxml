@@ -21,7 +21,7 @@
                   <Font size="20.0" />
                </font>
             </TextField>
-            <Button fx:id="_button" mnemonicParsing="false" onAction="#handleButton" onKeyReleased="#setButtonRealsed" text="Continue">
+            <Button fx:id="_button" mnemonicParsing="false" onAction="#handleButton" text="Continue">
                <font>
                   <Font size="20.0" />
                </font>
