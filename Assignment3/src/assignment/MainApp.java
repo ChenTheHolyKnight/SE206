@@ -21,7 +21,6 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application{
 	private Stage _primaryStage;
-	private BorderPane _rootLayout;
 	private int _counter=0;
 
 	@Override

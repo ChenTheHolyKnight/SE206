@@ -20,7 +20,7 @@
                   <Font size="19.0" />
                </font>
             </Button>
-            <Label prefHeight="40.0" prefWidth="205.0" text="Back to main menu ">
+            <Label prefHeight="40.0" prefWidth="205.0" text="Back to Score Menu ">
                <font>
                   <Font size="19.0" />
                </font>
