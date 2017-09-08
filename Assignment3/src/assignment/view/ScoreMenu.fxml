@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.ScoreMenuController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="95.0" layoutY="82.0" prefHeight="473.0" prefWidth="400.0" spacing="80.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
          <children>
@@ -27,7 +27,7 @@
             </Button>
          </children>
       </VBox>
-      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="&lt;">
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="40.0" prefWidth="40.0" text="&lt;">
          <font>
             <Font size="19.0" />
          </font>

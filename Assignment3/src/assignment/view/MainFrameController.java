@@ -22,6 +22,13 @@ public class MainFrameController {
 	public void handleTutorialButton() {
 		_mainApp.showTutorialFrame();
 	}
+	
+	
+	@FXML
+	public void handleScoreButton() {
+		_mainApp.showScoreFrame();
+	}
+	
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}

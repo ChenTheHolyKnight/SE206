@@ -5,6 +5,7 @@ import java.io.IOException;
 import assignment.view.DeletionDialogController;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
+import assignment.view.ScoreMenuController;
 import assignment.view.TutorialFrameController;
 import assignment.view.UserNameSceneController;
 import javafx.application.Application;
@@ -130,6 +131,8 @@ public class MainApp extends Application{
 
 		}
 	}
+	
+		
 	/**
 	 * This is a method to increase the counter when the continue button in the tutorial frame is clicked
 	 */
@@ -161,7 +164,24 @@ public class MainApp extends Application{
 		return _counter;
 	}
 
+	//Score frame
+	public void showScoreFrame() {
+		try {
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/ScoreMenu.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
 
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			ScoreMenuController controller = loader.getController();
+			controller.setMainApp(this);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+	}
 
 	public static void main(String[] args) {
 		launch();
