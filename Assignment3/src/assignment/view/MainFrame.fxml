@@ -7,9 +7,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.MainFrameController">
+<AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="pane" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.MainFrameController">
    <children>
-      <Label alignment="CENTER" layoutX="205.0" layoutY="53.0" prefHeight="67.0" prefWidth="183.0" text="Tatai" AnchorPane.topAnchor="53.0">
+      <Label alignment="CENTER" layoutX="205.0" layoutY="53.0" prefHeight="67.0" prefWidth="183.0" text="Tatai" textFill="#f5f0f0" AnchorPane.topAnchor="53.0">
          <font>
             <Font size="44.0" />
          </font>
