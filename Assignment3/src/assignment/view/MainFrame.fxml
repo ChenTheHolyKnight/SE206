@@ -9,12 +9,12 @@
 
 <AnchorPane prefHeight="500.0" prefWidth="600.0" styleClass="pane" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.MainFrameController">
    <children>
-      <Label alignment="CENTER" layoutX="205.0" layoutY="53.0" prefHeight="67.0" prefWidth="183.0" text="Tatai" textFill="#f5f0f0" AnchorPane.topAnchor="53.0">
+      <Label alignment="CENTER" layoutX="181.0" layoutY="25.0" prefHeight="114.0" prefWidth="231.0" text="Tatai" textFill="#f5f0f0" AnchorPane.topAnchor="25.0">
          <font>
-            <Font size="44.0" />
+            <Font size="74.0" />
          </font>
       </Label>
-      <JFXButton layoutX="230.0" layoutY="159.0" onAction="#handleStartButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Start">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="159.0" onAction="#handleStartButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Start">
          <font>
             <Font size="25.0" />
          </font>
@@ -27,7 +27,7 @@
             </LinearGradient>
          </ripplerFill>
       </JFXButton>
-      <JFXButton layoutX="230.0" layoutY="244.0" onAction="#handleTutorialButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Tutorial">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="244.0" onAction="#handleTutorialButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Tutorial">
          <font>
             <Font size="25.0" />
          </font>
@@ -40,7 +40,7 @@
             </LinearGradient>
          </ripplerFill>
       </JFXButton>
-      <JFXButton layoutX="230.0" layoutY="330.0" onAction="#handleScoreButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Score">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="330.0" onAction="#handleScoreButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Score">
          <font>
             <Font size="25.0" />
          </font>
@@ -53,7 +53,7 @@
             </LinearGradient>
          </ripplerFill>
       </JFXButton>
-      <JFXButton layoutX="230.0" layoutY="410.0" onAction="#handleExitButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Exit">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="410.0" onAction="#handleExitButton" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Exit">
          <font>
             <Font size="25.0" />
          </font>

@@ -9,20 +9,14 @@ import assignment.view.ScoreMenuController;
 import assignment.view.TutorialFrameController;
 import assignment.view.UserNameSceneController;
 import javafx.application.Application;
-import javafx.beans.binding.BooleanBinding;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MainApp extends Application{
 	private Stage _primaryStage;
-	private int _counter=0;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -133,36 +127,7 @@ public class MainApp extends Application{
 	}
 	
 		
-	/**
-	 * This is a method to increase the counter when the continue button in the tutorial frame is clicked
-	 */
-	public void increaseCounter(){
-		if(_counter<2) {
-			_counter++;
-		}
-		if(_counter>2) {
-			_counter=2;
-		}
-	}	
 
-	/**
-	 * This is a method to decrease the counter when the back button in the tutorial frame is clicked
-	 */
-	public void decreaseCounter() {
-		if(_counter>0) {
-			_counter--;
-		}
-		if(_counter<0) {
-			_counter=0;
-		}
-	}
-
-	/**
-	 * This is a method to get the counter
-	 */
-	public int getCounter() {
-		return _counter;
-	}
 
 	//Score frame
 	public void showScoreFrame() {

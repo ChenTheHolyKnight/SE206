@@ -3,6 +3,7 @@ package assignment.view;
 import java.util.ArrayList;
 import java.util.List;
 
+import assignment.util.Counter;
 import assignment.MainApp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,7 +13,7 @@ import javafx.scene.image.ImageView;
 public class TutorialFrameController {
 	private MainApp _mainApp;
 	private List<String> _imagePaths=new ArrayList<String>();
-	
+	private Counter _counter=new Counter();
 	@FXML
 	private ImageView _imageView;
 	
@@ -38,20 +39,20 @@ public class TutorialFrameController {
 	
 	@FXML
 	public void handleContinue() {		
-		int counter=_mainApp.getCounter();	
+		int counter=_counter.getCounter();	
 		if(counter<1) {
-			_mainApp.increaseCounter();
-			Image image=new Image(_imagePaths.get(_mainApp.getCounter()),true);
+			_counter.increaseCounter();
+			Image image=new Image(_imagePaths.get(_counter.getCounter()),true);
 			_imageView.setImage(image);		
 		}	
 	}
 	
 	@FXML
 	public void handleBack() {
-		int counter=_mainApp.getCounter();
+		int counter=_counter.getCounter();
 		if(counter>0) {
-			_mainApp.decreaseCounter();
-			Image image=new Image(_imagePaths.get(_mainApp.getCounter()),true);
+			_counter.decreaseCounter();
+			Image image=new Image(_imagePaths.get(_counter.getCounter()),true);
 			_imageView.setImage(image);			
 		}		
 	}
@@ -59,7 +60,7 @@ public class TutorialFrameController {
 	@FXML
 	public void setKeyRealseReaction() {
 		//need to implement 
-		if(_mainApp.getCounter()>0) {
+		if(_counter.getCounter()>0) {
 			//System.out.println("enable");
 			_backButton.setDisable(false);
 		}else {

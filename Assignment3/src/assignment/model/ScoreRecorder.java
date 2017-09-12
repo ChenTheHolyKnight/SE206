@@ -25,7 +25,7 @@ public class ScoreRecorder {
 	}
 	
 	
-	public List getRecord() {
+	public List<Integer> getRecord() {
 		return _record;
 	}
 	
