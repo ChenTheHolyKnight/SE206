@@ -17,17 +17,17 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="242.0" prefHeight="65.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Easy">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="242.0" onAction="#handleEasyButton" prefHeight="65.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Easy">
          <font>
             <Font size="34.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="398.0" prefHeight="65.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Hard">
+      <JFXButton buttonType="RAISED" layoutX="230.0" layoutY="398.0" onAction="#handleHardButton" prefHeight="65.0" prefWidth="140.0" style="-fx-background-color: #c19a6b;" text="Hard">
          <font>
             <Font size="34.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="21.0" onAction="#handleEasyButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #c19a6b;" text="&lt;">
+      <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="21.0" onAction="#handleBackButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #c19a6b;" text="&lt;">
          <font>
             <Font size="19.0" />
          </font>

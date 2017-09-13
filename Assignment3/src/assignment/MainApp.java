@@ -3,6 +3,7 @@ package assignment;
 import java.io.IOException;
 
 import assignment.view.DeletionDialogController;
+import assignment.view.GameFrame1Controller;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
 import assignment.view.ScoreMenuController;
@@ -105,6 +106,26 @@ public class MainApp extends Application{
 		}
 
 	}
+	//GameFrame1
+	public void showGameFrame1() {
+		try {
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/GameFrame1.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			GameFrame1Controller controller = loader.getController();
+			controller.setMainApp(this);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+
+	}
+	
 
 	//Tutorial frame
 
