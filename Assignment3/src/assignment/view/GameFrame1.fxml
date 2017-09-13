@@ -18,11 +18,16 @@
             <Font size="19.0" />
          </font>
       </Label>
-      <ImageView fx:id="_imageView" fitHeight="308.0" fitWidth="337.0" layoutX="129.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
+      <ImageView fx:id="_imageView" fitHeight="300.0" fitWidth="340.0" layoutX="129.0" layoutY="95.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" />
       <JFXButton layoutX="269.0" layoutY="441.0" onAction="#handleRecordButton" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: c19a6b;" text="Record" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
          <font>
             <Font size="14.0" />
          </font>
       </JFXButton>
+      <Label fx:id="_label" alignment="CENTER" layoutX="247.0" layoutY="192.0" prefHeight="100.0" prefWidth="100.0" text="num" textFill="#1b1a1a" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
