@@ -1,6 +1,9 @@
 package assignment.view;
 
 import assignment.MainApp;
+import assignment.util.Recorder;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -33,6 +36,10 @@ public class GameFrame1Controller {
 	@FXML
 	public void handleRecordButton() {
 		//need to use Task to make record button functional.
+		//_mainApp.showRecordDialog();
+		DoWork dowork=new DoWork();
+		Thread thread=new Thread(dowork);
+		thread.start();
 	}
 	
 	
@@ -45,4 +52,47 @@ public class GameFrame1Controller {
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
 	}
+	
+	
+	
+	
+	
+	class DoWork extends Task<Void>{
+
+		@Override
+		protected Void call() throws Exception {
+			System.out.println("start");
+			//Thread.sleep(3000);
+			Recorder recorder=new Recorder("42");
+			recorder.record();
+			
+			
+			System.out.println("finish");
+			
+			
+			return null;
+			
+			
+		}
+		
+		@Override
+		protected void done() {
+				Platform.runLater(new Runnable() {
+
+					@Override
+					public void run() {
+						
+						_mainApp.showRecordDialog();
+					}
+					
+				});
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
 }

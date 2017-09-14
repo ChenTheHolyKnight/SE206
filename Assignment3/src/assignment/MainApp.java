@@ -3,10 +3,11 @@ package assignment;
 import java.io.IOException;
 
 
-import assignment.view.DeletionDialogController;
+import assignment.view.ExitDialogController;
 import assignment.view.GameFrame1Controller;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
+import assignment.view.RecordDialogController;
 import assignment.view.ScoreMenuController;
 import assignment.view.TutorialFrameController;
 import assignment.view.UserNameSceneController;
@@ -49,7 +50,7 @@ public class MainApp extends Application{
 	public void showExitDialog() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/DeletionDialog.fxml"));
+			loader.setLocation(getClass().getResource("view/ExitDialog.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 
 			Stage dialog=new Stage();
@@ -60,7 +61,7 @@ public class MainApp extends Application{
 			Scene scene = new Scene(anchorPane);
 			dialog.setScene(scene);
 
-			DeletionDialogController deletion =loader.getController();
+			ExitDialogController deletion =loader.getController();
 			deletion.setMainApp(dialog);
 
 			dialog.showAndWait();
@@ -129,6 +130,31 @@ public class MainApp extends Application{
 
 	}
 	
+	//Record Dialog
+	public void showRecordDialog() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/RecordDialog.fxml"));
+			AnchorPane anchorPane=(AnchorPane) loader.load();
+
+			Stage dialog=new Stage();
+			dialog.setTitle("Deletion Dialog");
+			dialog.initModality(Modality.WINDOW_MODAL);
+			dialog.initOwner(_primaryStage);
+
+			Scene scene = new Scene(anchorPane);
+			dialog.setScene(scene);
+
+			RecordDialogController record =loader.getController();
+			record.setMainApp(dialog);
+
+			dialog.showAndWait();
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 
 	//Tutorial frame
 
@@ -171,6 +197,8 @@ public class MainApp extends Application{
 
 		}
 	}
+	
+	
 
 	public static void main(String[] args) {
 		launch();

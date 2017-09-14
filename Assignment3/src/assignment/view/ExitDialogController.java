@@ -4,7 +4,7 @@ package assignment.view;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
-public class DeletionDialogController {
+public class ExitDialogController {
 
 	private Stage _dialogStage;
 	
