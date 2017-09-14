@@ -4,11 +4,11 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Recorder {
+public class Recorder {/*
 	private String _name;
 	public Recorder(String name) {
 		_name=name;
-	}
+	}*/
 	public void printpwd() {
 		String cmd = "pwd";
 		ProcessBuilder pb=new ProcessBuilder("bash","-c",cmd);
@@ -27,7 +27,7 @@ public class Recorder {
 
 	public void record() {
 		try {
-			String cmd="arecord -d 3 -r 22050 -c 1 -i -t wav -f s16_LE "+_name+".wav";
+			String cmd="arecord -d 3 -r 22050 -c 1 -i -t wav -f s16_LE "+"foo.wav";
 			ProcessBuilder pb=new ProcessBuilder("bash","-c",cmd);
 			Process process=pb.start();
 			int exitValue=process.waitFor();

@@ -63,7 +63,7 @@ public class GameFrame1Controller {
 		protected Void call() throws Exception {
 			System.out.println("start");
 			//Thread.sleep(3000);
-			Recorder recorder=new Recorder("42");
+			Recorder recorder=new Recorder();
 			recorder.record();
 			
 			
