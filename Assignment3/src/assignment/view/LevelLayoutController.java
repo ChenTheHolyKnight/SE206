@@ -1,10 +1,14 @@
 package assignment.view;
 
 import assignment.MainApp;
+import assignment.model.EasyLevel;
+import assignment.model.HardLevel;
+import assignment.model.Level;
 import javafx.fxml.FXML;
 
 public class LevelLayoutController {
 	private MainApp _mainApp;
+	private Level _level;
 	@FXML
 	public void handleBackButton() {
 		_mainApp.showUserNameFrame();
@@ -12,12 +16,16 @@ public class LevelLayoutController {
 	}
 	@FXML
 	public void handleEasyButton() {
-		_mainApp.showGameFrame1();
+		_level=new EasyLevel();
+		int num=_level.generateNumber();
+		_mainApp.showGameFrame1(num);
 	}
 	
 	@FXML
 	public void handleHardButton() {
-		_mainApp.showGameFrame1();
+		_level=new HardLevel();
+		int num=_level.generateNumber();
+		_mainApp.showGameFrame1(num);
 	}
 	
 	public void setMainApp(MainApp mainApp) {

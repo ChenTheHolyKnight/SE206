@@ -5,8 +5,7 @@ public class Test {
 		Recorder recorder=new Recorder("foo");
 		//recorder.record();
 		//recorder.recordToWord();
-		NumImage image=new NumImage("penis");
-		image.createImage();
+	
 		
 	}
 

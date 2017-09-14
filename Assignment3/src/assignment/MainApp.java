@@ -2,6 +2,7 @@ package assignment;
 
 import java.io.IOException;
 
+
 import assignment.view.DeletionDialogController;
 import assignment.view.GameFrame1Controller;
 import assignment.view.LevelLayoutController;
@@ -18,6 +19,7 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application{
 	private Stage _primaryStage;
+	
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -107,7 +109,7 @@ public class MainApp extends Application{
 
 	}
 	//GameFrame1
-	public void showGameFrame1() {
+	public void showGameFrame1(int num) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/GameFrame1.fxml"));
@@ -118,6 +120,7 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			GameFrame1Controller controller = loader.getController();
 			controller.setMainApp(this);
+			controller.setLabel(num);
 
 		} catch (IOException e) {
 			e.printStackTrace();
