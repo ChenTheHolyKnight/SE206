@@ -5,6 +5,7 @@ import assignment.util.Recorder;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.scene.Cursor;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -62,11 +63,10 @@ public class GameFrame1Controller {
 		@Override
 		protected Void call() throws Exception {
 			System.out.println("start");
-			//Thread.sleep(3000);
+			_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 			Recorder recorder=new Recorder();
-			recorder.record();
-			
-			
+			recorder.record();		
+			recorder.recordToWord();			
 			System.out.println("finish");
 			
 			
@@ -81,8 +81,9 @@ public class GameFrame1Controller {
 
 					@Override
 					public void run() {
-						
+						_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
 						_mainApp.showRecordDialog();
+						
 					}
 					
 				});

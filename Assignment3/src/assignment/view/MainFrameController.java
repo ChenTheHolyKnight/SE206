@@ -24,12 +24,6 @@ public class MainFrameController implements Initializable{
 	@FXML
 	public void handleExitButton() {
 		_mainApp.showExitDialog();
-		/*Dialogs.create()
-        .owner(_mainApp)
-        .title("Information Dialog")
-        .masthead("Look, an Information Dialog")
-        .message("I have a great message for you!")
-        .showInformation();*/
 	}
 	
 	@FXML

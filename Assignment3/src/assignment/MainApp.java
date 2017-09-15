@@ -57,6 +57,7 @@ public class MainApp extends Application{
 			dialog.setTitle("Deletion Dialog");
 			dialog.initModality(Modality.WINDOW_MODAL);
 			dialog.initOwner(_primaryStage);
+			dialog.setResizable(false);
 
 			Scene scene = new Scene(anchorPane);
 			dialog.setScene(scene);
@@ -141,6 +142,7 @@ public class MainApp extends Application{
 			dialog.setTitle("Deletion Dialog");
 			dialog.initModality(Modality.WINDOW_MODAL);
 			dialog.initOwner(_primaryStage);
+			dialog.setResizable(false);
 
 			Scene scene = new Scene(anchorPane);
 			dialog.setScene(scene);
@@ -198,7 +200,10 @@ public class MainApp extends Application{
 		}
 	}
 	
-	
+	//get the PrimaryStage
+	public Stage getPrimaryStage() {
+		return _primaryStage;
+	}
 
 	public static void main(String[] args) {
 		launch();
