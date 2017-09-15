@@ -24,6 +24,11 @@ public class RecordDialogController {
 		
 	}
 	
+	@FXML
+	public void handlePlay() {
+		Recorder recorder=new Recorder();
+		recorder.playRecord();
+	}
 	
 	
 	
@@ -38,7 +43,7 @@ public class RecordDialogController {
 			Recorder recorder=new Recorder();
 			recorder.record();		
 			recorder.recordToWord();	
-			
+			//recorder.deleteRecord();
 			System.out.println("finish");
 			
 			

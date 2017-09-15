@@ -19,7 +19,7 @@
          </font>
       </Label>
       <ImageView fx:id="_imageView" fitHeight="300.0" fitWidth="340.0" layoutX="147.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="113.0" />
-      <JFXButton layoutX="269.0" layoutY="441.0" onAction="#handleRecordButton" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: c19a6b;" text="Record" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+      <JFXButton fx:id="_reBtn" layoutX="269.0" layoutY="441.0" onAction="#handleRecordButton" onMouseClicked="#recordButtonClicked" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: c19a6b;" text="Record" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
          <font>
             <Font size="14.0" />
          </font>
