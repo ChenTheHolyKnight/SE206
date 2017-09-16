@@ -9,9 +9,22 @@ public class Answer {
 		loadAnswerList();
 	}
 	
+	public boolean checkAnswer(int num) {
+		//the 1 in the equals bracket should be changed later.
+		//System.out.println(_answerList.get(num-1));
+		if(num<10) {
+			return _answerList.get(num-1).equals("tekau");
+		}else {
+			int tenth=num/10;
+			int oneth=num%10;
+			//further implementation needs to be done
+		}
+		return _answerList.get(num-1).equals("iwa");//needs to be deleted
+	}
 	
-	
-	
+	public void Display() {
+		System.out.println(_answerList);
+	}
 	
 	
 	
@@ -45,7 +58,6 @@ public class Answer {
 		_answerList.add("waru");
 		_answerList.add("iwa");
 		_answerList.add("tekau");
-		
 	}
 	
 	

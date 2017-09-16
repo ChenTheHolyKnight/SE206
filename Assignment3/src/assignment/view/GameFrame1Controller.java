@@ -63,6 +63,10 @@ public class GameFrame1Controller {
 		_label.setText(Integer.toString(num));
 	}
 	
+	/*public int getLabelNum() {
+		return Integer.parseInt(_label.getText());
+	}*/
+	
 	
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
@@ -96,7 +100,7 @@ public class GameFrame1Controller {
 
 					@Override
 					public void run() {
-						_mainApp.showRecordDialog();
+						_mainApp.showRecordDialog(Integer.parseInt(_label.getText()));
 						_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
 						_anchorPane.setCursor(Cursor.DEFAULT);
 						_reBtn.setDisable(false);

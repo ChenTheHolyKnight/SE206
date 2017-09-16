@@ -133,7 +133,7 @@ public class MainApp extends Application{
 	}
 	
 	//Record Dialog
-	public void showRecordDialog() {
+	public void showRecordDialog(int num) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/RecordDialog.fxml"));
@@ -151,6 +151,7 @@ public class MainApp extends Application{
 			RecordDialogController record =loader.getController();
 			record.setDialog(dialog);
 			record.setMainApp(this);
+			record.setNum(num);
 
 			dialog.showAndWait();
 
@@ -160,7 +161,7 @@ public class MainApp extends Application{
 	}
 	
 	//Show GameFrame2
-	public void showGameFrame2() {
+	public void showGameFrame2(int num) {
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
@@ -172,7 +173,7 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			GameFrame2Controller controller = loader.getController();
 			controller.setMainApp(this);
-			
+			controller.setLabel(num);
 			
 
 		} catch (IOException e) {

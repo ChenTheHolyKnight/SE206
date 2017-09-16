@@ -6,7 +6,10 @@ public class Test {
 		//recorder.record();
 		//recorder.recordToWord();
 	
-		
+		Answer answer =new Answer();
+		answer.Display();
+		boolean correct=answer.checkAnswer(10);
+		System.out.println(correct);
 	}
 
 }

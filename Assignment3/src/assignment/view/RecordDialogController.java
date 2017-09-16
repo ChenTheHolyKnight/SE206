@@ -13,6 +13,7 @@ public class RecordDialogController {
 	
 	private Stage _dialogStage;
 	private MainApp _mainApp;
+	private int _num=0;
 	
 	public void setDialog(Stage dialog) {
 		_dialogStage=dialog;
@@ -40,8 +41,12 @@ public class RecordDialogController {
 	public void hanleSubmit() {
 		//todo: read the output file when button is clicked 
 		//show the correctness frame
-		_mainApp.showGameFrame2();
+		_mainApp.showGameFrame2(_num);
 		_dialogStage.close();
+	}
+	
+	public void setNum(int num) {
+		_num=num;
 	}
 	
 	public void setMainApp(MainApp mainApp) {
