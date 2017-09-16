@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" styleClass="pane" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrame1Controller">
+<AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="pane" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrame1Controller">
    <children>
       <JFXButton layoutX="14.0" layoutY="14.0" onAction="#handleBackButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: c19a6b;" text="&lt;">
          <font>

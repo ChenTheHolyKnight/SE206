@@ -1,6 +1,7 @@
 package assignment.view;
 
 
+import assignment.MainApp;
 import assignment.util.Recorder;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -11,8 +12,9 @@ import javafx.stage.Stage;
 public class RecordDialogController {
 	
 	private Stage _dialogStage;
+	private MainApp _mainApp;
 	
-	public void setMainApp(Stage dialog) {
+	public void setDialog(Stage dialog) {
 		_dialogStage=dialog;
 	}
 	
@@ -33,12 +35,18 @@ public class RecordDialogController {
 		thread.start();
 	}
 	
+	
 	@FXML
 	public void hanleSubmit() {
-		
+		//todo: read the output file when button is clicked 
+		//show the correctness frame
+		_mainApp.showGameFrame2();
+		_dialogStage.close();
 	}
 	
-	
+	public void setMainApp(MainApp mainApp) {
+		_mainApp=mainApp;
+	}
 	
 	
 	class Record extends Task<Void>{

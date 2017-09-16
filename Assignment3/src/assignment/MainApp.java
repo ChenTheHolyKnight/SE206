@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import assignment.view.ExitDialogController;
 import assignment.view.GameFrame1Controller;
+import assignment.view.GameFrame2Controller;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
 import assignment.view.RecordDialogController;
@@ -148,7 +149,8 @@ public class MainApp extends Application{
 			dialog.setScene(scene);
 
 			RecordDialogController record =loader.getController();
-			record.setMainApp(dialog);
+			record.setDialog(dialog);
+			record.setMainApp(this);
 
 			dialog.showAndWait();
 
@@ -157,6 +159,26 @@ public class MainApp extends Application{
 		}
 	}
 	
+	//Show GameFrame2
+	public void showGameFrame2() {
+		try {
+		
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/GameFrame2.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			GameFrame2Controller controller = loader.getController();
+			controller.setMainApp(this);
+			
+			
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 	//Tutorial frame
 
