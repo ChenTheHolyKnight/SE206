@@ -18,7 +18,7 @@ public class RecordDialogController {
 	
 	@FXML
 	public void handleRedo() {
-		DoWork dowork=new DoWork();
+		Record dowork=new Record();
 		Thread thread=new Thread(dowork);
 		thread.start();
 		
@@ -26,14 +26,22 @@ public class RecordDialogController {
 	
 	@FXML
 	public void handlePlay() {
-		Recorder recorder=new Recorder();
-		recorder.playRecord();
+		//Recorder recorder=new Recorder();
+		//recorder.playRecord();
+		Play play=new Play();
+		Thread thread=new Thread(play);
+		thread.start();
+	}
+	
+	@FXML
+	public void hanleSubmit() {
+		
 	}
 	
 	
 	
 	
-	class DoWork extends Task<Void>{
+	class Record extends Task<Void>{
 
 		@Override
 		protected Void call() throws Exception {
@@ -63,6 +71,18 @@ public class RecordDialogController {
 					
 				});
 			
+		}
+		
+	}
+	
+	class Play extends Task<Void>{
+
+		@Override
+		protected Void call() throws Exception {
+			Recorder recorder = new Recorder();
+			//System.out.println("play");
+			recorder.playRecord();
+			return null;
 		}
 		
 	}
