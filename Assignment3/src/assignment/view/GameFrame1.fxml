@@ -13,7 +13,7 @@
             <Font size="19.0" />
          </font>
       </JFXButton>
-      <Label layoutX="70.0" layoutY="14.0" prefHeight="40.0" prefWidth="236.0" text="Back to The Level Menu">
+      <Label layoutX="70.0" layoutY="14.0" prefHeight="40.0" prefWidth="236.0" text="Back to The Level Menu" textFill="#116b37">
          <font>
             <Font size="19.0" />
          </font>

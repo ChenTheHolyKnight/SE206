@@ -2,6 +2,7 @@ package assignment.view;
 
 
 import assignment.MainApp;
+import assignment.model.Level;
 import assignment.util.Recorder;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -14,6 +15,7 @@ public class RecordDialogController {
 	private Stage _dialogStage;
 	private MainApp _mainApp;
 	private int _num=0;
+	private Level _level;
 	
 	public void setDialog(Stage dialog) {
 		_dialogStage=dialog;
@@ -41,12 +43,16 @@ public class RecordDialogController {
 	public void hanleSubmit() {
 		//todo: read the output file when button is clicked 
 		//show the correctness frame
-		_mainApp.showGameFrame2(_num);
+		_mainApp.showGameFrame2(_num,_level);
 		_dialogStage.close();
 	}
 	
 	public void setNum(int num) {
 		_num=num;
+	}
+	
+	public void setLevel(Level level) {
+		_level=level;
 	}
 	
 	public void setMainApp(MainApp mainApp) {
@@ -58,14 +64,14 @@ public class RecordDialogController {
 
 		@Override
 		protected Void call() throws Exception {
-			System.out.println("start");
+			//System.out.println("start");
 			//Thread.sleep(3000);
 			_dialogStage.getScene().setCursor(Cursor.WAIT);
 			Recorder recorder=new Recorder();
 			recorder.record();		
 			recorder.recordToWord();	
 			//recorder.deleteRecord();
-			System.out.println("finish");
+			//System.out.println("finish");
 			
 			
 			return null;

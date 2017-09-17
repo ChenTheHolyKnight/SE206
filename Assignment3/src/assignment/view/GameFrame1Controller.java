@@ -1,6 +1,7 @@
 package assignment.view;
 
 import assignment.MainApp;
+import assignment.model.Level;
 import assignment.util.Recorder;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -14,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class GameFrame1Controller {
 	private MainApp _mainApp;
-	
+	private Level _level;
 	@FXML
 	private Button _reBtn;
 	
@@ -63,9 +64,9 @@ public class GameFrame1Controller {
 		_label.setText(Integer.toString(num));
 	}
 	
-	/*public int getLabelNum() {
-		return Integer.parseInt(_label.getText());
-	}*/
+	public void setLevel(Level level) {
+		_level=level;
+	}
 	
 	
 	public void setMainApp(MainApp mainApp) {
@@ -80,13 +81,13 @@ public class GameFrame1Controller {
 
 		@Override
 		protected Void call() throws Exception {
-			System.out.println("start");
+			//System.out.println("start");
 			_reBtn.setDisable(true);
 			Recorder recorder=new Recorder();
 			recorder.record();		
 			recorder.recordToWord();
 			//recorder.deleteRecord();
-			System.out.println("finish");
+			//System.out.println("finish");
 			
 			
 			return null;
@@ -100,7 +101,7 @@ public class GameFrame1Controller {
 
 					@Override
 					public void run() {
-						_mainApp.showRecordDialog(Integer.parseInt(_label.getText()));
+						_mainApp.showRecordDialog(Integer.parseInt(_label.getText()),_level);
 						_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
 						_anchorPane.setCursor(Cursor.DEFAULT);
 						_reBtn.setDisable(false);
