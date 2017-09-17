@@ -34,7 +34,7 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <JFXButton layoutX="14.0" layoutY="17.0" prefHeight="50.0" prefWidth="50.0" text="&lt;">
+      <JFXButton layoutX="14.0" layoutY="17.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="50.0" text="&lt;">
          <font>
             <Font size="20.0" />
          </font>

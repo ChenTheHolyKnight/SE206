@@ -26,6 +26,11 @@ public class GameFrame2Controller {
 		_mainApp.showGameFrame1(num, _level);
 	}
 	
+	@FXML
+	public void handleBackButton() {
+		_mainApp.showLevelLayout();
+	}
+	
 	
 	public void setLabel(int num) {	
 		_label.setText(Integer.toString(num));
