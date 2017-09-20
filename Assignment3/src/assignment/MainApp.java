@@ -195,7 +195,7 @@ public class MainApp extends Application{
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
 			GameFrameController controller = loader.getController();
-			//controller.setMainApp(this);
+			controller.setMainApp(this);
 			controller.setLevel(level);
 			
 

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrameController">
+<AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrameController">
    <children>
       <JFXButton fx:id="_nextButton" layoutX="539.0" layoutY="245.0" onAction="#handleNextButton" prefHeight="50.0" prefWidth="50.0" text="&gt;">
          <font>
@@ -17,9 +17,9 @@
       </JFXButton>
       <Label layoutX="50.0" layoutY="450.0" prefHeight="40.0" text="Your answer is:" />
       <Label layoutX="50.0" layoutY="490.0" prefHeight="40.0" text="The answer is" />
-      <JFXTextField layoutX="156.0" layoutY="460.0" prefHeight="24.0" prefWidth="364.0" />
-      <JFXTextField layoutX="153.0" layoutY="498.0" prefHeight="24.0" prefWidth="364.0" />
-      <JFXButton alignment="CENTER" layoutX="247.0" layoutY="542.0" prefHeight="50.0" prefWidth="100.0" text="Try Again">
+      <JFXTextField editable="false" layoutX="156.0" layoutY="460.0" prefHeight="24.0" prefWidth="364.0" />
+      <JFXTextField editable="false" layoutX="153.0" layoutY="498.0" prefHeight="24.0" prefWidth="364.0" />
+      <JFXButton fx:id="_reBtn" alignment="CENTER" layoutX="247.0" layoutY="542.0" onAction="#handleRecordButton" prefHeight="50.0" prefWidth="100.0" text="Record">
          <font>
             <Font size="16.0" />
          </font>
@@ -27,7 +27,7 @@
       <Pane fx:id="_Pane" layoutX="130.0" layoutY="80.0" prefHeight="350.0" prefWidth="350.0">
          <children>
             <ImageView fx:id="_imageView" fitHeight="350.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="_label" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="250.0" prefWidth="250.0" text="9">
+            <Label fx:id="_label" alignment="CENTER" layoutX="50.0" layoutY="50.0" prefHeight="250.0" prefWidth="250.0">
                <font>
                   <Font size="82.0" />
                </font>

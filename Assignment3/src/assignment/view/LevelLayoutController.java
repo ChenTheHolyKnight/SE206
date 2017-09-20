@@ -25,8 +25,8 @@ public class LevelLayoutController {
 	@FXML
 	public void handleHardButton() {
 		_level=new HardLevel();
-		int num=_level.generateNumber();
-		_mainApp.showGameFrame1(num,_level);
+		//_mainApp.showGameFrame1(num,_level);
+		_mainApp.showGameFrame(_level);
 	}
 	
 	public Level getLevel() {
