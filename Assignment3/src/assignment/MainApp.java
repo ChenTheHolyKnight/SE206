@@ -6,6 +6,7 @@ import assignment.model.Level;
 import assignment.view.ExitDialogController;
 import assignment.view.GameFrame1Controller;
 import assignment.view.GameFrame2Controller;
+import assignment.view.GameFrameController;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
 import assignment.view.RecordDialogController;
@@ -182,7 +183,26 @@ public class MainApp extends Application{
 			e.printStackTrace();
 		}
 	}
+	//Show GameFrame
+	public void showGameFrame(Level level) {
+		try {
+		
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/GameFrame.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
 
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			GameFrameController controller = loader.getController();
+			//controller.setMainApp(this);
+			controller.setLevel(level);
+			
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	//Tutorial frame
 
 	public void showTutorialFrame() {

@@ -18,7 +18,8 @@ public class LevelLayoutController {
 	public void handleEasyButton() {
 		_level=new EasyLevel();
 		int num=_level.generateNumber();
-		_mainApp.showGameFrame1(num,_level);
+		//_mainApp.showGameFrame1(num,_level);
+		_mainApp.showGameFrame(_level);
 	}
 	
 	@FXML
