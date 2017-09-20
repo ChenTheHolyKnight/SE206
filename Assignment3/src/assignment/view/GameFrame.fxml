@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrameController">
+<AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrameController">
    <children>
       <JFXButton fx:id="_nextButton" layoutX="539.0" layoutY="245.0" onAction="#handleNextButton" prefHeight="50.0" prefWidth="50.0" text="&gt;">
          <font>
@@ -16,9 +16,9 @@
          </font>
       </JFXButton>
       <Label layoutX="50.0" layoutY="450.0" prefHeight="40.0" text="Your answer is:" />
-      <Label layoutX="50.0" layoutY="490.0" prefHeight="40.0" text="The answer is" />
+      <Label layoutX="50.0" layoutY="490.0" prefHeight="40.0" prefWidth="100.0" text="The answer is:" />
       <JFXTextField editable="false" layoutX="156.0" layoutY="460.0" prefHeight="24.0" prefWidth="364.0" />
-      <JFXTextField editable="false" layoutX="153.0" layoutY="498.0" prefHeight="24.0" prefWidth="364.0" />
+      <JFXTextField editable="false" layoutX="156.0" layoutY="498.0" prefHeight="24.0" prefWidth="364.0" />
       <JFXButton fx:id="_reBtn" alignment="CENTER" layoutX="247.0" layoutY="542.0" onAction="#handleRecordButton" prefHeight="50.0" prefWidth="100.0" text="Record">
          <font>
             <Font size="16.0" />
@@ -34,6 +34,16 @@
             </Label>
          </children>
       </Pane>
+      <JFXButton layoutX="15.0" layoutY="15.0" onAction="#handleBackButton" prefHeight="50.0" prefWidth="50.0" text="&lt;">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="70.0" layoutY="15.0" prefHeight="50.0" text="Go Back to Level Menu">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
       <ImageView fx:id="_imageView1" fitHeight="350.0" fitWidth="350.0" layoutX="130.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

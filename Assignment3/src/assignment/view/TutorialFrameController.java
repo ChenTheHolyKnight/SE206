@@ -13,7 +13,7 @@ import javafx.scene.image.ImageView;
 public class TutorialFrameController {
 	private MainApp _mainApp;
 	private List<String> _imagePaths=new ArrayList<String>();
-	private Counter _counter=new Counter();
+	private Counter _counter=new Counter(2);
 	@FXML
 	private ImageView _imageView;
 	

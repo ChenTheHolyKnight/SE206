@@ -3,15 +3,19 @@ package assignment.util;
 public class Counter {
 	
 	private int _counter=0;
+	private int _limit;
+	public Counter(int parameter) {
+		_limit=parameter;
+	}
 	
 	/**
 	 * This is a method to increase the counter when the continue button in the tutorial frame is clicked
 	 */
 	public void increaseCounter(){
-		if(_counter<2) {
+		if(_counter<_limit) {
 			_counter++;
 		}
-		if(_counter>2) {
+		if(_counter>_limit) {
 			_counter=2;
 		}
 	}	

@@ -4,12 +4,9 @@ import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.view.ExitDialogController;
-import assignment.view.GameFrame1Controller;
-import assignment.view.GameFrame2Controller;
 import assignment.view.GameFrameController;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
-import assignment.view.RecordDialogController;
 import assignment.view.ScoreMenuController;
 import assignment.view.TutorialFrameController;
 import assignment.view.UserNameSceneController;
@@ -113,7 +110,7 @@ public class MainApp extends Application{
 
 	}
 	//GameFrame1
-	public void showGameFrame1(int num,Level level) {
+	/*public void showGameFrame1(int num,Level level) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/GameFrame1.fxml"));
@@ -131,10 +128,10 @@ public class MainApp extends Application{
 
 		}
 
-	}
+	}*/
 	
 	//Record Dialog
-	public void showRecordDialog(int num,Level level) {
+	/*public void showRecordDialog(int num,Level level) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/RecordDialog.fxml"));
@@ -160,10 +157,10 @@ public class MainApp extends Application{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	//Show GameFrame2
-	public void showGameFrame2(int num,Level level) {
+	/*public void showGameFrame2(int num,Level level) {
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
@@ -182,7 +179,7 @@ public class MainApp extends Application{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	//Show GameFrame
 	public void showGameFrame(Level level) {
 		try {
