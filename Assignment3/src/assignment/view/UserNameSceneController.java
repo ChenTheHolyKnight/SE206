@@ -31,7 +31,7 @@ public class UserNameSceneController {
 		if(_textField.getText()!=null&&!_textField.getText().equals("")) {
 			_button.setDisable(false);
 			_player.setName(_textField.getText());
-			_mainApp.showLevelLayout();
+			_mainApp.showLevelLayout(_player);
 		}
 	}
 	

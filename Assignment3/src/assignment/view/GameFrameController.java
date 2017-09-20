@@ -3,6 +3,7 @@ package assignment.view;
 
 import assignment.MainApp;
 import assignment.model.Level;
+import assignment.model.Player;
 import assignment.util.Counter;
 import assignment.util.Recorder;
 import javafx.animation.TranslateTransition;
@@ -45,20 +46,28 @@ public class GameFrameController {
 	private Level _level;
 
 	private MainApp _mainApp;
-
+	
 	private Counter _frameCounter;
+	
+	private Counter _attemptCounter;
+	
+	private Counter _scoreCounter;
+	
+	private Player _player;
 
 	@FXML
 	public void initialize() {
-		Image image=new Image(getClass().getClassLoader().getResource("resources/Maori.jpg").toString());
+		Image image=new Image(getClass().getClassLoader().getResource("resources/gameImage.jpg").toString());
 		_imageView.setImage(image);
 		_frameCounter=new Counter(10);
+		_attemptCounter=new Counter();
+		_scoreCounter=new Counter(10);
 	}
 
 	@FXML
 	public void handleNextButton() {
+		_reBtn.setText("Record");
 		_frameCounter.increaseCounter();
-		//System.out.println(_frameCounter.getCounter());
 		if(_frameCounter.getCounter()<10) {
 			_nextButton.setDisable(true);
 			WritableImage image=_Pane.snapshot(new SnapshotParameters(),null);
@@ -80,23 +89,33 @@ public class GameFrameController {
 			});
 			transition.playFromStart();	
 		}else {
-			//next frame
+			//next frame needs to be implemented to show the statistic of this game
+			Player player=new Player();
+			player.setScore(_scoreCounter.getCounter());
+			player.setAttempts(_attemptCounter.getCounter());
+			player.setLevel(_level);
 		}
 	}
 	
 	
 	@FXML
 	public void handleBackButton() {
-		_mainApp.showLevelLayout();
+		_player.resetStats();
+		_mainApp.showLevelLayout(_player);
 	}
 
 	@FXML
 	public void handleRecordButton() {
+		_attemptCounter.increaseCounter();
+		//System.out.println(_attemptCounter.getCounter());
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
 		DoWork dowork=new DoWork();
 		Thread thread=new Thread(dowork);
 		thread.start();
+		
+		
+		
 	}
 
 	public void setLevel(Level level) {
@@ -107,31 +126,28 @@ public class GameFrameController {
 	public void setMainApp(MainApp mainApp){
 		_mainApp=mainApp;
 	}	
+	
+	public void setPlayer(Player player) {
+		_player=player;
+	}
 
 	class DoWork extends Task<Void>{
 
 		@Override
 		protected Void call() throws Exception {
-			//System.out.println("start");
 			_reBtn.setDisable(true);
 			Recorder recorder=new Recorder();
 			recorder.record();		
 			recorder.recordToWord();
 			recorder.playRecord();
 			recorder.deleteRecord();
-			//System.out.println("finish");
-
-
 			return null;
-
-
 		}
 
 
 		@Override
 		protected void done() {
 			Platform.runLater(new Runnable() {
-
 				@Override
 				public void run() {
 					_reBtn.setText("Try Again");
@@ -143,6 +159,8 @@ public class GameFrameController {
 			});
 
 		}
+		
+		
 
 	}
 

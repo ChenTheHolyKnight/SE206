@@ -4,6 +4,10 @@ public class Counter {
 	
 	private int _counter=0;
 	private int _limit;
+	public Counter() {
+		_limit=Integer.MAX_VALUE;
+	}
+	
 	public Counter(int parameter) {
 		_limit=parameter;
 	}

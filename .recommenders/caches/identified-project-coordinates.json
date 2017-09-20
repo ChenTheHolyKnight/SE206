@@ -1,1 +1,1 @@
-[[{"location":"/usr/local/java/jdk1.8.0_144","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"/usr/local/java/jdk1.8.0_144/jre/lib/ext/jfxrt.jar","type":"JAR","hints":{}},"ABSENT"]]
+[[{"location":"/usr/local/java/jdk1.8.0_144","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"JavaSE-1.8"}},"jre:jre:1.8.0"],[{"location":"/home/se206/Desktop/Assignment3/Assignment3","type":"PROJECT","hints":{"PROJECT_NAME":"Assignment3"}},"ABSENT"]]

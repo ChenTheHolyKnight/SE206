@@ -3,6 +3,7 @@ package assignment;
 import java.io.IOException;
 
 import assignment.model.Level;
+import assignment.model.Player;
 import assignment.view.ExitDialogController;
 import assignment.view.GameFrameController;
 import assignment.view.LevelLayoutController;
@@ -91,7 +92,7 @@ public class MainApp extends Application{
 	}
 
 	//Level Layout
-	public void showLevelLayout() {
+	public void showLevelLayout(Player player) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/LevelLayout.fxml"));
@@ -102,6 +103,7 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			LevelLayoutController controller = loader.getController();
 			controller.setMainApp(this);
+			controller.setPlayer(player);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -181,7 +183,7 @@ public class MainApp extends Application{
 		}
 	}*/
 	//Show GameFrame
-	public void showGameFrame(Level level) {
+	public void showGameFrame(Level level,Player player) {
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
@@ -194,6 +196,7 @@ public class MainApp extends Application{
 			GameFrameController controller = loader.getController();
 			controller.setMainApp(this);
 			controller.setLevel(level);
+			controller.setPlayer(player);
 			
 
 		} catch (IOException e) {

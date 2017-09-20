@@ -2,8 +2,8 @@ package assignment.model;
 
 public class Player {
 	private String _name;
-	private int _score;
-	private int _attempts;
+	private int _score=0;
+	private int _attempts=0;
 	private Level _level;
 	
 	
@@ -35,6 +35,11 @@ public class Player {
 	
 	public void setLevel(Level level) {
 		_level=level;
+	}
+	
+	public void resetStats() {
+		_score=0;
+		_attempts=0;
 	}
 
 }
