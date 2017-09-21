@@ -1,10 +1,16 @@
 package assignment.view;
 
 
+import java.util.List;
+
+import com.jfoenix.controls.JFXTextField;
+
 import assignment.MainApp;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.util.Answer;
 import assignment.util.Counter;
+import assignment.util.FileReader;
 import assignment.util.Recorder;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
@@ -36,6 +42,12 @@ public class GameFrameController {
 	private Button _nextButton;
 	@FXML
 	private Button _reBtn;
+	@FXML
+	private Button _submitBtn;
+	@FXML
+	private JFXTextField _playerAnswer;
+	@FXML
+	private JFXTextField _correctAnswer;
 
 	@FXML
 	private Label _label;
@@ -54,6 +66,8 @@ public class GameFrameController {
 	private Counter _scoreCounter;
 	
 	private Player _player;
+	
+	private int _num=0;
 
 	@FXML
 	public void initialize() {
@@ -62,27 +76,31 @@ public class GameFrameController {
 		_frameCounter=new Counter(10);
 		_attemptCounter=new Counter();
 		_scoreCounter=new Counter(10);
+		_nextButton.setDisable(true);
+		_submitBtn.setDisable(true);
 	}
 
 	@FXML
 	public void handleNextButton() {
+		_playerAnswer.setText("");
+		_correctAnswer.setText("");
 		_reBtn.setText("Record");
 		_frameCounter.increaseCounter();
 		if(_frameCounter.getCounter()<10) {
+			_submitBtn.setDisable(true);
 			_nextButton.setDisable(true);
 			WritableImage image=_Pane.snapshot(new SnapshotParameters(),null);
 			_imageView1.setImage(image);
 			_imageView1.toFront();
-			int num=_level.generateNumber();
-			_label.setText(Integer.toString(num));
+			 _num=_level.generateNumber();
+			_label.setText(Integer.toString(_num));
 			TranslateTransition transition=new TranslateTransition(Duration.millis(500),_imageView1);
-			transition.setByX(-350f);
+			transition.setByX(-500f);
 			transition.setFromX(0);
 			transition.setOnFinished(new EventHandler<ActionEvent>(){
 				@Override
 				public void handle(ActionEvent event) {
 					_imageView1.setImage(null);
-					_nextButton.setDisable(false);
 					transition.stop();
 				}
 
@@ -95,6 +113,7 @@ public class GameFrameController {
 			player.setAttempts(_attemptCounter.getCounter());
 			player.setLevel(_level);
 		}
+		
 	}
 	
 	
@@ -106,21 +125,43 @@ public class GameFrameController {
 
 	@FXML
 	public void handleRecordButton() {
-		_attemptCounter.increaseCounter();
+		_correctAnswer.setText("");
+		_playerAnswer.setText("");
+		//_attemptCounter.increaseCounter();
 		//System.out.println(_attemptCounter.getCounter());
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
 		DoWork dowork=new DoWork();
 		Thread thread=new Thread(dowork);
-		thread.start();
-		
-		
+		thread.start();	
 		
 	}
-
+	
+	@FXML
+	public void handleSubmitBtn() {
+		_nextButton.setDisable(false);
+		_attemptCounter.increaseCounter();
+		Answer answer=new Answer();
+		//System.out.println(_num);
+		boolean correctness=answer.checkAnswer(_num);
+		//System.out.println(correctness);
+		if(correctness) {
+			String s=answer.getPLayerAnswer();
+			System.out.println(s);
+			_playerAnswer.setText(s);
+			String correct=answer.getAnswer();
+			_correctAnswer.setText(correct);
+		}else {
+			String s=answer.getPLayerAnswer();
+			System.out.println(s);
+			_playerAnswer.setText(s);
+			
+		}
+	}
 	public void setLevel(Level level) {
 		_level=level;
-		_label.setText(Integer.toString(_level.generateNumber()));
+		_num=_level.generateNumber();
+		_label.setText(Integer.toString(_num));
 	}
 
 	public void setMainApp(MainApp mainApp){
@@ -130,6 +171,13 @@ public class GameFrameController {
 	public void setPlayer(Player player) {
 		_player=player;
 	}
+	/*
+	private void checkAnswer() {
+		//System.out.println("true");
+		FileReader reader=new FileReader();
+		List<String> answer=reader.getRecordFile();
+		System.out.println(answer);
+	}*/
 
 	class DoWork extends Task<Void>{
 
@@ -154,11 +202,13 @@ public class GameFrameController {
 					_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
 					_anchorPane.setCursor(Cursor.DEFAULT);
 					_reBtn.setDisable(false);
+					_submitBtn.setDisable(false);
+					//checkAnswer();
 				}
 
 			});
-
 		}
+		
 		
 		
 

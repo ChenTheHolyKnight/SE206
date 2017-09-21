@@ -9,16 +9,17 @@ import java.util.Scanner;
 public class FileReader {
 	
 	private List<String> _recordFile;
-	public FileReader(){
+	public FileReader() {
 		_recordFile=new ArrayList<String>();
 		readFile();
-		trimFile();
+		try {
+			trimFile();
+		}catch (Exception e) {
+			
+		}
 	}
 	
 	private void readFile() {
-		//System.out.println(System.getProperty("user.dir")+"/recout.mlf");
-		//System.out.println(getClass().getClassLoader().getResource(".").toString());
-		//System.out.println(getClass().getResource("../../recout.mlf").toString());
 		try (Scanner scanner=new Scanner(new File(System.getProperty("user.dir")+"/recout.mlf"))){
 			while(scanner.hasNextLine()) {
 				_recordFile.add(scanner.nextLine());
@@ -29,7 +30,9 @@ public class FileReader {
 		}
 	}
 	
-	private void trimFile() {
+	private void trimFile() throws Exception{
+		//need to catch no input exception
+		
 		_recordFile.remove(0);
 		_recordFile.remove(0);
 		_recordFile.remove(0);
