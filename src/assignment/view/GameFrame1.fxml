@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="600.0" styleClass="pane" stylesheets="@MainFrame1.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrame1Controller">
+   <children>
+      <JFXButton layoutX="14.0" layoutY="14.0" onAction="#handleBackButton" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: c19a6b;" text="&lt;">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="70.0" layoutY="14.0" prefHeight="40.0" prefWidth="236.0" text="Back to The Level Menu" textFill="#116b37">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="_imageView" fitHeight="300.0" fitWidth="340.0" layoutX="147.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="147.0" AnchorPane.rightAnchor="113.0" />
+      <JFXButton fx:id="_reBtn" layoutX="269.0" layoutY="441.0" onAction="#handleRecordButton" onMouseClicked="#recordButtonClicked" prefHeight="85.0" prefWidth="85.0" style="-fx-background-color: c19a6b;" text="Record" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="250.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="_label" alignment="CENTER" layoutX="118.0" layoutY="112.0" prefHeight="286.0" prefWidth="364.0" text="num" textFill="#1b1a1a" AnchorPane.leftAnchor="118.0" AnchorPane.rightAnchor="118.0">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
