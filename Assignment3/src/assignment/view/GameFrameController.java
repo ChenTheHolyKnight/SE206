@@ -1,7 +1,7 @@
 package assignment.view;
 
 
-import java.util.List;
+
 
 import com.jfoenix.controls.JFXTextField;
 
@@ -10,7 +10,6 @@ import assignment.model.Level;
 import assignment.model.Player;
 import assignment.util.Answer;
 import assignment.util.Counter;
-import assignment.util.FileReader;
 import assignment.util.Recorder;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
@@ -48,25 +47,30 @@ public class GameFrameController {
 	private JFXTextField _playerAnswer;
 	@FXML
 	private JFXTextField _correctAnswer;
+	@FXML
+	private ImageView _correctnessImage;
+	
 
 	@FXML
 	private Label _label;
 
 	@FXML
 	private AnchorPane _anchorPane;
+	
+	
 
 	private Level _level;
 
 	private MainApp _mainApp;
-	
+
 	private Counter _frameCounter;
-	
+
 	private Counter _attemptCounter;
-	
+
 	private Counter _scoreCounter;
-	
+
 	private Player _player;
-	
+
 	private int _num=0;
 
 	@FXML
@@ -87,12 +91,13 @@ public class GameFrameController {
 		_reBtn.setText("Record");
 		_frameCounter.increaseCounter();
 		if(_frameCounter.getCounter()<10) {
+			_correctnessImage.setImage(null);
 			_submitBtn.setDisable(true);
 			_nextButton.setDisable(true);
 			WritableImage image=_Pane.snapshot(new SnapshotParameters(),null);
 			_imageView1.setImage(image);
 			_imageView1.toFront();
-			 _num=_level.generateNumber();
+			_num=_level.generateNumber();
 			_label.setText(Integer.toString(_num));
 			TranslateTransition transition=new TranslateTransition(Duration.millis(500),_imageView1);
 			transition.setByX(-500f);
@@ -108,15 +113,21 @@ public class GameFrameController {
 			transition.playFromStart();	
 		}else {
 			//next frame needs to be implemented to show the statistic of this game
-			Player player=new Player();
-			player.setScore(_scoreCounter.getCounter());
-			player.setAttempts(_attemptCounter.getCounter());
-			player.setLevel(_level);
+			
+			//Player player=new Player();
+			_player.setScore(_scoreCounter.getCounter());
+			//System.out.println(_scoreCounter.getCounter());
+			
+			_player.setAttempts(_attemptCounter.getCounter());
+			//System.out.println(_attemptCounter.getCounter());
+			_player.setLevel(_level);
+			_mainApp.showStatsFrame(_player);
+			
 		}
-		
+
 	}
-	
-	
+
+
 	@FXML
 	public void handleBackButton() {
 		_player.resetStats();
@@ -127,35 +138,36 @@ public class GameFrameController {
 	public void handleRecordButton() {
 		_correctAnswer.setText("");
 		_playerAnswer.setText("");
-		//_attemptCounter.increaseCounter();
-		//System.out.println(_attemptCounter.getCounter());
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
 		DoWork dowork=new DoWork();
 		Thread thread=new Thread(dowork);
 		thread.start();	
-		
+
 	}
-	
+
 	@FXML
 	public void handleSubmitBtn() {
 		_nextButton.setDisable(false);
 		_attemptCounter.increaseCounter();
 		Answer answer=new Answer();
-		//System.out.println(_num);
 		boolean correctness=answer.checkAnswer(_num);
-		//System.out.println(correctness);
+		
+		
 		if(correctness) {
+			Image image=new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(),true);
+			_correctnessImage.setImage(image);
+			_scoreCounter.increaseCounter();
 			String s=answer.getPLayerAnswer();
-			System.out.println(s);
 			_playerAnswer.setText(s);
 			String correct=answer.getAnswer();
 			_correctAnswer.setText(correct);
 		}else {
+			Image image=new Image(getClass().getClassLoader().getResource("resources/wrong.png").toString(),true);
+			_correctnessImage.setImage(image);
 			String s=answer.getPLayerAnswer();
-			System.out.println(s);
 			_playerAnswer.setText(s);
-			
+
 		}
 	}
 	public void setLevel(Level level) {
@@ -167,17 +179,14 @@ public class GameFrameController {
 	public void setMainApp(MainApp mainApp){
 		_mainApp=mainApp;
 	}	
-	
+
 	public void setPlayer(Player player) {
 		_player=player;
 	}
-	/*
-	private void checkAnswer() {
-		//System.out.println("true");
-		FileReader reader=new FileReader();
-		List<String> answer=reader.getRecordFile();
-		System.out.println(answer);
-	}*/
+
+
+
+
 
 	class DoWork extends Task<Void>{
 
@@ -203,15 +212,9 @@ public class GameFrameController {
 					_anchorPane.setCursor(Cursor.DEFAULT);
 					_reBtn.setDisable(false);
 					_submitBtn.setDisable(false);
-					//checkAnswer();
 				}
-
 			});
 		}
-		
-		
-		
-
 	}
 
 }

@@ -9,6 +9,7 @@ import assignment.view.GameFrameController;
 import assignment.view.LevelLayoutController;
 import assignment.view.MainFrameController;
 import assignment.view.ScoreMenuController;
+import assignment.view.StatsFrameController;
 import assignment.view.TutorialFrameController;
 import assignment.view.UserNameSceneController;
 import javafx.application.Application;
@@ -203,6 +204,29 @@ public class MainApp extends Application{
 			e.printStackTrace();
 		}
 	}
+	
+	//Show Stats Frame
+	public void showStatsFrame(Player player) {
+		try {
+			
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/StatsFrame.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			StatsFrameController controller = loader.getController();
+			controller.setPlayer(player);
+			controller.setMainApp(this);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	
+	
 	//Tutorial frame
 
 	public void showTutorialFrame() {

@@ -28,8 +28,8 @@ public class Answer {
 
 		if(num<10) {
 			_answer.add(_answerList.get(num-1));
-			System.out.println(_list);
-			System.out.println(_answer);
+		//	System.out.println(_list);
+		//	System.out.println(_answer);
 			return _answer.equals(_list);
 		}else {
 			int tenth=num/10;
@@ -44,8 +44,8 @@ public class Answer {
 				_answer.add("maa");
 				_answer.add(_answerList.get(oneth-1));
 			}
-			System.out.println(_list);
-			System.out.println(_answer);
+		//	System.out.println(_list);
+		//	System.out.println(_answer);
 			//further implementation needs to be done
 			return _answer.equals(_list);
 		}
