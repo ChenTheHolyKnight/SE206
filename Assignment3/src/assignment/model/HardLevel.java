@@ -7,7 +7,7 @@ public class HardLevel implements Level{
 	@Override
 	public int generateNumber() {
 		Random rand =new Random();
-		return rand.nextInt(90)+10;
+		return rand.nextInt(99)+1;
 	}
 
 	@Override
