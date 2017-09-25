@@ -12,7 +12,7 @@
    <children>
       <VBox alignment="CENTER" layoutX="124.0" layoutY="105.0" prefHeight="380.0" prefWidth="360.0" spacing="20.0">
          <children>
-            <Label alignment="CENTER" prefHeight="46.0" prefWidth="380.0" text="PLease eneter a name to cotinue :">
+            <Label alignment="CENTER" prefHeight="46.0" prefWidth="380.0" text="Please enter a name to continue :">
                <font>
                   <Font size="20.0" />
                </font>

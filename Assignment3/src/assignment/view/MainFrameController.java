@@ -9,6 +9,7 @@ import java.util.ResourceBundle;
 import assignment.MainApp;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import org.controlsfx.control.PopOver;
 
 
 public class MainFrameController implements Initializable{
@@ -45,6 +46,17 @@ public class MainFrameController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@FXML
+	public void popOverStart() {
+		//this is a method which allows a popover to occur over the button to explain to the user
+		//what the button is used for
+		//PopOver popOver = new PopOver();
+
+
+
+
 	}
 	
 	

@@ -35,7 +35,7 @@ public class MainApp extends Application{
 	public void initMainFrame() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/MainFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/MainFrame2.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
