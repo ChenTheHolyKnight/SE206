@@ -16,7 +16,7 @@ public class MainFrameController implements Initializable{
 	
 	@FXML
 	public void handleStartButton() {
-		//_mainApp.showLevelLayout();
+		// moves to the show userFrame
 		_mainApp.showUserNameFrame();
 		
 	}
@@ -26,10 +26,10 @@ public class MainFrameController implements Initializable{
 		_mainApp.showExitDialog();
 	}
 	
-	@FXML
+	/**@FXML
 	public void handleTutorialButton() {
 		_mainApp.showTutorialFrame();
-	}
+	}*/
 	
 	
 	@FXML
