@@ -14,8 +14,6 @@ public class Answer {
 	}
 
 	public boolean checkAnswer(int num) {
-		//the 1 in the equals bracket should be changed later.
-		//System.out.println(_answerList.get(num-1));
 
 		FileReader reader=new FileReader();
 		_list=reader.getRecordFile();
@@ -28,14 +26,11 @@ public class Answer {
 
 		if(num<10) {
 			_answer.add(_answerList.get(num-1));
-		//	System.out.println(_list);
-		//	System.out.println(_answer);
 			return _answer.equals(_list);
 		}else {
 			int tenth=num/10;
 			int oneth=num%10;
 			if(tenth==1) {
-				//_answer.add("tekau");
 			}else {
 				_answer.add(_answerList.get(tenth-1));
 			}
@@ -44,43 +39,20 @@ public class Answer {
 				_answer.add("maa");
 				_answer.add(_answerList.get(oneth-1));
 			}
-		//	System.out.println(_list);
-		//	System.out.println(_answer);
-			//further implementation needs to be done
 			return _answer.equals(_list);
 		}
-		//return _answerList.get(num-1).equals("iwa");//needs to be deleted
 	}
 
 	public String getAnswer(){
 		String answer=String.join(" ", _answer);
 		return answer;
 	}
-	
+
 	public String getPLayerAnswer(){
-		String list=String.join(" ", _list);
-		return list;
+			String list=String.join(" ", _list);
+			return list;
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 	private void loadAnswerList() {

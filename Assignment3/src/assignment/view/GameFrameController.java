@@ -3,6 +3,8 @@ package assignment.view;
 
 
 
+import org.controlsfx.control.Notifications;
+
 import com.jfoenix.controls.JFXTextField;
 
 import assignment.MainApp;
@@ -17,6 +19,7 @@ import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.geometry.Pos;
 import javafx.scene.Cursor;
 import javafx.scene.SnapshotParameters;
 import javafx.scene.control.Button;
@@ -138,6 +141,7 @@ public class GameFrameController {
 	public void handleRecordButton() {
 		_correctAnswer.setText("");
 		_playerAnswer.setText("");
+		_correctnessImage.setImage(null);
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
 		DoWork dowork=new DoWork();
@@ -153,11 +157,12 @@ public class GameFrameController {
 		Answer answer=new Answer();
 		boolean correctness=answer.checkAnswer(_num);
 		
-		
 		if(correctness) {
 			Image image=new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(),true);
 			_correctnessImage.setImage(image);
-			_scoreCounter.increaseCounter();
+			if(_reBtn.getText().equals("Record")) {
+				_scoreCounter.increaseCounter();
+			}
 			String s=answer.getPLayerAnswer();
 			_playerAnswer.setText(s);
 			String correct=answer.getAnswer();
@@ -212,6 +217,11 @@ public class GameFrameController {
 					_anchorPane.setCursor(Cursor.DEFAULT);
 					_reBtn.setDisable(false);
 					_submitBtn.setDisable(false);
+					Answer answer=new Answer();
+					answer.checkAnswer(_num);
+					if(answer.getPLayerAnswer().isEmpty()) {
+						Notifications.create().text("no voice detected,please try again").position(Pos.CENTER).showWarning();
+					}
 				}
 			});
 		}

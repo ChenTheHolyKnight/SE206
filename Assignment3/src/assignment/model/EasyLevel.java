@@ -13,8 +13,7 @@ public class EasyLevel implements Level{
 	}
 
 	@Override
-	public Levels getLevels() {
-		
+	public Levels getLevels() {		
 		return _levelStr;
 	}
 
