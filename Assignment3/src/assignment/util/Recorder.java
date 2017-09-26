@@ -37,7 +37,7 @@ public class Recorder {
 			
 		}
 	}
-	
+	/*
 	public void deleteRecord() {
 		try {
 			String cmd="rm foo.wav";
@@ -53,7 +53,7 @@ public class Recorder {
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 	
 	public void playRecord() {
 		try {

@@ -86,7 +86,6 @@ public class MainApp extends Application{
 			UserNameSceneController controller = loader.getController();
 			controller.setMainApp(this);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -112,77 +111,7 @@ public class MainApp extends Application{
 		}
 
 	}
-	//GameFrame1
-	/*public void showGameFrame1(int num,Level level) {
-		try {
-			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/GameFrame1.fxml"));
-			AnchorPane anchorPane = (AnchorPane) loader.load();
 
-			Scene scene=new Scene(anchorPane);
-			_primaryStage.setScene(scene);
-			_primaryStage.show();
-			GameFrame1Controller controller = loader.getController();
-			controller.setMainApp(this);
-			controller.setLabel(num);
-			controller.setLevel(level);
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-
-	}*/
-	
-	//Record Dialog
-	/*public void showRecordDialog(int num,Level level) {
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/RecordDialog.fxml"));
-			AnchorPane anchorPane=(AnchorPane) loader.load();
-
-			Stage dialog=new Stage();
-			dialog.setTitle("Deletion Dialog");
-			dialog.initModality(Modality.WINDOW_MODAL);
-			dialog.initOwner(_primaryStage);
-			dialog.setResizable(false);
-
-			Scene scene = new Scene(anchorPane);
-			dialog.setScene(scene);
-
-			RecordDialogController record =loader.getController();
-			record.setDialog(dialog);
-			record.setMainApp(this);
-			record.setNum(num);
-			record.setLevel(level);
-
-			dialog.showAndWait();
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}*/
-	
-	//Show GameFrame2
-	/*public void showGameFrame2(int num,Level level) {
-		try {
-		
-			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/GameFrame2.fxml"));
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-
-			Scene scene=new Scene(anchorPane);
-			_primaryStage.setScene(scene);
-			_primaryStage.show();
-			GameFrame2Controller controller = loader.getController();
-			controller.setMainApp(this);
-			controller.setLabel(num);
-			controller.setLevel(level);
-			
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}*/
 	//Show GameFrame
 	public void showGameFrame(Level level,Player player) {
 		try {
