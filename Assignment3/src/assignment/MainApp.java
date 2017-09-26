@@ -4,14 +4,7 @@ import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.model.Player;
-import assignment.view.ExitDialogController;
-import assignment.view.GameFrameController;
-import assignment.view.LevelLayoutController;
-import assignment.view.MainFrameController;
-import assignment.view.ScoreMenuController;
-import assignment.view.StatsFrameController;
-import assignment.view.TutorialFrameController;
-import assignment.view.UserNameSceneController;
+import assignment.view.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,7 +28,7 @@ public class MainApp extends Application{
 	public void initMainFrame() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/MainFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/MainFrame2.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
@@ -78,12 +71,12 @@ public class MainApp extends Application{
 
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/UserNameScene.fxml"));
+			loader.setLocation(getClass().getResource("view/UserNameFrame.fxml"));
 			AnchorPane anchorPane= (AnchorPane) loader.load();
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
-			UserNameSceneController controller = loader.getController();
+			UserNameFrameController controller = loader.getController();
 			controller.setMainApp(this);
 		} catch (IOException e) {
 			e.printStackTrace();

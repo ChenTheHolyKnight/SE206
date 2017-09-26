@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.LevelLayoutFrame">
+   <children>
+      <Pane layoutX="349.0" layoutY="135.0" prefHeight="330.0" prefWidth="303.0" styleClass="box" stylesheets="@mainFrame2.css">
+         <children>
+            <Label layoutX="52.0" layoutY="14.0" prefHeight="81.0" prefWidth="200.0" text="Level" textFill="#0072ff">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="65.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="184.0" prefHeight="45.0" prefWidth="148.0" text="Easy">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="240.0" prefHeight="45.0" prefWidth="148.0" text="Hard">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="24.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="78.0" layoutY="129.0" prefHeight="45.0" prefWidth="148.0" text="Tutorial">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="24.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
