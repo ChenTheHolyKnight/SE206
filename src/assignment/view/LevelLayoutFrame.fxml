@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.LevelLayoutFrame">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.LevelLayoutController">
    <children>
       <Pane layoutX="349.0" layoutY="135.0" prefHeight="330.0" prefWidth="303.0" styleClass="box" stylesheets="@mainFrame2.css">
          <children>
