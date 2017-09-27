@@ -17,7 +17,7 @@
             </JFXButton>
             <JFXTextField fx:id="_textfield" focusColor="#0072ff" labelFloat="true" layoutX="77.0" layoutY="97.0" onKeyReleased="#setButtonReleased" prefHeight="39.0" prefWidth="334.0" promptText="Please Enter Your Name" unFocusColor="#141313">
                <font>
-                  <Font size="16.0" />
+                  <Font size="14.0" />
                </font>
             </JFXTextField>
             <JFXButton fx:id="_button" buttonType="RAISED" layoutX="336.0" layoutY="160.0" onAction="#handleButton" prefHeight="39.0" prefWidth="128.0" text="Continue ">

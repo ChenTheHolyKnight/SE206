@@ -56,7 +56,7 @@ public class MainApp extends Application{
 			Scene scene = new Scene(anchorPane);
 			dialog.setScene(scene);
 
-			ExitDialogController deletion =loader.getController();
+			ExitFrameController deletion =loader.getController();
 			deletion.setMainApp(dialog);
 
 			dialog.showAndWait();
