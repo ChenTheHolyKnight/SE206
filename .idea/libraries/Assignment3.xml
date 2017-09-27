@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Assignment3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Assignment3/controlsfx-8.40.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Assignment3/jfoenix.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
