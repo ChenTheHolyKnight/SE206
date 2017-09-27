@@ -88,13 +88,13 @@ public class MainApp extends Application{
 	public void showLevelLayout(Player player) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/LevelLayout.fxml"));
+			loader.setLocation(getClass().getResource("view/LevelLayoutFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
-			LevelLayoutController controller = loader.getController();
+			LevelLayoutFrameController controller = loader.getController();
 			controller.setMainApp(this);
 			controller.setPlayer(player);
 

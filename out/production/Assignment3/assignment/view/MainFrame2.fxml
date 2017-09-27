@@ -10,7 +10,7 @@
    <children>
       <Pane layoutX="342.0" layoutY="103.0" prefHeight="376.0" prefWidth="341.0" style="-fx-background-color: #E9E4F0;" styleClass="box">
          <children>
-            <Label layoutX="44.0" layoutY="23.0" prefHeight="116.0" prefWidth="248.0" text="Tatai" textFill="#eb0d0d">
+            <Label layoutX="44.0" layoutY="23.0" prefHeight="116.0" prefWidth="248.0" text="Tatai" textFill="#0072ff">
                <font>
                   <Font name="DejaVu Sans Bold" size="85.0" />
                </font>
