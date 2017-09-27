@@ -1,7 +1,6 @@
 .pane {
-	
-	-fx-background-image: url("../../resources/Arctic_Ridge.png");
-    /*-fx-background-image: url("../../resources/Lawrencium.png");*/
+
+    -fx-background-image: url("../../resources/Lawrencium.png");
     -fx-background-size: 1000 600;
     -fx-background-position: center center;
 

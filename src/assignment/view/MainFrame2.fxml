@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.MainFrameController">
    <children>
-      <Pane layoutX="342.0" layoutY="103.0" prefHeight="380.0" prefWidth="340.0" style="-fx-background-color: #E9E4F0;" styleClass="box">
+      <Pane layoutX="342.0" layoutY="103.0" prefHeight="376.0" prefWidth="341.0" style="-fx-background-color: #E9E4F0;" styleClass="box">
          <children>
-            <Label layoutX="44.0" layoutY="23.0" prefHeight="116.0" prefWidth="248.0" text="Tatai" textFill="#395add">
+            <Label layoutX="44.0" layoutY="23.0" prefHeight="116.0" prefWidth="248.0" text="Tatai" textFill="#eb0d0d">
                <font>
                   <Font name="DejaVu Sans Bold" size="85.0" />
                </font>
