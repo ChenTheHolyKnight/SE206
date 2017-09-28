@@ -126,7 +126,7 @@ public class GameFrameController {
 			_num=_level.generateNumber();
 			_label.setText(Integer.toString(_num));
 			TranslateTransition transition=new TranslateTransition(Duration.millis(500),_imageView1);
-			transition.setByX(-500f);
+			transition.setByX(-1000f);
 			transition.setFromX(0);
 			transition.setOnFinished(new EventHandler<ActionEvent>(){
 				@Override
