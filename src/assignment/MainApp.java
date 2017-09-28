@@ -1,6 +1,13 @@
 package assignment;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.prefs.Preferences;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 
 import assignment.model.Level;
 import assignment.model.Player;
@@ -8,6 +15,8 @@ import assignment.view.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -15,6 +24,7 @@ import javafx.stage.Stage;
 public class MainApp extends Application{
 	private Stage _primaryStage;
 	
+	private List<Player> _players;
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -199,5 +209,16 @@ public class MainApp extends Application{
 	public static void main(String[] args) {
 		launch();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
 
 }

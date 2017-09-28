@@ -66,4 +66,6 @@ public class StatsFrameController {
 		_mainApp=mainApp;
 		_playerTable.setItems(_players);
 	}
+	
+	
 }
