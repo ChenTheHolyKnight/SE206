@@ -1,6 +1,6 @@
 .pane {
 
-    -fx-background-image: url("../../resources/Lawrencium.png");
+    -fx-background-image: url("../../resources/landscape.png");
     -fx-background-size: 1000 600;
     -fx-background-position: center center;
 
@@ -9,7 +9,7 @@
 .box {
 
     /*-fx-background-image: url("../../resources/SoundCloud.png");*/
-    -fx-background-color: #ffffff;
+    -fx-background-color: #E9E4F0;
     -fx-background-size: 400 500;
     -fx-border-radius: 20;
     -fx-background-radius: 20;
