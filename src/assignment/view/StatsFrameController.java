@@ -48,7 +48,8 @@ public class StatsFrameController {
 	
 	@FXML
 	public void handleStayButton() {
-		_mainApp.showGameFrame(_players.get(0).getLevel(), _players.get(0));;
+		_mainApp.showGameFrame(_players.get(0).getLevel(), _players.get(0));
+		System.out.println(_players.get(0).getScore());
 	}
 
 	public void setPlayer(Player player) {

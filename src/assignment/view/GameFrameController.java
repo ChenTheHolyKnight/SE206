@@ -77,10 +77,15 @@ public class GameFrameController {
 	private Counter _attemptCounter;
 
 	private Counter _scoreCounter;
+	
+	private Counter _recCounter;
 
 	private Player _player;
 
 	private int _num=0;
+	
+	
+	
 	
 	private boolean _isPopOverShown=false;
 
@@ -91,6 +96,7 @@ public class GameFrameController {
 		_frameCounter=new Counter(10);
 		_attemptCounter=new Counter();
 		_scoreCounter=new Counter(10);
+		_recCounter=new Counter();
 		
 		
 		Image reImage=new Image(getClass().getClassLoader().getResource("resources/record2.png").toString());
@@ -107,7 +113,7 @@ public class GameFrameController {
 
 	@FXML
 	public void handleNextButton() {
-		
+		_recCounter=new Counter();
 		Image reimage=new Image(getClass().getClassLoader().getResource("resources/record1.png").toString());
 		_reBtn.setGraphic(new ImageView(reimage));		
 		_playerAnswer.setText("");
@@ -153,6 +159,7 @@ public class GameFrameController {
 
 	@FXML
 	public void handleRecordButton() {
+		_recCounter.increaseCounter();
 		_correctAnswer.setText("");
 		_playerAnswer.setText("");
 		_nextButton.setDisable(true);
@@ -176,11 +183,11 @@ public class GameFrameController {
 		_playBtn.setDisable(true);
 		Answer answer=new Answer();
 		boolean correctness=answer.checkAnswer(_num);
-
 		if(correctness) {
 			Image image=new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(),true);
 			_correctnessImage.setImage(image);
-			if(_reBtn.getText().equals("Record")) {
+			
+			if(_recCounter.getCounter()==1) { ///bugs here
 				_scoreCounter.increaseCounter();
 			}
 			String s=answer.getPLayerAnswer();
