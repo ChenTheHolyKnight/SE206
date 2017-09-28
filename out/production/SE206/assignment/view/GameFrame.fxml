@@ -40,8 +40,8 @@
             <Label layoutX="11.0" layoutY="375.0" prefHeight="40.0" text="Your answer is:" textFill="#0072ff" />
             <Label layoutX="11.0" layoutY="405.0" prefHeight="40.0" prefWidth="100.0" text="The answer is:" textFill="#0072ff" />
             <ImageView fx:id="_imageView1" fitHeight="300.0" fitWidth="300.0" layoutX="100.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" />
-            <JFXTextField fx:id="_playerAnswer" editable="false" layoutX="112.0" layoutY="375.0" prefHeight="30.0" prefWidth="308.0" promptText="Your Answer" />
-            <JFXTextField fx:id="_correctAnswer" editable="false" layoutX="114.0" layoutY="405.0" prefHeight="30.0" prefWidth="308.0" promptText="Correct Answer" />
+            <JFXTextField fx:id="_playerAnswer" editable="false" layoutX="112.0" layoutY="375.0" prefHeight="30.0" prefWidth="308.0" />
+            <JFXTextField fx:id="_correctAnswer" editable="false" layoutX="114.0" layoutY="405.0" prefHeight="30.0" prefWidth="308.0" />
             <JFXButton fx:id="_playBtn" layoutX="180.0" layoutY="447.0" onAction="#handlePlayBtn" prefHeight="50.0" prefWidth="100.0">
                <font>
                   <Font size="16.0" />
