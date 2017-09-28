@@ -58,11 +58,8 @@ public class GameFrameController {
 	private JFXTextField _correctAnswer;
 	@FXML
 	private ImageView _correctnessImage;
-
-
 	@FXML
 	private Label _label;
-
 	@FXML
 	private AnchorPane _anchorPane;
 
@@ -91,24 +88,22 @@ public class GameFrameController {
 
 	@FXML
 	public void initialize() {
-		Image image=new Image(getClass().getClassLoader().getResource("resources/gameImage.jpg").toString());
-		_imageView.setImage(image);
+			
 		_frameCounter=new Counter(10);
 		_attemptCounter=new Counter();
 		_scoreCounter=new Counter(10);
 		_recCounter=new Counter();
 		
-		
+		Image image=new Image(getClass().getClassLoader().getResource("resources/gameImage.jpg").toString());
+		_imageView.setImage(image);
 		Image reImage=new Image(getClass().getClassLoader().getResource("resources/record2.png").toString());
 		_reBtn.setGraphic(new ImageView(reImage));
 		Image playImage=new Image(getClass().getClassLoader().getResource("resources/play1.png").toString());
 		_playBtn.setGraphic(new ImageView(playImage));
 		Image subImage=new Image(getClass().getClassLoader().getResource("resources/submit.png").toString());
 		_submitBtn.setGraphic(new ImageView(subImage));
-		
-		_nextButton.setDisable(true);
-		_submitBtn.setDisable(true);
-		_playBtn.setDisable(true);
+			
+		lockSomeBtns();
 	}
 
 	@FXML
@@ -118,15 +113,16 @@ public class GameFrameController {
 		_reBtn.setGraphic(new ImageView(reimage));		
 		_playerAnswer.setText("");
 		_correctAnswer.setText("");
-		_playBtn.setDisable(true);
 		_frameCounter.increaseCounter();
 		if(_frameCounter.getCounter()<10) {
 			_correctnessImage.setImage(null);
-			_submitBtn.setDisable(true);
-			_nextButton.setDisable(true);
+			
+			lockSomeBtns();
+			
 			WritableImage image=_Pane.snapshot(new SnapshotParameters(),null);
 			_imageView1.setImage(image);
 			_imageView1.toFront();
+			
 			_num=_level.generateNumber();
 			_label.setText(Integer.toString(_num));
 			TranslateTransition transition=new TranslateTransition(Duration.millis(500),_imageView1);
@@ -138,7 +134,6 @@ public class GameFrameController {
 					_imageView1.setImage(null);
 					transition.stop();
 				}
-
 			});
 			transition.playFromStart();	
 		}else {	
@@ -162,14 +157,11 @@ public class GameFrameController {
 		_recCounter.increaseCounter();
 		_correctAnswer.setText("");
 		_playerAnswer.setText("");
-		_nextButton.setDisable(true);
-		_playBtn.setDisable(true);
-		_submitBtn.setDisable(true);
-		_backBtn.setDisable(true);
-		_correctnessImage.setImage(null);
-		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
-		_anchorPane.setCursor(Cursor.WAIT);
 		
+		lockAllBtns();
+		
+		_correctnessImage.setImage(null);
+		waitCursor();
 		DoWork dowork=new DoWork();
 		Thread thread=new Thread(dowork);
 		thread.start();	
@@ -178,16 +170,19 @@ public class GameFrameController {
 
 	@FXML
 	public void handleSubmitBtn() {
-		_nextButton.setDisable(false);
+		
 		_attemptCounter.increaseCounter();
+		
+		_nextButton.setDisable(false);
 		_playBtn.setDisable(true);
+		
 		Answer answer=new Answer();
 		boolean correctness=answer.checkAnswer(_num);
 		if(correctness) {
 			Image image=new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(),true);
 			_correctnessImage.setImage(image);
 			
-			if(_recCounter.getCounter()==1) { ///bugs here
+			if(_recCounter.getCounter()==1) { 
 				_scoreCounter.increaseCounter();
 			}
 			String s=answer.getPLayerAnswer();
@@ -206,11 +201,10 @@ public class GameFrameController {
 	
 	@FXML
 	public void handlePlayBtn() {
-		_playBtn.setDisable(true);
-		_reBtn.setDisable(true);
-		_submitBtn.setDisable(true);
-		_nextButton.setDisable(true);
-		_backBtn.setDisable(true);
+
+		lockAllBtns();
+		waitCursor();
+		
 		PlayWorker playworker=new PlayWorker();
 		Thread thread=new Thread(playworker);
 		thread.start();
@@ -225,11 +219,16 @@ public class GameFrameController {
 
 	public void setMainApp(MainApp mainApp){
 		_mainApp=mainApp;
+		normaliseCursor();
 	}	
 
 	public void setPlayer(Player player) {
 		_player=player;
 	}
+	
+	
+	
+	
 	//need to be refactored
 	public void showPopOver() {
 
@@ -241,20 +240,61 @@ public class GameFrameController {
 		popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
 		popover.show(_playBtn);
 
-		FadeTransition fade=new FadeTransition(Duration.seconds(5),popover.getRoot());
+		FadeTransition fade=new FadeTransition(Duration.seconds(1.5),popover.getRoot());
 		fade.setFromValue(1);
 		fade.setToValue(0);
 		fade.setOnFinished(e->popover.hide());
 		fade.play();
 	}
+	
+	
+	//a method to release all the buttons
+	public void releaseAllBtns() {
+		_playBtn.setDisable(false);
+		_reBtn.setDisable(false);
+		_submitBtn.setDisable(false);
+		_backBtn.setDisable(false);
+	}
 
-
+	//a method to release all the buttons
+	public void lockAllBtns() {
+		_playBtn.setDisable(true);
+		_reBtn.setDisable(true);
+		_submitBtn.setDisable(true);		
+		_backBtn.setDisable(true);
+		_nextButton.setDisable(true);
+	}
+	
+	//a method to lock btns except backbtn
+	public void lockSomeBtns(){
+		_playBtn.setDisable(true);
+		_submitBtn.setDisable(true);
+		_nextButton.setDisable(true);
+	}
+	
+	//a method to change the cursor to wait state
+	public void waitCursor() {		
+		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
+		_anchorPane.setCursor(Cursor.WAIT);
+		_playerAnswer.setCursor(Cursor.WAIT);
+		_correctAnswer.setCursor(Cursor.WAIT);
+	}
+	
+	//a method to change the cursor to normal state
+		public void normaliseCursor() {		
+			_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
+			_anchorPane.setCursor(Cursor.DEFAULT);
+			_playerAnswer.setCursor(Cursor.DEFAULT);
+			_correctAnswer.setCursor(Cursor.DEFAULT);
+		}
+	
+	
 	//this is the worker class that is used to record recordings
 	class DoWork extends Task<Void>{
 
 		@Override
 		protected Void call() throws Exception {
-			_reBtn.setDisable(true);
+			//_reBtn.setDisable(true);
 			Recorder recorder=new Recorder();
 			recorder.record();		
 			recorder.recordToWord();
@@ -267,16 +307,13 @@ public class GameFrameController {
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
-					//_reBtn.setText("Try Again");
+
 					Image image=new Image(getClass().getClassLoader().getResource("resources/replay1.png").toString());
 					_reBtn.setGraphic(new ImageView(image));
 					
-					_playBtn.setDisable(false);
-					_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
-					_anchorPane.setCursor(Cursor.DEFAULT);
-					_reBtn.setDisable(false);
-					_submitBtn.setDisable(false);
-					_backBtn.setDisable(false);
+					releaseAllBtns();
+					normaliseCursor();
+					
 					Answer answer=new Answer();
 					answer.checkAnswer(_num);
 					if(answer.getPLayerAnswer().isEmpty()) {
@@ -309,10 +346,8 @@ public class GameFrameController {
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
-					_playBtn.setDisable(false);
-					_reBtn.setDisable(false);
-					_submitBtn.setDisable(false);
-					_backBtn.setDisable(false);
+					normaliseCursor();
+					releaseAllBtns();
 				}
 			});
 		}
