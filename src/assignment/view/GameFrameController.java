@@ -96,6 +96,7 @@ public class GameFrameController {
 		
 		Image image=new Image(getClass().getClassLoader().getResource("resources/gameImage.jpg").toString());
 		_imageView.setImage(image);
+
 		Image reImage=new Image(getClass().getClassLoader().getResource("resources/record2.png").toString());
 		_reBtn.setGraphic(new ImageView(reImage));
 		Image playImage=new Image(getClass().getClassLoader().getResource("resources/play1.png").toString());

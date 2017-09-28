@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="SE206">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/controlsfx-8.40.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
