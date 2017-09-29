@@ -3,6 +3,8 @@ package assignment.view;
 import assignment.MainApp;
 import assignment.model.Player;
 import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -61,15 +63,16 @@ public class UserNameFrameController {
             _button.setDisable(false);
             //sets the text that is inputted into the field as the name of the player
             _player.setName(_textfield.getText());
-            _mainapp.showLevelLayout(_player);
+
+            makeFadeOutLevel();
 
         }
     }
 
     @FXML
     public void BackButtonControl() {
-        //to the set the back button to go back to the main menu
-        _mainapp.initMainFrame();
+        //fades out to the main menu frame
+        makeFadeOutMainMenu();
     }
 
     @FXML
@@ -101,6 +104,47 @@ public class UserNameFrameController {
         fadeout.setFromValue(0.0);
         fadeout.setToValue(1.0);
         fadeout.play();
+
+
+    }
+
+    /**
+     * this fades out the main menu screen
+     */
+    public void makeFadeOutMainMenu() {
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(1.0);
+        fadeout.setToValue(0.0);
+        fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _mainapp.initMainFrame();
+            }
+        });
+        fadeout.play();
+
+
+    }
+
+    /**
+     * fadeOut for the level screen
+     */
+    public void makeFadeOutLevel() {
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(1.0);
+        fadeout.setToValue(0.0);
+        fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _mainapp.showLevelLayout(_player);
+            }
+        });
+        fadeout.play();
+
 
 
     }

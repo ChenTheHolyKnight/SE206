@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8397b3bc-a936-4dda-a7d1-9f01f9dd578d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foo.wav" afterPath="$PROJECT_DIR$/foo.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/MainFrameController$1.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/MainFrameController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/MainFrameController.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/MainFrameController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/UserNameFrameController.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/UserNameFrameController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/GameFrame2.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/GameFrame2.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/GameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/GameFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/MainFrame2.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/MainFrame2.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/LevelLayoutFrame.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/LevelLayoutFrame.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/LevelLayoutFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/LevelLayoutFrameController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/MainFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/MainFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/UserNameFrame.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/UserNameFrame.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,36 +24,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameFrameController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameFrameController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="863">
-              <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+            <state relative-caret-position="-4725">
+              <caret line="231" column="27" lean-forward="true" selection-start-line="231" selection-start-column="27" selection-end-line="231" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="112" column="70" lean-forward="false" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainFrameController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assignment/view/MainFrameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="65" column="47" lean-forward="false" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
-              <folding>
-                <element signature="e#1518#1519#0" expanded="true" />
-                <element signature="e#1557#1558#0" expanded="true" />
+                <element signature="e#12212#12213#0" expanded="true" />
+                <element signature="e#12256#12257#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,9 +41,12 @@
       <file leaf-file-name="UserNameFrameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="98" column="47" lean-forward="false" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
-              <folding />
+            <state relative-caret-position="255">
+              <caret line="145" column="23" lean-forward="true" selection-start-line="134" selection-start-column="8" selection-end-line="145" selection-end-column="23" />
+              <folding>
+                <element signature="e#3986#3987#0" expanded="true" />
+                <element signature="e#4051#4052#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -84,9 +72,10 @@
         <option value="$PROJECT_DIR$/src/assignment/view/mainFrame2.css" />
         <option value="$PROJECT_DIR$/src/assignment/view/GameFrame.css" />
         <option value="$PROJECT_DIR$/src/assignment/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/GameFrameController.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/MainFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/LevelLayoutFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/GameFrameController.java" />
       </list>
     </option>
   </component>
@@ -114,6 +103,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,10 +142,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RecentsManager">
@@ -334,10 +323,51 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3420">
+          <caret line="221" column="0" lean-forward="false" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
+            <element signature="e#12256#12257#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2016">
+          <caret line="112" column="70" lean-forward="false" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/MainFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2124">
+          <caret line="129" column="0" lean-forward="false" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+          <folding>
+            <element signature="e#3986#3987#0" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9126">
           <caret line="540" column="15" lean-forward="false" selection-start-line="540" selection-start-column="15" selection-end-line="540" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
+            <element signature="e#12256#12257#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -346,7 +376,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="774">
           <caret line="43" column="1" lean-forward="true" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -354,7 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="30" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="34" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -364,6 +392,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
+            <element signature="e#12256#12257#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -374,45 +404,45 @@
           <caret line="166" column="9" lean-forward="false" selection-start-line="166" selection-start-column="9" selection-end-line="166" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
+            <element signature="e#12256#12257#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrame.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrame.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrame.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/mainFrame2.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
           <caret line="34" column="30" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="34" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -420,19 +450,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="43" column="1" lean-forward="false" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/TutorialFrame.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/TutorialFrameController.java">
@@ -443,39 +472,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrameController.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/MainFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="221" column="0" lean-forward="true" selection-start-line="221" selection-start-column="0" selection-end-line="221" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="18">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
+        <state relative-caret-position="511">
           <caret line="112" column="70" lean-forward="false" selection-start-line="112" selection-start-column="70" selection-end-line="112" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/LevelLayoutFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="98" column="47" lean-forward="false" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="-1174">
+          <caret line="57" column="31" lean-forward="true" selection-start-line="57" selection-start-column="31" selection-end-line="57" selection-end-column="31" />
+          <folding>
+            <element signature="e#2937#2938#0" expanded="true" />
+            <element signature="e#2997#2998#0" expanded="true" />
+            <element signature="e#3427#3428#0" expanded="true" />
+            <element signature="e#3498#3499#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/MainFrameController.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/UserNameFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="65" column="47" lean-forward="false" selection-start-line="65" selection-start-column="47" selection-end-line="65" selection-end-column="47" />
+        <state relative-caret-position="255">
+          <caret line="145" column="23" lean-forward="true" selection-start-line="134" selection-start-column="8" selection-end-line="145" selection-end-column="23" />
           <folding>
-            <element signature="e#1518#1519#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+            <element signature="e#4051#4052#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/GameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4725">
+          <caret line="231" column="27" lean-forward="true" selection-start-line="231" selection-start-column="27" selection-end-line="231" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12212#12213#0" expanded="true" />
+            <element signature="e#12256#12257#0" expanded="true" />
           </folding>
         </state>
       </provider>

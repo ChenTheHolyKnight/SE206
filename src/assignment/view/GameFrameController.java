@@ -80,6 +80,9 @@ public class GameFrameController {
 	@FXML
 	private AnchorPane _anchorPane;
 
+	@FXML
+	private Pane _rootPane;
+
 
 	//private variables for functionality
 	private Level _level;
@@ -114,6 +117,11 @@ public class GameFrameController {
 	 */
 	@FXML
 	public void initialize() {
+		//setting the fade in transition
+		_rootPane.setOpacity(0);
+		makeFadeIn();
+
+
 
 		//initialize the counters which is are required
 		_frameCounter = new Counter(10);
@@ -221,7 +229,7 @@ public class GameFrameController {
 		_player.resetStats();
 
 		//show the level layout
-		_mainApp.showLevelLayout(_player);
+		makeFadeOutLevel();
 
 	}
 
@@ -464,6 +472,36 @@ public class GameFrameController {
 			_correctAnswer.setCursor(Cursor.DEFAULT);
 		}
 
+
+	public void makeFadeIn() {
+
+		FadeTransition fadeout = new FadeTransition();
+		fadeout.setDuration(Duration.millis(750));
+		fadeout.setNode(_rootPane);
+		fadeout.setFromValue(0.0);
+		fadeout.setToValue(1.0);
+		fadeout.play();
+
+
+	}
+
+	public void makeFadeOutLevel() {
+		FadeTransition fadeout = new FadeTransition();
+		fadeout.setDuration(Duration.millis(750));
+		fadeout.setNode(_rootPane);
+		fadeout.setFromValue(1.0);
+		fadeout.setToValue(0.0);
+		fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				_mainApp.showLevelLayout(_player);
+			}
+		});
+		fadeout.play();
+
+
+
+	}
 
 	/**
 	 * this is a worker class which shall do the recording in the background

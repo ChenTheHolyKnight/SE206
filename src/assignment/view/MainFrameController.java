@@ -23,9 +23,12 @@ public class MainFrameController implements Initializable{
 
 	@FXML
 	private Pane _rootPane;
-	
+
+
+
 	@FXML
 	public void handleStartButton() {
+
 		makeFadeOutStart();
 
 		
@@ -53,7 +56,8 @@ public class MainFrameController implements Initializable{
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
+		_rootPane.setOpacity(0);
+		makeFadeIn();
 		
 	}
 
@@ -73,6 +77,15 @@ public class MainFrameController implements Initializable{
 				_mainApp.showUserNameFrame();
 			}
 		});
+		fadeout.play();
+	}
+
+	public void makeFadeIn() {
+		FadeTransition fadeout = new FadeTransition();
+		fadeout.setDuration(Duration.millis(750));
+		fadeout.setNode(_rootPane);
+		fadeout.setFromValue(0.0);
+		fadeout.setToValue(1.0);
 		fadeout.play();
 	}
 	

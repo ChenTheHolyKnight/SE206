@@ -5,7 +5,12 @@ import assignment.model.EasyLevel;
 import assignment.model.HardLevel;
 import assignment.model.Level;
 import assignment.model.Player;
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 /**
  * this is the controller for the Level Layout Frame
@@ -17,6 +22,18 @@ public class LevelLayoutFrameController {
     private Level _level;
     private Player _player;
 
+    @FXML
+    private Pane _pane;
+
+
+    public void initialize() {
+        _pane.setOpacity(0);
+        makeFadeIn();
+
+
+    }
+
+
 
     /**
      * this is the action for the back button which returns user to the nameframe
@@ -24,7 +41,7 @@ public class LevelLayoutFrameController {
     @FXML
     public void backButtonAction() {
         //calling the userName frame
-        _mainapp.showUserNameFrame();
+        makeFadeOutUserName();
 
     }
 
@@ -38,7 +55,7 @@ public class LevelLayoutFrameController {
         _level = new EasyLevel();
 
         //show the corresponding game frame
-        _mainapp.showGameFrame(_level, _player);
+        makeFadeOutGameFrame();
     }
 
     /**
@@ -49,14 +66,14 @@ public class LevelLayoutFrameController {
         //set the level to hard
         _level = new HardLevel();
 
-        _mainapp.showGameFrame(_level, _player);
+        makeFadeOutGameFrame();
     }
 
     public void tutorialButtonAction() {
 
         /**
          * shall show the tutorial frame when it is clicked in demonstrating how to play the
-         * game
+         * game with a simply layout
          */
 
     }
@@ -73,5 +90,67 @@ public class LevelLayoutFrameController {
     public void setPlayer(Player player) {
         _player = player;
     }
+
+    /**
+     * this is the fade in transition for the pane to add a sort of aesthetic effect
+     */
+    public void makeFadeIn() {
+
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(0.0);
+        fadeout.setToValue(1.0);
+        fadeout.play();
+
+
+    }
+
+
+    /**
+     * this are the fade in and fade out methods for the aesthetics
+     */
+    public void makeFadeOutUserName() {
+
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(1.0);
+        fadeout.setToValue(0.0);
+        fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _mainapp.showUserNameFrame();
+            }
+        });
+        fadeout.play();
+
+    }
+
+    public void makeFadeOutGameFrame() {
+
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(1.0);
+        fadeout.setToValue(0.0);
+        fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _mainapp.showGameFrame(_level, _player);
+            }
+        });
+        fadeout.play();
+
+
+
+    }
+
+
+
+
+
+
+
 
 }

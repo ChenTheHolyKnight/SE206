@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="_anchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@GameFrame.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.GameFrameController">
    <children>
-      <Pane layoutX="221.0" layoutY="9.0" prefHeight="590.0" prefWidth="572.0" styleClass="box" stylesheets="@GameFrame.css">
+      <Pane fx:id="_rootPane" layoutX="221.0" layoutY="9.0" prefHeight="590.0" prefWidth="572.0" styleClass="box" stylesheets="@GameFrame.css">
          <children>
             <JFXButton fx:id="_playBtn" layoutX="134.0" layoutY="26.0" onAction="#handlePlayBtn" prefHeight="55.0" prefWidth="84.0" />
             <JFXButton fx:id="_reBtn" layoutX="236.0" layoutY="15.0" onAction="#handleRecordButton" prefHeight="78.0" prefWidth="109.0" />

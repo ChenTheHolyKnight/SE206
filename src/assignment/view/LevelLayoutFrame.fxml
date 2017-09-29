@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.LevelLayoutFrameController">
    <children>
-      <Pane layoutX="330.0" layoutY="133.0" prefHeight="353.0" prefWidth="340.0" styleClass="box" stylesheets="@mainFrame2.css">
+      <Pane fx:id="_pane" layoutX="330.0" layoutY="133.0" prefHeight="353.0" prefWidth="340.0" styleClass="box" stylesheets="@mainFrame2.css">
          <children>
             <Label layoutX="70.0" layoutY="14.0" prefHeight="81.0" prefWidth="200.0" text="Level" textFill="#0072ff">
                <font>
