@@ -176,7 +176,9 @@ public class GameFrameController {
 			_num = _level.generateNumber();
 			_label.setText(Integer.toString(_num));
 
+
 			//translate transition
+			/**
 			TranslateTransition transition = new TranslateTransition(Duration.millis(500), _imageView1);
 			transition.setByX(-1000f);
 			transition.setFromX(0);
@@ -188,6 +190,21 @@ public class GameFrameController {
 				}
 			});
 			transition.playFromStart();
+			*/
+
+			//fade transition cause it looks cooler :P
+			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
+			fadeout.setFromValue(1.0);
+			fadeout.setToValue(0.0);
+			fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+				@Override
+				public void handle(ActionEvent event) {
+					_imageView1.setImage(null);
+					fadeout.stop();
+				}
+			});
+			fadeout.playFromStart();
+
 
 		} else {
 
