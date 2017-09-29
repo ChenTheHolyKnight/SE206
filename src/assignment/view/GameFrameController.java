@@ -365,125 +365,194 @@ public class GameFrameController {
 	 * gives a pop up message plan to use for the tutorial screen
 	 */
 	public void showPopOver() {
+		//set the label which is too be used by the popover
+		Label label = new Label();
+		label.setText("press play to play the recording");
 
-		Label label=new Label();
-		label.setText("Press play to play your recording");
-		
-		PopOver popover=new PopOver(label);
+		//generating the popOver and setting the location
+		PopOver popover = new PopOver(label);
 		popover.setFadeOutDuration(new Duration(1000));
 		popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
 		popover.show(_playBtn);
 
-		FadeTransition fade=new FadeTransition(Duration.seconds(1.5),popover.getRoot());
+		//Fade transition can be refactored into another method
+		fadeTransitionPopOver(popover);
+	}
+
+
+	/**
+	 * this is method which which carries out the FadeTransition by taking the
+	 * parameter of Popover
+	 */
+	public void fadeTransitionPopOver(PopOver popover) {
+
+		FadeTransition fade = new FadeTransition(Duration.seconds(1.0), popover.getRoot());
 		fade.setFromValue(1);
 		fade.setToValue(0);
 		fade.setOnFinished(e->popover.hide());
 		fade.play();
 	}
-	
-	
-	//a method to release all the buttons
+
+
+	/**
+	 * this method releases all the buttons
+	 */
 	public void releaseAllBtns() {
+
+		//disable all buttons
 		_playBtn.setDisable(false);
 		_reBtn.setDisable(false);
 		_submitBtn.setDisable(false);
 		_backBtn.setDisable(false);
 	}
 
-	//a method to release all the buttons
+	/**
+	 * this method locks all the buttons
+	 */
 	public void lockAllBtns() {
+
+		//lock every button
 		_playBtn.setDisable(true);
 		_reBtn.setDisable(true);
-		_submitBtn.setDisable(true);		
+		_submitBtn.setDisable(true);
 		_backBtn.setDisable(true);
 		_nextButton.setDisable(true);
 	}
-	
-	//a method to lock btns except backbtn
+
+	/**
+	 * all other buttons are locked except the back button
+	 */
 	public void lockSomeBtns(){
+
+		//setting the buttons to disabled state
 		_playBtn.setDisable(true);
 		_submitBtn.setDisable(true);
 		_nextButton.setDisable(true);
 	}
 	
 	//a method to change the cursor to wait state
+
+	/**
+	 * change the cursor to a wait state when the recording occurs such that
+	 * it can't be used to disrupt the entire program
+	 */
 	public void waitCursor() {		
+
+		//do this to the components of the scene
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
 		_playerAnswer.setCursor(Cursor.WAIT);
 		_correctAnswer.setCursor(Cursor.WAIT);
 	}
+
+
 	
 	//a method to change the cursor to normal state
-		public void normaliseCursor() {		
+
+	/**
+	 * changing the cursor back to the normalise state where the cursor can be used
+	 * once again
+	 */
+		public void normaliseCursor() {
+
+			//get control of the cursor once again
 			_mainApp.getPrimaryStage().getScene().setCursor(Cursor.DEFAULT);
 			_anchorPane.setCursor(Cursor.DEFAULT);
 			_playerAnswer.setCursor(Cursor.DEFAULT);
 			_correctAnswer.setCursor(Cursor.DEFAULT);
 		}
-	
-	
-	//this is the worker class that is used to record recordings
+
+
+	/**
+	 * this is a worker class which shall do the recording in the background
+	 * whenever the record button is presed
+	 */
 	class DoWork extends Task<Void>{
 
 		@Override
 		protected Void call() throws Exception {
-			//_reBtn.setDisable(true);
-			Recorder recorder=new Recorder();
-			recorder.record();		
+
+			//set the record to store the recording
+			Recorder recorder = new Recorder();
+			recorder.record();
 			recorder.recordToWord();
 			return null;
 		}
 
-
 		@Override
 		protected void done() {
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
 
-					Image image=new Image(getClass().getClassLoader().getResource("resources/replay1.png").toString());
+					//setting the new image which is replay
+					Image image = new Image(getClass().getClassLoader().getResource("resources/replay1.png").toString());
 					_reBtn.setGraphic(new ImageView(image));
-					
+
 					releaseAllBtns();
 					normaliseCursor();
-					
-					Answer answer=new Answer();
+
+					//check for a Recording
+					Answer answer = new Answer();
 					answer.checkAnswer(_num);
-					if(answer.getPLayerAnswer().isEmpty()) {
+
+					if (answer.getPLayerAnswer().isEmpty()) {
 						Notifications.create()
-									.text("no voice detected,please try again")
-									.position(Pos.CENTER)
-									.hideAfter(Duration.seconds(1))
-									.showWarning();						
+								.text("no voice detected, Please try Again")
+								.position(Pos.CENTER)
+								.hideAfter(Duration.seconds(1))
+								.showWarning();
 					}
-					if(!_isPopOverShown) {
+
+					//showing the popOver and checking it off
+					if (!_isPopOverShown) {
 						showPopOver();
-						_isPopOverShown=true;
+						_isPopOverShown = true;
 					}
+
+
+
+
 				}
 			});
+
+
+
 		}
+
+
+
 	}
-	
+
+	/**
+	 * play worker is the worker class which allows the playing of the
+	 * recording when the play button is pressed in the background
+	 */
 	class PlayWorker extends Task<Void>{
+
 		@Override
 		protected Void call() throws Exception {
-			Recorder recorder=new Recorder();
+			Recorder recorder = new Recorder();
 			recorder.playRecord();
 			return null;
 		}
-		
-		
+
 		@Override
-		protected void done() {
+		protected  void done() {
+
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
+
+					//make this for doing other methods
 					normaliseCursor();
 					releaseAllBtns();
+
+
 				}
 			});
+
+
 		}
 		
 		
