@@ -151,21 +151,24 @@ public class MainApp extends Application{
 	
 	//Tutorial frame
 
-	public void showTutorialFrame() {
+	public void showTutorialFrame(Level level, Player player) {
 		try {
+
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/TutorialFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/TutFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
-			TutorialFrameController controller = loader.getController();
+			TutFrameController controller = loader.getController();
 			controller.setMainApp(this);
+			controller.setLevel(level);
+			controller.setPlayer(player);
+
 
 		} catch (IOException e) {
 			e.printStackTrace();
-
 		}
 	}
 	

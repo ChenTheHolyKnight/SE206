@@ -69,12 +69,15 @@ public class LevelLayoutFrameController {
         makeFadeOutGameFrame();
     }
 
+    /**
+     * this is the tutorial button which moves the player to the tutorial frame which is a sort
+     * of an unlimited game which has popovers everytime
+     */
     public void tutorialButtonAction() {
 
-        /**
-         * shall show the tutorial frame when it is clicked in demonstrating how to play the
-         * game with a simply layout
-         */
+        _level = new EasyLevel();
+
+        makeFadeOutTutorial();
 
     }
 
@@ -143,6 +146,23 @@ public class LevelLayoutFrameController {
         fadeout.play();
 
 
+
+    }
+
+    public void makeFadeOutTutorial() {
+
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(1.0);
+        fadeout.setToValue(0.0);
+        fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                _mainapp.showTutorialFrame(_level, _player);
+            }
+        });
+        fadeout.play();
 
     }
 
