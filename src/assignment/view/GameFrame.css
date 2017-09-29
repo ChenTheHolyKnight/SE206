@@ -24,3 +24,21 @@
     -fx-text-fill: #E9E4F0;
 
 }
+
+.buttonN_B {
+
+    -fx-background-color: #0072ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: #E9E4F0;
+
+}
+
+.buttonN_B:hover {
+
+    -fx-background-color: #E9E4F0;
+    -fx-text-fill: #0072ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-color: #f83600;
+}
