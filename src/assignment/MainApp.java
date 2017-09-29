@@ -1,13 +1,7 @@
 package assignment;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.prefs.Preferences;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.model.Player;
@@ -15,8 +9,6 @@ import assignment.view.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -24,8 +16,6 @@ import javafx.stage.Stage;
 public class MainApp extends Application{
 	private Stage _primaryStage;
 	
-	private List<Player> _players;
-
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		_primaryStage=primaryStage;
@@ -159,47 +149,8 @@ public class MainApp extends Application{
 	
 	
 	
-	//Tutorial frame
-
-	public void showTutorialFrame() {
-		try {
-			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/TutorialFrame.fxml"));
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-
-			Scene scene=new Scene(anchorPane);
-			_primaryStage.setScene(scene);
-			_primaryStage.show();
-			TutorialFrameController controller = loader.getController();
-			controller.setMainApp(this);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-	}
 	
-		
-
-
-	//Score frame
-	public void showScoreFrame() {
-		try {
-			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/ScoreMenu.fxml"));
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-
-			Scene scene=new Scene(anchorPane);
-			_primaryStage.setScene(scene);
-			_primaryStage.show();
-			ScoreMenuController controller = loader.getController();
-			controller.setMainApp(this);
-
-		} catch (IOException e) {
-			e.printStackTrace();
-
-		}
-	}
+	
 	
 	//get the PrimaryStage
 	public Stage getPrimaryStage() {

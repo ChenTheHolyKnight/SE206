@@ -15,19 +15,14 @@
                   <Font name="DejaVu Sans Bold" size="85.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="76.0" layoutY="157.0" onAction="#handleStartButton" prefHeight="46.0" prefWidth="187.0" stylesheets="@mainFrame2.css" text="Start" textFill="#deebdf">
+            <JFXButton buttonType="RAISED" layoutX="75.0" layoutY="173.0" onAction="#handleStartButton" prefHeight="50.0" prefWidth="180.0" text="Start" textFill="#deebdf">
                <font>
                   <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="124.0" layoutY="223.0" onAction="#handleScoreButton" prefHeight="36.0" prefWidth="89.0" text="Score" textFill="#e9e4f0">
+            <JFXButton buttonType="RAISED" layoutX="75.0" layoutY="269.0" onAction="#handleExitButton" prefHeight="50.0" prefWidth="180.0" text="Quit" textFill="#e9e4f0">
                <font>
-                  <Font name="DejaVu Sans Bold" size="13.0" />
-               </font>
-            </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="124.0" layoutY="269.0" onAction="#handleExitButton" prefHeight="36.0" prefWidth="89.0" text="Quit" textFill="#e9e4f0">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="13.0" />
+                  <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
             </JFXButton>
          </children></Pane>
