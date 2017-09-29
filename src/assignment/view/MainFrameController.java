@@ -7,18 +7,27 @@ import java.util.ResourceBundle;
 
 
 import assignment.MainApp;
+import javafx.animation.FadeTransition;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 import org.controlsfx.control.PopOver;
 
 
 public class MainFrameController implements Initializable{
 	private MainApp _mainApp;
+
+	@FXML
+	private Pane _rootPane;
 	
 	@FXML
 	public void handleStartButton() {
-		// moves to the show userFrame
-		_mainApp.showUserNameFrame();
+		makeFadeOutStart();
+
 		
 	}
 	
@@ -48,15 +57,23 @@ public class MainFrameController implements Initializable{
 		
 	}
 
-	@FXML
-	public void popOverStart() {
-		//this is a method which allows a popover to occur over the button to explain to the user
-		//what the button is used for
-		//PopOver popOver = new PopOver();
-
-
-
-
+	/**
+	 * this is used to make a fadeOut Transition from the mainFrame and then shall be allowed to
+	 * make a fadeIn transition to the next frame
+	 */
+	public void makeFadeOutStart() {
+		FadeTransition fadeout = new FadeTransition();
+		fadeout.setDuration(Duration.millis(750));
+		fadeout.setNode(_rootPane);
+		fadeout.setFromValue(1.0);
+		fadeout.setToValue(0.0);
+		fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				_mainApp.showUserNameFrame();
+			}
+		});
+		fadeout.play();
 	}
 	
 	

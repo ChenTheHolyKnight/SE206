@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.UserNameFrameController">
    <children>
-      <Pane layoutX="259.0" layoutY="179.0" prefHeight="220.0" prefWidth="487.0" styleClass="box">
+      <Pane fx:id="_pane" layoutX="259.0" layoutY="179.0" prefHeight="220.0" prefWidth="487.0" styleClass="box">
          <children>
             <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#BackButtonControl" prefHeight="38.0" prefWidth="97.0" text="Back">
                <font>

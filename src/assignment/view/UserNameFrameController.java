@@ -2,9 +2,12 @@ package assignment.view;
 
 import assignment.MainApp;
 import assignment.model.Player;
+import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
+import javafx.util.Duration;
 
 public class UserNameFrameController {
 
@@ -20,6 +23,9 @@ public class UserNameFrameController {
 
     private Player _player;
 
+    @FXML
+    private Pane _pane;
+
     //setting the MainApp to what is given
     public void setMainApp(MainApp mainapp) {
 
@@ -34,6 +40,10 @@ public class UserNameFrameController {
      */
     @FXML
     public void initialize() {
+        //setting the pane to not be present
+        _pane.setOpacity(0);
+        makeFadeIn();
+
         //here we set the button to disabled and then we initialize a player object
         _button.setDisable(true);
         _player = new Player();
@@ -78,6 +88,21 @@ public class UserNameFrameController {
     public String getName() {
         //we can get the name value from the textvalue which is attained
         return _textfield.getText();
+    }
+
+    /**
+     * this a fadeIn transition for the the pane which holds the contents
+     */
+    public void makeFadeIn() {
+
+        FadeTransition fadeout = new FadeTransition();
+        fadeout.setDuration(Duration.millis(750));
+        fadeout.setNode(_pane);
+        fadeout.setFromValue(0.0);
+        fadeout.setToValue(1.0);
+        fadeout.play();
+
+
     }
 
 

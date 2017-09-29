@@ -177,21 +177,6 @@ public class GameFrameController {
 			_label.setText(Integer.toString(_num));
 
 
-			//translate transition
-			/**
-			TranslateTransition transition = new TranslateTransition(Duration.millis(500), _imageView1);
-			transition.setByX(-1000f);
-			transition.setFromX(0);
-			transition.setOnFinished(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(ActionEvent event) {
-					_imageView1.setImage(null);
-					transition.stop();
-				}
-			});
-			transition.playFromStart();
-			*/
-
 			//fade transition cause it looks cooler :P
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
 			fadeout.setFromValue(1.0);
