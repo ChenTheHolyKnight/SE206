@@ -110,7 +110,7 @@ public class MainApp extends Application{
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/GameFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/GameFrame2.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
