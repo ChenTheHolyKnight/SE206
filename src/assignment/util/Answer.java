@@ -12,7 +12,11 @@ public class Answer {
 		_answer=new ArrayList<String>();
 		loadAnswerList();
 	}
-
+	
+	/**
+	 * This is a method to check the answer by seperating the number to tenth and oneth and determine whether the 
+	 * player's answer is correct or not
+	 */
 	public boolean checkAnswer(int num) {
 
 		FileReader reader=new FileReader();
@@ -22,7 +26,6 @@ public class Answer {
 		}else if(_list.size()==0) {
 			return false;
 		}
-
 
 		if(num<10) {
 			_answer.add(_answerList.get(num-1));
@@ -42,19 +45,27 @@ public class Answer {
 			return _answer.equals(_list);
 		}
 	}
-
+	
+	/**
+	 * A method to get the correct answer
+	 */
 	public String getAnswer(){
 		String answer=String.join(" ", _answer);
 		return answer;
 	}
 
+	/**
+	 * A method to get a players answer
+	 */
 	public String getPLayerAnswer(){
 			String list=String.join(" ", _list);
 			return list;
 	}
 	
 
-
+	/**
+	 * This is a method to load 1 to 10 in Maori to the answer list
+	 */
 	private void loadAnswerList() {
 		_answerList.add("tahi");
 		_answerList.add("rua");

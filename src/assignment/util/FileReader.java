@@ -19,6 +19,9 @@ public class FileReader {
 		}
 	}
 	
+	/**
+	 * This is to read the file that stores users answer
+	 */
 	private void readFile() {
 		try (Scanner scanner=new Scanner(new File(System.getProperty("user.dir")+"/recout.mlf"))){
 			while(scanner.hasNextLine()) {
@@ -30,15 +33,20 @@ public class FileReader {
 		}
 	}
 	
+	/**
+	 * This is to trim the content read from the file to remain the Maori numbers
+	 */
 	private void trimFile() throws Exception{
-		//need to catch no input exception
-		
 		_recordFile.remove(0);
 		_recordFile.remove(0);
 		_recordFile.remove(0);
 		_recordFile.remove(_recordFile.size()-1);
 		_recordFile.remove(_recordFile.size()-1);
 	}
+	
+	/**
+	 * This is to get the content read from the file
+	 */
 	public List<String> getRecordFile(){
 		return _recordFile;
 	}
