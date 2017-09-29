@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
@@ -98,11 +99,8 @@ public class TutFrameController {
 
 
     //pop over boolean's
-    private boolean _isPopOverShownPlay = false;
-    private boolean _isPopOverShownRecord = false;
-    private boolean _isPopOverShownSubmit = false;
-    private boolean _isPopOverShownCorrectAnswer = false;
-    private boolean _isPopOverShownPlayerAnswer = false;
+    private boolean _isPopOverShown = false;
+
 
     /**
      * initialize method for the GameFrame , initializes the counters and
@@ -356,20 +354,206 @@ public class TutFrameController {
      * using the popOver which is from the controls fx library which basically
      * gives a pop up message plan to use for the tutorial screen
      */
+
+    /**
+     * popover methods for the rest of the PopOvers that are used which is for play, record
+     * and submit buttons
+     */
     public void showPopOverPlay() {
-        //set the label which is too be used by the popover
-        Label label = new Label();
-        label.setText("press play to play the recording");
+       if (_isPopOverShown == false) {
+           _isPopOverShown = true;
 
-        //generating the popOver and setting the location
-        PopOver popover = new PopOver(label);
-        //popover.setFadeOutDuration(new Duration(3000));
-        popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
-        popover.show(_playBtn);
+           //set the label which is too be used by the popover
+           Label label = new Label();
+           label.setText("press play to play the recording");
 
-        //Fade transition can be refactored into another method
-        fadeTransitionPopOver(popover);
+           //generating the popOver and setting the location
+           PopOver popover = new PopOver(label);
+           //popover.setFadeOutDuration(new Duration(3000));
+           popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+           popover.show(_playBtn);
+
+           _playBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+               @Override
+               public void handle(MouseEvent event) {
+                   fadeTransitionPopOver(popover);
+                   _isPopOverShown = false;
+               }
+           });
+
+       }
     }
+
+    public void showPopOverRecord() {
+        if (_isPopOverShown == false) {
+            //boolean the popOver value
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("press record to record a recording");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_reBtn);
+
+            //when the mouse is not in the button radius it fades out the popOver
+            _reBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+    }
+
+    public void showPopOverSubmit() {
+        if (_isPopOverShown == false) {
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("press submit to submit the Answer");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_submitBtn);
+
+
+            _submitBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+    }
+
+    public void showPopOverPlayerAnswer() {
+
+        if (_isPopOverShown == false) {
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("The Voice Input is displayed as your answer");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_playerAnswer);
+
+
+            _playerAnswer.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+
+    }
+
+    public void showPopOverCorrectAnswer() {
+
+        if (_isPopOverShown == false) {
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("This is the correct Maori representation of the number");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_correctAnswer);
+
+
+            _correctAnswer.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+
+    }
+
+    public void showPopOverBackBtn() {
+        if (_isPopOverShown == false) {
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("press back to go to the level layout");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_backBtn);
+
+
+            _backBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+
+    }
+
+    public void showPopOverNextButton() {
+        if (_isPopOverShown == false) {
+            _isPopOverShown = true;
+
+            //set the label which is too be used by the popover
+            Label label = new Label();
+            label.setText("press the next button to change the number that is tested");
+
+            //generating the popOver and setting the location
+            PopOver popover = new PopOver(label);
+            //popover.setFadeOutDuration(new Duration(3000));
+            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            popover.show(_nextButton);
+
+
+            _nextButton.setOnMouseExited(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    fadeTransitionPopOver(popover);
+                    _isPopOverShown = false;
+                }
+            });
+
+        }
+
+
+
+    }
+
 
 
     /**
@@ -378,12 +562,14 @@ public class TutFrameController {
      */
     public void fadeTransitionPopOver(PopOver popover) {
 
-        FadeTransition fade = new FadeTransition(Duration.seconds(3.0), popover.getRoot());
+        FadeTransition fade = new FadeTransition(Duration.seconds(0.1), popover.getRoot());
         fade.setFromValue(1);
         fade.setToValue(0);
         fade.setOnFinished(e->popover.hide());
         fade.play();
     }
+
+
 
 
     /**
@@ -526,11 +712,6 @@ public class TutFrameController {
                                 .showWarning();
                     }
 
-                    //showing the popOver and checking it off
-                    if (!_isPopOverShownPlay) {
-                        showPopOverPlay();
-                        _isPopOverShownPlay = true;
-                    }
 
 
 
