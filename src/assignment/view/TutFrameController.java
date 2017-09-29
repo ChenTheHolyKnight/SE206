@@ -562,7 +562,7 @@ public class TutFrameController {
      */
     public void fadeTransitionPopOver(PopOver popover) {
 
-        FadeTransition fade = new FadeTransition(Duration.seconds(0.1), popover.getRoot());
+        FadeTransition fade = new FadeTransition(Duration.seconds(0), popover.getRoot());
         fade.setFromValue(1);
         fade.setToValue(0);
         fade.setOnFinished(e->popover.hide());
