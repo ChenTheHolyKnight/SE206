@@ -33,6 +33,12 @@ public class Player {
 	public StringProperty getScoreProperty() {
 		return new SimpleStringProperty(Integer.toString(_score)+" out of 10");
 	}
+
+	public String setToString(int integer) {
+		//basically changing the integer values to that of a string
+		String s = ""+ integer;
+		return s;
+	}
 	
 	
 	public int getAttempts() {

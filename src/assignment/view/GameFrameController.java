@@ -374,20 +374,7 @@ public class GameFrameController {
 	 * using the popOver which is from the controls fx library which basically
 	 * gives a pop up message plan to use for the tutorial screen
 	 */
-	public void showPopOver() {
-		//set the label which is too be used by the popover
-		Label label = new Label();
-		label.setText("press play to play the recording");
 
-		//generating the popOver and setting the location
-		PopOver popover = new PopOver(label);
-		popover.setFadeOutDuration(new Duration(1000));
-		popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
-		popover.show(_playBtn);
-
-		//Fade transition can be refactored into another method
-		fadeTransitionPopOver(popover);
-	}
 
 
 	/**
@@ -544,11 +531,7 @@ public class GameFrameController {
 								.showWarning();
 					}
 
-					//showing the popOver and checking it off
-					if (!_isPopOverShown) {
-						showPopOver();
-						_isPopOverShown = true;
-					}
+
 
 
 

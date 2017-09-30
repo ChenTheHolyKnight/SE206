@@ -132,13 +132,13 @@ public class MainApp extends Application{
 		try {
 			
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/StatsFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/StatsResultsFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
-			StatsFrameController controller = loader.getController();
+			StatsFrameResultController controller = loader.getController();
 			controller.setPlayer(player);
 			controller.setMainApp(this);
 
