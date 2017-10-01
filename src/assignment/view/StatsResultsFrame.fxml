@@ -27,7 +27,10 @@
                      <font>
                         <Font name="DejaVu Sans Bold" size="18.0" />
                      </font></Label>
-                  <JFXTextField fx:id="_playerName" focusColor="#e9e4f0" layoutX="94.0" layoutY="12.0" prefHeight="24.0" prefWidth="215.0" unFocusColor="#e9e4f0" />
+                  <JFXTextField fx:id="_playerName" focusColor="#e9e4f0" layoutX="94.0" layoutY="2.0" prefHeight="24.0" prefWidth="215.0" unFocusColor="#e9e4f0">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="20.0" />
+                     </font></JFXTextField>
                </children>
             </Pane>
             <Pane layoutX="23.0" layoutY="203.0" prefHeight="48.0" prefWidth="332.0" styleClass="box2">
@@ -36,7 +39,7 @@
                      <font>
                         <Font name="DejaVu Sans Bold" size="18.0" />
                      </font></Label>
-                  <JFXTextField fx:id="_scoreResult" focusColor="#e9e4f0" layoutX="94.0" layoutY="12.0" prefHeight="24.0" prefWidth="215.0" unFocusColor="#e9e4f0" />
+                  <JFXTextField fx:id="_scoreResult" focusColor="#e9e4f0" layoutX="94.0" layoutY="2.0" prefHeight="36.0" prefWidth="215.0" unFocusColor="#e9e4f0" />
                </children>
             </Pane>
             <Pane layoutX="23.0" layoutY="285.0" prefHeight="48.0" prefWidth="332.0" styleClass="box2">
@@ -45,7 +48,7 @@
                      <font>
                         <Font name="DejaVu Sans Bold" size="18.0" />
                      </font></Label>
-                  <JFXTextField fx:id="_attempts" focusColor="#e9e4f0" layoutX="118.0" layoutY="12.0" prefHeight="24.0" prefWidth="189.0" unFocusColor="#e9e4f0" />
+                  <JFXTextField fx:id="_attempts" focusColor="#e9e4f0" layoutX="118.0" layoutY="2.0" prefHeight="33.0" prefWidth="191.0" unFocusColor="#e9e4f0" />
                </children>
             </Pane>
             <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="376.0" onAction="#handlePlayAgainButton" prefHeight="36.0" prefWidth="104.0" styleClass="buttonN_B" text="Play Again">

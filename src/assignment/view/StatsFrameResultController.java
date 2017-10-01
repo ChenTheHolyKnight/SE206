@@ -31,7 +31,7 @@ public class StatsFrameResultController {
     private JFXTextField _attempts;
 
     @FXML
-    private ObservableList<Player> _players= FXCollections.observableArrayList();
+    private Player _players;
 
     @FXML
     private JFXButton _button;
@@ -44,11 +44,6 @@ public class StatsFrameResultController {
     public void initialize() {
         _rootPane.setOpacity(0);
         makeFadeIn();
-
-
-        _playerName.setText(_players.get(0).getName());
-        _scoreResult.setText(_players.get(0).setToString(_players.get(0).getScore()));
-        _attempts.setText(_players.get(0).setToString(_players.get(0).getAttempts()));
 
 
     }
@@ -65,7 +60,10 @@ public class StatsFrameResultController {
     }
 
     public void setPlayer(Player player) {
-        _players.add(player);
+        _players = player;
+        _playerName.setText(_players.getName());
+        _scoreResult.setText(Integer.toString(_players.getScore()));
+        _attempts.setText(Integer.toString(_players.getAttempts()));
         if(player.getLevel().getLevels().equals(Level.Levels.HARD)) {
             _button.setDisable(true);
             _button.setOpacity(0);
@@ -103,7 +101,7 @@ public class StatsFrameResultController {
         fadeout.setOnFinished(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                _mainApp.showGameFrame(_players.get(0).getLevel(), _players.get(0));
+                _mainApp.showGameFrame(_players.getLevel(), _players);
             }
         });
         fadeout.play();
