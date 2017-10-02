@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@GameFrame.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.StatsFrameResultController">
+   <children>
+      <Pane fx:id="_rootPane" layoutX="311.0" layoutY="86.0" prefHeight="429.0" prefWidth="378.0" styleClass="box">
+         <children>
+            <Label layoutX="54.0" layoutY="50.0" prefHeight="66.0" prefWidth="270.0" text="Game Over" textFill="#0072ff">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="42.0" />
+               </font>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="14.0" onAction="#handleBackButton" prefHeight="29.0" prefWidth="80.0" styleClass="buttonN_B" text="Back">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <Pane layoutX="24.0" layoutY="125.0" prefHeight="48.0" prefWidth="332.0" styleClass="box2">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="29.0" prefWidth="80.0" text="Name :" textFill="#e9e4f0">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="_playerName" editable="false" focusColor="#e9e4f0" layoutX="94.0" layoutY="2.0" prefHeight="24.0" prefWidth="215.0" unFocusColor="#e9e4f0">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="20.0" />
+                     </font></JFXTextField>
+               </children>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="203.0" prefHeight="48.0" prefWidth="332.0" styleClass="box2">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="29.0" prefWidth="80.0" text="Score :" textFill="#e9e4f0">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="_scoreResult" editable="false" focusColor="#e9e4f0" layoutX="94.0" layoutY="2.0" prefHeight="36.0" prefWidth="215.0" unFocusColor="#e9e4f0" />
+               </children>
+            </Pane>
+            <Pane layoutX="23.0" layoutY="285.0" prefHeight="48.0" prefWidth="332.0" styleClass="box2">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" prefHeight="29.0" prefWidth="104.0" text="Attempt :" textFill="#e9e4f0">
+                     <font>
+                        <Font name="DejaVu Sans Bold" size="18.0" />
+                     </font></Label>
+                  <JFXTextField fx:id="_attempts" editable="false" focusColor="#e9e4f0" layoutX="118.0" layoutY="2.0" prefHeight="33.0" prefWidth="191.0" unFocusColor="#e9e4f0" />
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="376.0" onAction="#handlePlayAgainButton" prefHeight="36.0" prefWidth="104.0" styleClass="buttonN_B" text="Play Again">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="_button" layoutX="256.0" layoutY="376.0" prefHeight="36.0" prefWidth="104.0" styleClass="buttonN_B" text="Hard Level">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="13.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
