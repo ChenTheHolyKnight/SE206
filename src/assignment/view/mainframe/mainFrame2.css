@@ -1,0 +1,37 @@
+.pane {
+
+    /*-fx-background-image: url("../../resources/Lawrencium.png");*/
+    -fx-background-image: url("../../../resources/landscape.png");
+    -fx-background-size: 1000 600;
+    -fx-background-position: center center;
+
+}
+
+.box {
+
+    /*-fx-background-image: url("../../resources/SoundCloud.png");*/
+    -fx-background-color: #ffffff;
+    -fx-background-size: 400 500;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+
+}
+
+.button {
+
+    -fx-background-color: #0072ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-text-fill: #E9E4F0;
+
+}
+
+.button:hover {
+
+    -fx-background-color: #E9E4F0;
+    -fx-text-fill: #0072ff;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-border-color: #f83600;
+
+}

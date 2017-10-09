@@ -5,6 +5,15 @@ import java.io.IOException;
 import assignment.model.Level;
 import assignment.model.Player;
 import assignment.view.*;
+import assignment.view.customizegameframe.CustomizeGameFrameController;
+import assignment.view.exitdialog.ExitFrameController;
+import assignment.view.gameframe.GameFrameController;
+import assignment.view.levellayout.LevelLayoutFrameController;
+import assignment.view.mainframe.MainFrameController;
+import assignment.view.scoremenu.ScoreMenuController;
+import assignment.view.statsresult.StatsFrameResultController;
+import assignment.view.tutorial.TutFrameController;
+import assignment.view.username.UserNameFrameController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -28,7 +37,7 @@ public class MainApp extends Application{
 	public void initMainFrame() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/MainFrame2.fxml"));
+			loader.setLocation(getClass().getResource("view/mainframe/MainFrame2.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
@@ -44,7 +53,7 @@ public class MainApp extends Application{
 	public void showExitDialog() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/ExitDialog.fxml"));
+			loader.setLocation(getClass().getResource("view/exitdialog/ExitDialog.fxml"));
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 
 			Stage dialog=new Stage();
@@ -71,7 +80,7 @@ public class MainApp extends Application{
 
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/UserNameFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/username/UserNameFrame.fxml"));
 			AnchorPane anchorPane= (AnchorPane) loader.load();
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
@@ -88,7 +97,7 @@ public class MainApp extends Application{
 	public void showLevelLayout(Player player) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/LevelLayoutFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/levellayout/LevelLayoutFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
@@ -110,7 +119,7 @@ public class MainApp extends Application{
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/GameFrame2.fxml"));
+			loader.setLocation(getClass().getResource("view/gameframe/GameFrame2.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
@@ -132,7 +141,7 @@ public class MainApp extends Application{
 		try {
 			
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/StatsResultsFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/statsresult/StatsResultsFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
@@ -155,7 +164,7 @@ public class MainApp extends Application{
 		try {
 
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/TutFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/tutorial/TutFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
@@ -177,7 +186,7 @@ public class MainApp extends Application{
 		try {
 
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/CustomizeGameFrame.fxml"));
+			loader.setLocation(getClass().getResource("view/customizegameframe/CustomizeGameFrame.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
@@ -200,7 +209,7 @@ public class MainApp extends Application{
 	public void showScoreFrame() {
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/ScoreMenu.fxml"));
+			loader.setLocation(getClass().getResource("view/scoremenu/ScoreMenu.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
