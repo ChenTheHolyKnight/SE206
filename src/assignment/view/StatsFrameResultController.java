@@ -3,9 +3,12 @@ package assignment.view;
 import assignment.MainApp;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.PlayerRecorder;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
@@ -37,8 +40,6 @@ public class StatsFrameResultController extends Controller{
     public void initialize() {
         _rootPane.setOpacity(0);
         makeFadeIn(_rootPane);
-
-
     }
 
     @FXML
@@ -53,6 +54,8 @@ public class StatsFrameResultController extends Controller{
     }
 
     public void setPlayer(Player player) {
+    	ObservableList<Player> recorder=PlayerRecorder.getInstance();
+    	recorder.add(player);
         _players = player;
         _playerName.setText(_players.getName());
         _scoreResult.setText(Integer.toString(_players.getScore()));

@@ -15,17 +15,17 @@
                   <Font name="DejaVu Sans Bold" size="65.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="185.0" onAction="#easyButtonAction" prefHeight="45.0" prefWidth="148.0" text="Easy">
+            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="160.0" onAction="#easyButtonAction" prefHeight="45.0" prefWidth="148.0" text="Easy">
                <font>
                   <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="241.0" onAction="#hardButtonAction" prefHeight="45.0" prefWidth="148.0" text="Hard">
+            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="216.0" onAction="#hardButtonAction" prefHeight="45.0" prefWidth="148.0" text="Hard">
                <font>
                   <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="131.0" onAction="#tutorialButtonAction" prefHeight="45.0" prefWidth="148.0" text="Tutorial">
+            <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="106.0" onAction="#tutorialButtonAction" prefHeight="45.0" prefWidth="148.0" text="Tutorial">
                <font>
                   <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
@@ -33,6 +33,11 @@
             <JFXButton buttonType="RAISED" layoutX="21.0" layoutY="313.0" onAction="#backButtonAction" prefHeight="25.0" prefWidth="76.0" text="Back">
                <font>
                   <Font name="DejaVu Sans Bold" size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="94.0" layoutY="271.0" onAction="#ArcadeButtonAction" prefHeight="45.0" prefWidth="148.0" text="Arcade">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="24.0" />
                </font>
             </JFXButton>
          </children>

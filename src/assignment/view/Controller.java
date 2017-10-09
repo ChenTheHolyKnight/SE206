@@ -10,7 +10,7 @@ import javafx.util.Duration;
 abstract public class Controller {
 
 	public enum ControllerType{
-		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS
+		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS,ARCADE
 	}
 
 
@@ -60,6 +60,9 @@ abstract public class Controller {
 		}
 		if(type==ControllerType.STATS) {
 			fadeout.setOnFinished(event->mainApp.showGameFrame(players.getLevel(), players));
+		}
+		if(type==ControllerType.ARCADE) {
+			fadeout.setOnFinished(event->mainApp.showCustomizeGameFrame(players));
 		}
 		fadeout.play();
 	}

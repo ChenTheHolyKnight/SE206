@@ -172,6 +172,27 @@ public class MainApp extends Application{
 		}
 	}
 	
+	//Customize game Frame
+	public void showCustomizeGameFrame(Player player) {
+		try {
+
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/CustomizeGameFrame.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			CustomizeGameFrameController controller = loader.getController();
+			controller.setMainApp(this);
+			
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 		
 
 
@@ -193,6 +214,8 @@ public class MainApp extends Application{
 
 		}
 	}
+	
+	
 	
 	//get the PrimaryStage
 	public Stage getPrimaryStage() {

@@ -79,6 +79,22 @@ public class LevelLayoutFrameController extends Controller{
 
         makeFadeOut(_pane,_player,_mainapp,ControllerType.TUTORIAL);
     }
+    
+    
+    
+    
+    /**
+     * This is to test Arcade mode.
+     */
+    public void ArcadeButtonAction() {
+        //set the level to hard
+        _level = new HardLevel();
+        //set the level that the player chose
+        _player.setLevel(_level);
+        makeFadeOut(_pane,_player,_mainapp,ControllerType.ARCADE);
+    }
+    
+    
 
     //here are some getter and setter methods
     public Level getLevel() {
