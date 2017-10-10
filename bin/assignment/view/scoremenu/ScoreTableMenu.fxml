@@ -3,8 +3,10 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import org.controlsfx.control.SegmentedButton?>
 
 <AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.scoremenu.ScoreTableMenuController">
    <children>
@@ -19,6 +21,10 @@
                   <TableColumn prefWidth="72.0" text="Time" />
               </columns>
             </TableView>
+            <SegmentedButton fx:id="_segmentedButton" layoutX="43.0" layoutY="46.0" prefHeight="26.0" prefWidth="178.0" />
+            <ToggleButton fx:id="_b1" layoutX="43.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleEasyButton" prefHeight="26.0" prefWidth="50.0" text="Easy" />
+            <ToggleButton fx:id="_b2" layoutX="94.0" layoutY="47.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Hard" />
+            <ToggleButton fx:id="_b3" layoutX="143.0" layoutY="47.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Arcade" />
          </children>
       </Pane>
    </children>
