@@ -17,7 +17,7 @@
             <JFXButton fx:id="_submitBtn" layoutX="359.0" layoutY="26.0" onAction="#handleSubmitBtn" prefHeight="55.0" prefWidth="84.0" />
             <AnchorPane layoutX="92.0" layoutY="93.0" prefHeight="55.0" prefWidth="388.0" styleClass="box2" stylesheets="@GameFrame.css">
                <children>
-                  <JFXTextField fx:id="_playerAnswer" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="269.0" promptText="Your Answer" unFocusColor="WHITE">
+                  <JFXTextField fx:id="_playerAnswer" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="269.0" promptText="Your Answer" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
                      <font>
                         <Font name="DejaVu Sans Bold" size="23.0" />
                      </font>
@@ -27,7 +27,7 @@
             </AnchorPane>
             <AnchorPane layoutX="92.0" layoutY="458.0" prefHeight="55.0" prefWidth="388.0" styleClass="box2" stylesheets="@GameFrame.css">
                <children>
-                  <JFXTextField fx:id="_correctAnswer" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="357.0" promptText="Correct Answer" unFocusColor="WHITE">
+                  <JFXTextField fx:id="_correctAnswer" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="357.0" promptText="Correct Answer" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
                      <font>
                         <Font name="DejaVu Sans Bold" size="24.0" />
                      </font>

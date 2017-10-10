@@ -5,7 +5,6 @@ import assignment.model.Level;
 import assignment.model.Player;
 import assignment.model.PlayerRecorder;
 import assignment.view.Controller;
-import assignment.view.Controller.ControllerType;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;

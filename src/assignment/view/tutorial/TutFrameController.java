@@ -7,7 +7,6 @@ import assignment.util.Answer;
 import assignment.util.Counter;
 import assignment.util.Recorder;
 import assignment.view.Controller;
-import assignment.view.Controller.ControllerType;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;

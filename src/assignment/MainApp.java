@@ -4,13 +4,12 @@ import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.model.Player;
-import assignment.view.*;
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
 import assignment.view.gameframe.GameFrameController;
 import assignment.view.levellayout.LevelLayoutFrameController;
 import assignment.view.mainframe.MainFrameController;
-import assignment.view.scoremenu.ScoreMenuController;
+import assignment.view.scoremenu.ScoreTableMenuController;
 import assignment.view.statsresult.StatsFrameResultController;
 import assignment.view.tutorial.TutFrameController;
 import assignment.view.username.UserNameFrameController;
@@ -209,13 +208,13 @@ public class MainApp extends Application{
 	public void showScoreFrame() {
 		try {
 			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/scoremenu/ScoreMenu.fxml"));
+			loader.setLocation(getClass().getResource("view/scoremenu/ScoreTableMenu.fxml"));
 			AnchorPane anchorPane = (AnchorPane) loader.load();
 
 			Scene scene=new Scene(anchorPane);
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
-			ScoreMenuController controller = loader.getController();
+			ScoreTableMenuController controller = loader.getController();
 			controller.setMainApp(this);
 
 		} catch (IOException e) {

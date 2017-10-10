@@ -15,7 +15,6 @@ import assignment.util.Answer;
 import assignment.util.Counter;
 import assignment.util.Recorder;
 import assignment.view.Controller;
-import assignment.view.Controller.ControllerType;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;

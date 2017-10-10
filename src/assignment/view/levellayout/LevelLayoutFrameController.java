@@ -6,7 +6,6 @@ import assignment.model.HardLevel;
 import assignment.model.Level;
 import assignment.model.Player;
 import assignment.view.Controller;
-import assignment.view.Controller.ControllerType;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
 
