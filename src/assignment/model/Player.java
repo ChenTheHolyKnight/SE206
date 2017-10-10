@@ -1,13 +1,20 @@
 package assignment.model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Player {
 	private String _name;
 	private int _score=0;
 	private int _attempts=0;
 	private Level _level;
+	
+	
+	private ObservableList<Score> _scoreRecord=FXCollections.observableArrayList();
 	
 	
 	public String getName() {
@@ -28,6 +35,7 @@ public class Player {
 	
 	public void setScore(int score) {
 		_score=score;
+		addScore(score);
 	}
 	
 	public StringProperty getScoreProperty() {
@@ -63,6 +71,17 @@ public class Player {
 	public void resetStats() {
 		_score=0;
 		_attempts=0;
+	}
+	
+	
+	
+	private void addScore(int score) {
+		Score s=new Score(score);
+		_scoreRecord.add(s);
+	}
+	
+	public ObservableList<Score> getScoreRecord() {
+		return _scoreRecord;
 	}
 
 }
