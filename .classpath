@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="/media/se206/Branch/Penis/Penis/jfoenix.jar"/>
 	<classpathentry kind="lib" path="/media/se206/Branch/Penis/Penis/controlsfx-8.40.13.jar"/>
+	<classpathentry kind="lib" path="/media/se206/Branch/Penis/Penis/gson-2.8.0-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
