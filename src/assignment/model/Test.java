@@ -10,12 +10,12 @@ public class Test {
 		}*/
 		//boolean bool=arith.isOutOfBound("99-1");
 		//System.out.println(bool);
-		EasyLevel level=new EasyLevel();
+		Level level=new HardLevel();
 		String s=level.generateFormula();
-		//System.out.println(s);
-		int num=arith.formulaToNumber(s);
+		System.out.println(s);
+		//int num=arith.formulaToNumber(s);
 		
-		System.out.println(num);
+		//System.out.println(num);
 	}
 
 }

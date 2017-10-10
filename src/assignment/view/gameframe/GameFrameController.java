@@ -9,6 +9,7 @@ import org.controlsfx.control.PopOver;
 import com.jfoenix.controls.JFXTextField;
 
 import assignment.MainApp;
+import assignment.model.Arithmatic;
 import assignment.model.Level;
 import assignment.model.Player;
 import assignment.util.Answer;
@@ -181,9 +182,9 @@ public class GameFrameController extends Controller{
 			_imageView1.toFront();
 
 			//generate the number which is to be said by the player
-			_num = _level.generateNumber();
-			_label.setText(Integer.toString(_num));
-
+			//_num = _level.generateNumber();
+			//_label.setText(Integer.toString(_num));
+			setEquation(_level);
 
 			//fade transition cause it looks cooler :P
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
@@ -342,9 +343,23 @@ public class GameFrameController extends Controller{
 		_level = level;
 
 		//generating the number to set to the label
-		_num = level.generateNumber();
-		_label.setText(Integer.toString(_num));
+		//_num = level.generateNumber();
+		//_label.setText(Integer.toString(_num));
+		setEquation(level);
 
+	}
+	
+	/**
+	 * This is to set the correct number and the label of the image
+	 */
+	private void setEquation(Level level) {
+		Arithmatic arith=new Arithmatic();
+		String formula=level.generateFormula();
+		while(arith.isOutOfBound(formula)) {
+			formula=level.generateFormula();
+		}
+		_label.setText(formula);
+		_num=arith.formulaToNumber(formula);
 	}
 
 	/**

@@ -9,7 +9,8 @@ public class HardLevel implements Level{
 	@Override
 	public int generateNumber() {
 		Random rand =new Random();
-		return rand.nextInt(99)+1;
+		//return rand.nextInt(99)+1;
+		return rand.nextInt(40)+1;
 	}
 
 	@Override
@@ -21,10 +22,20 @@ public class HardLevel implements Level{
 	public String generateFormula() {
 		int num1=generateNumber();
 		String num1Str=Integer.toString(num1);
-		String sign=new Arithmatic().getHardExpression();
+		String sign1=new Arithmatic().getHardExpression();
 		int num2=generateNumber();
 		String num2Str=Integer.toString(num2);
-		String formula=num1Str+sign+num2Str;
+		String sign2=new Arithmatic().getHardExpression();
+		int num3=generateNumber();
+		String num3Str=Integer.toString(num3);
+		String sign3=new Arithmatic().getHardExpression();
+		int num4=generateNumber();
+		String num4Str=Integer.toString(num4);
+		
+		
+		
+		
+		String formula=num1Str+sign1+num2Str+sign2+num3Str+sign3+num4;
 		return formula;
 	}
 

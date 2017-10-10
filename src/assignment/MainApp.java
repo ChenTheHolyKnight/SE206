@@ -27,7 +27,7 @@ public class MainApp extends Application{
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		_primaryStage=primaryStage;
-		_primaryStage.setTitle("Tatai");
+		_primaryStage.setTitle("Tātai");
 		_primaryStage.setResizable(false);
 
 		initMainFrame();
