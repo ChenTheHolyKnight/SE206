@@ -1,6 +1,7 @@
 package assignment.model;
 
 import assignment.model.Level.Levels;
+import javafx.beans.binding.IntegerExpression;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -16,6 +17,8 @@ public class Player {
 
 
 	private ObservableList<Score> _easyScoreRecord=FXCollections.observableArrayList();
+	private ObservableList<Score> _hardScoreRecord=FXCollections.observableArrayList();
+	private ObservableList<Score> _customizeScoreRecord=FXCollections.observableArrayList();
 
 
 	public String getName() {
@@ -81,10 +84,27 @@ public class Player {
 		if(_level.getLevels().equals(Levels.EASY)) {
 			_easyScoreRecord.add(s);
 		}
+		if(_level.getLevels().equals(Levels.HARD)) {
+			_hardScoreRecord.add(s);
+		}
+		if(_level.getLevels().equals(Levels.CUSTOMIZE)) {
+			_customizeScoreRecord.add(s);
+		}
 	}
 
 	public ObservableList<Score> getScoreRecord() {
-		return _easyScoreRecord;
+		
+		
+		if(_level.getLevels().equals(Levels.EASY)) {
+			return _easyScoreRecord;
+		}
+		if(_level.getLevels().equals(Levels.HARD)) {
+			return _hardScoreRecord;
+		}
+		if(_level.getLevels().equals(Levels.CUSTOMIZE)) {
+			return _customizeScoreRecord;
+		}
+		return null;
 	}
 
 }

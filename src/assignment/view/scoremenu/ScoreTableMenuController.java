@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import org.controlsfx.control.SegmentedButton;
 
 import assignment.MainApp;
-import assignment.model.EasyLevel;
 import assignment.model.Player;
 import assignment.model.PlayerRecorder;
 import assignment.model.Score;
@@ -103,17 +102,24 @@ public class ScoreTableMenuController extends Controller{
 	public void handleEasyButton() {
 		_b1.setSelected(true);
 		ObservableList<Score> scores=_player.getScoreRecord();
+		_table.getItems().clear();
 		_table.setItems(scores);
 	}
 	
 	@FXML
 	public void handleHardButton() {
 		_b2.setSelected(true);
+		ObservableList<Score> scores=_player.getScoreRecord();
+		_table.getItems().clear();
+		_table.setItems(scores);
 	}
 	
 	@FXML
 	public void handleArcade() {
 		_b3.setSelected(true);
+		ObservableList<Score> scores=_player.getScoreRecord();
+		_table.getItems().clear();
+		_table.setItems(scores);
 	}
 
 

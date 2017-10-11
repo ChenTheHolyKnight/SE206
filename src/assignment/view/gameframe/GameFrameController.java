@@ -169,7 +169,7 @@ public class GameFrameController extends Controller{
 
 		//check if the counter value is above 10 if not then consider to move and change the labels
 		//if done then lock the buttons and move to the next frame
-		if (_frameCounter.getCounter() < 10) {
+		if (_frameCounter.getCounter() < 1) {
 
 
 			_correctnessImage.setImage(null);
