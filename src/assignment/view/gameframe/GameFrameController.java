@@ -12,6 +12,7 @@ import assignment.MainApp;
 import assignment.model.Arithmatic;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.util.Answer;
 import assignment.util.Counter;
 import assignment.util.Recorder;
@@ -99,6 +100,8 @@ public class GameFrameController extends Controller{
 	private Counter _recCounter;
 
 	//other vars
+	private Round _round;
+	
 	private Player _player;
 
 	private int _num = 0;
@@ -204,14 +207,14 @@ public class GameFrameController extends Controller{
 
 			//get the values which the player got from playing
 			//the game
-			_player.setScore(_scoreCounter.getCounter());
-			_player.setAttempts(_attemptCounter.getCounter());
+			_round.setScore(_scoreCounter.getCounter());
+			_round.setAttempts(_attemptCounter.getCounter());
 
-			_player.setLevel(_level);
+			_round.setLevel(_level);
 
 			//this leads to the stats frame which shall show the values
 			//of the player
-			_mainApp.showStatsFrame(_player);
+			_mainApp.showStatsFrame(_round,_player);
 
 		}
 
@@ -227,10 +230,11 @@ public class GameFrameController extends Controller{
 	public void handleBackButton() {
 
 		//resetting the players stats
-		_player.resetStats();
+		System.out.println(_round==null);
+		_round.resetStats();
 
 		//show the level layout
-		makeFadeOut(_rootPane,_player,_mainApp,ControllerType.LEVEL);
+		makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.LEVEL);
 
 	}
 
@@ -375,6 +379,10 @@ public class GameFrameController extends Controller{
 	 * setting the player
 	 * @param player
 	 */
+	public void setRound(Round round) {
+		_round=round;
+	}
+	
 	public void setPlayer(Player player) {
 		_player=player;
 	}

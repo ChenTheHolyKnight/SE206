@@ -2,6 +2,7 @@ package assignment.view.customizegameframe;
 
 import assignment.MainApp;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.view.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
@@ -10,6 +11,7 @@ import javafx.scene.layout.Pane;
 public class CustomizeGameFrameController extends Controller{
 	private MainApp _mainApp;
 	private Player _player;
+	private Round  _round;
 	
 	@FXML
 	private Pane _rootPane;
@@ -18,7 +20,7 @@ public class CustomizeGameFrameController extends Controller{
 	
 	@FXML
 	public void handleBackButton() {
-		makeFadeOut(_rootPane,_player,_mainApp,ControllerType.LEVEL);
+		makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.LEVEL);
 	}
 	
 	public void setMainApp(MainApp mainApp) {
@@ -26,6 +28,9 @@ public class CustomizeGameFrameController extends Controller{
 	}
 	public void setPlayer(Player player) {
 		_player=player;
+	}
+	public void setRound(Round round) {
+		_round=round;
 	}
 
 }

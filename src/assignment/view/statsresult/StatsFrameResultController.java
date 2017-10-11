@@ -3,6 +3,7 @@ package assignment.view.statsresult;
 import assignment.MainApp;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.model.PlayerRecorder;
 import assignment.view.Controller;
 
@@ -28,8 +29,10 @@ public class StatsFrameResultController extends Controller{
     @FXML
     private JFXTextField _attempts;
 
-    @FXML
-    private Player _players;
+
+    private Round _rounds;
+    
+    private Player _player;
 
     @FXML
     private JFXButton _button;
@@ -45,12 +48,12 @@ public class StatsFrameResultController extends Controller{
 
     @FXML
     public void handleBackButton() {
-        makeFadeOut(null,null,_mainApp,ControllerType.MAINMENU);
+        makeFadeOut(null,null,null,_mainApp,ControllerType.MAINMENU);
     }
 
     @FXML
     public void handlePlayAgainButton() {
-        makeFadeOut(_rootPane,_players,_mainApp,ControllerType.GAME);
+        makeFadeOut(_rootPane,_player,_rounds,_mainApp,ControllerType.GAME);
 
     }
 
@@ -67,14 +70,15 @@ public class StatsFrameResultController extends Controller{
     	rec.remove(player2);
     	rec.add(player);
     	
-        _players = player;
-        _playerName.setText(_players.getName());
-        _scoreResult.setText(Integer.toString(_players.getScore()));
-        _attempts.setText(Integer.toString(_players.getAttempts()));
-        if(player.getLevel().getLevels().equals(Level.Levels.HARD)) {
+        _player = player;
+        _player.addRound(_rounds);
+        _playerName.setText(_player.getName());
+        _scoreResult.setText(Integer.toString(_rounds.getScore()));
+        _attempts.setText(Integer.toString(_rounds.getAttempts()));
+        if(_rounds.getLevel().getLevels().equals(Level.Levels.HARD)) {
             _button.setDisable(true);
             _button.setOpacity(0);
-        }else if(player.getScore()<8) {
+        }else if(_rounds.getScore()<8) {
             _button.setDisable(true);
         }
     }
@@ -82,6 +86,10 @@ public class StatsFrameResultController extends Controller{
     public void setMainApp(MainApp mainApp) {
         _mainApp=mainApp;
 
+    }
+    
+    public void setRound(Round round) {
+    	_rounds=round;
     }
 
 

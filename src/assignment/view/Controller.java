@@ -3,6 +3,7 @@ package assignment.view;
 
 import assignment.MainApp;
 import assignment.model.Player;
+import assignment.model.Round;
 import javafx.animation.FadeTransition;
 import javafx.scene.Node;
 import javafx.util.Duration;
@@ -36,7 +37,7 @@ abstract public class Controller {
 	/**
 	 * This is to fade out the frame 
 	 */
-	protected void makeFadeOut(Node rootPane,Player players,MainApp mainApp,ControllerType type) {
+	protected void makeFadeOut(Node rootPane,Player players,Round round,MainApp mainApp,ControllerType type) {
 		FadeTransition fadeout = new FadeTransition();
 		fadeout.setDuration(Duration.millis(_fadeTime));
 		fadeout.setNode(rootPane);
@@ -53,16 +54,16 @@ abstract public class Controller {
 			fadeout.setOnFinished(event->mainApp.showLevelLayout(players));
 		}
 		if(type==ControllerType.TUTORIAL) {
-			fadeout.setOnFinished(event->mainApp.showTutorialFrame(players.getLevel(), players));
+			fadeout.setOnFinished(event->mainApp.showTutorialFrame(round, players));
 		}
 		if(type==ControllerType.GAME) {
-			fadeout.setOnFinished(event->mainApp.showGameFrame(players.getLevel(), players));
+			fadeout.setOnFinished(event->mainApp.showGameFrame(players,round));
 		}
 		if(type==ControllerType.STATS) {
-			fadeout.setOnFinished(event->mainApp.showGameFrame(players.getLevel(), players));
+			fadeout.setOnFinished(event->mainApp.showGameFrame(players,round));
 		}
 		if(type==ControllerType.ARCADE) {
-			fadeout.setOnFinished(event->mainApp.showCustomizeGameFrame(players));
+			fadeout.setOnFinished(event->mainApp.showCustomizeGameFrame(round,players));
 		}
 		fadeout.play();
 	}

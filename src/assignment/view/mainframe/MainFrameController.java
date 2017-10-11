@@ -25,7 +25,7 @@ public class MainFrameController extends Controller implements Initializable {
 	public void handleStartButton() {
 
 		
-		makeFadeOut(_rootPane,null,_mainApp,ControllerType.USERNAME);
+		makeFadeOut(_rootPane,null,null,_mainApp,ControllerType.USERNAME);
 		
 	}
 	

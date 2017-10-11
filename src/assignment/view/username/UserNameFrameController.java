@@ -4,6 +4,7 @@ import org.controlsfx.control.Notifications;
 import org.controlsfx.control.action.Action;
 
 import assignment.MainApp;
+import assignment.model.Round;
 import assignment.model.Player;
 import assignment.model.PlayerRecorder;
 import assignment.view.Controller;
@@ -88,7 +89,7 @@ public class UserNameFrameController extends Controller{
             	_player=new Player();
             	  //sets the text that is inputted into the field as the name of the player
                  _player.setName(_textfield.getText());
-            	makeFadeOut(_pane,_player,_mainapp,ControllerType.LEVEL);
+            	makeFadeOut(_pane,_player,null,_mainapp,ControllerType.LEVEL);
             }else {
             	
             	//create a notification that asks the user whether he/she is the user that is already in the record list
@@ -99,7 +100,7 @@ public class UserNameFrameController extends Controller{
         					Button btn=(Button) e.getSource();
         					Popup popup=(Popup) btn.getScene().getWindow();
         					popup.hide();       					
-        					makeFadeOut(_pane,_player,_mainapp,ControllerType.LEVEL);       					
+        					makeFadeOut(_pane,_player,null,_mainapp,ControllerType.LEVEL);       					
         				}),
             			
             			//If the user chooses no, it will show another notification to ask user to choose another name
@@ -121,7 +122,7 @@ public class UserNameFrameController extends Controller{
     @FXML
     public void BackButtonControl() {
         //fades out to the main menu frame
-    	makeFadeOut(_pane,null,_mainapp,ControllerType.MAINMENU);
+    	makeFadeOut(_pane,null,null,_mainapp,ControllerType.MAINMENU);
     }
 
     @FXML

@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
 import assignment.view.gameframe.GameFrameController;
@@ -93,7 +94,7 @@ public class MainApp extends Application{
 	}
 
 	//Level Layout
-	public void showLevelLayout(Player player) {
+	public void showLevelLayout(Player players) {
 		try {
 			FXMLLoader loader =new FXMLLoader();
 			loader.setLocation(getClass().getResource("view/levellayout/LevelLayoutFrame.fxml"));
@@ -104,7 +105,7 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			LevelLayoutFrameController controller = loader.getController();
 			controller.setMainApp(this);
-			controller.setPlayer(player);
+			controller.setPlayer(players);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -114,7 +115,7 @@ public class MainApp extends Application{
 	}
 
 	//Show GameFrame
-	public void showGameFrame(Level level,Player player) {
+	public void showGameFrame(Player player,Round round) {
 		try {
 		
 			FXMLLoader loader =new FXMLLoader();
@@ -126,8 +127,10 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			GameFrameController controller = loader.getController();
 			controller.setMainApp(this);
+			Level level=round.getLevel();
 			controller.setLevel(level);
 			controller.setPlayer(player);
+			controller.setRound(round);
 			
 
 		} catch (IOException e) {
@@ -136,7 +139,7 @@ public class MainApp extends Application{
 	}
 	
 	//Show Stats Frame
-	public void showStatsFrame(Player player) {
+	public void showStatsFrame(Round round,Player player) {
 		try {
 			
 			FXMLLoader loader =new FXMLLoader();
@@ -147,6 +150,7 @@ public class MainApp extends Application{
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
 			StatsFrameResultController controller = loader.getController();
+			controller.setRound(round);
 			controller.setPlayer(player);
 			controller.setMainApp(this);
 
@@ -159,7 +163,7 @@ public class MainApp extends Application{
 	
 	//Tutorial frame
 
-	public void showTutorialFrame(Level level, Player player) {
+	public void showTutorialFrame(Round round,Player player) {
 		try {
 
 			FXMLLoader loader =new FXMLLoader();
@@ -171,9 +175,10 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			TutFrameController controller = loader.getController();
 			controller.setMainApp(this);
+			Level level=round.getLevel();
 			controller.setLevel(level);
 			controller.setPlayer(player);
-
+			controller.setRound(round);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -181,7 +186,7 @@ public class MainApp extends Application{
 	}
 	
 	//Customize game Frame
-	public void showCustomizeGameFrame(Player player) {
+	public void showCustomizeGameFrame(Round round,Player player) {
 		try {
 
 			FXMLLoader loader =new FXMLLoader();
@@ -194,6 +199,7 @@ public class MainApp extends Application{
 			CustomizeGameFrameController controller = loader.getController();
 			controller.setMainApp(this);
 			controller.setPlayer(player);
+			controller.setRound(round);
 
 
 		} catch (IOException e) {

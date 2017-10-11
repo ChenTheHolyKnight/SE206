@@ -3,6 +3,7 @@ package assignment.view.tutorial;
 import assignment.MainApp;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.util.Answer;
 import assignment.util.Counter;
 import assignment.util.Recorder;
@@ -12,8 +13,6 @@ import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
@@ -23,7 +22,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
@@ -93,6 +91,8 @@ public class TutFrameController extends Controller{
     private Counter _recCounter;
 
     //other vars
+    private Round _round;
+    
     private Player _player;
 
     private int _num = 0;
@@ -219,10 +219,10 @@ public class TutFrameController extends Controller{
     public void handleBackButton() {
 
         //resetting the players stats
-        _player.resetStats();
+        _round.resetStats();
 
         //show the level layout
-        makeFadeOut(_rootPane,_player,_mainApp,ControllerType.LEVEL);
+        makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.LEVEL);
         
         _popOver.hide();
     }
@@ -357,6 +357,11 @@ public class TutFrameController extends Controller{
      */
     public void setPlayer(Player player) {
         _player=player;
+    }
+    
+    
+    public void setRound(Round round) {
+    	_round=round;
     }
 
 

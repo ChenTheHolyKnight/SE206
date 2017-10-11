@@ -5,6 +5,7 @@ import assignment.model.EasyLevel;
 import assignment.model.HardLevel;
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.Round;
 import assignment.view.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
@@ -19,6 +20,7 @@ public class LevelLayoutFrameController extends Controller{
     private MainApp _mainapp;
     private Level _level;
     private Player _player;
+    private Round _round=new Round();
 
     @FXML
     private Pane _pane;
@@ -38,7 +40,7 @@ public class LevelLayoutFrameController extends Controller{
     @FXML
     public void backButtonAction() {
         //calling the userName frame
-    	makeFadeOut(_pane,_player,_mainapp,ControllerType.USERNAME);
+    	makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.USERNAME);
     }
 
     /**
@@ -50,9 +52,9 @@ public class LevelLayoutFrameController extends Controller{
         //set the level to easy
         _level = new EasyLevel();
         //set the level that the player chose
-        _player.setLevel(_level);
+        _round.setLevel(_level);
         //show the corresponding game frame
-        makeFadeOut(_pane,_player,_mainapp,ControllerType.GAME);
+        makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.GAME);
     }
 
     /**
@@ -63,8 +65,8 @@ public class LevelLayoutFrameController extends Controller{
         //set the level to hard
         _level = new HardLevel();
         //set the level that the player chose
-        _player.setLevel(_level);
-        makeFadeOut(_pane,_player,_mainapp,ControllerType.GAME);
+        _round.setLevel(_level);
+        makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.GAME);
     }
 
     /**
@@ -76,9 +78,9 @@ public class LevelLayoutFrameController extends Controller{
         _level = new EasyLevel();
         
         //set the level that the player chose
-        _player.setLevel(_level);
+        _round.setLevel(_level);
 
-        makeFadeOut(_pane,_player,_mainapp,ControllerType.TUTORIAL);
+        makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.TUTORIAL);
     }
     
     
@@ -91,8 +93,8 @@ public class LevelLayoutFrameController extends Controller{
         //set the level to hard
         _level = new HardLevel();
         //set the level that the player chose
-        _player.setLevel(_level);
-        makeFadeOut(_pane,_player,_mainapp,ControllerType.ARCADE);
+        _round.setLevel(_level);
+        makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.ARCADE);
     }
     
     
@@ -106,8 +108,8 @@ public class LevelLayoutFrameController extends Controller{
         _mainapp = mainapp;
     }
 
-    public void setPlayer(Player player) {
-        _player = player;
+    public void setPlayer(Player players) {
+        _player = players;
     }
 
 
