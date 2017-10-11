@@ -15,11 +15,13 @@ public class Player {
 	private int _attempts=0;
 	private Level _level;
 
-
+	//set up the score recorders
 	private ObservableList<Score> _easyScoreRecord=FXCollections.observableArrayList();
 	private ObservableList<Score> _hardScoreRecord=FXCollections.observableArrayList();
 	private ObservableList<Score> _customizeScoreRecord=FXCollections.observableArrayList();
 
+	//set up the Attempt recorders
+	//TODO: copy and paste the attempts recorders
 
 	public String getName() {
 		return _name;

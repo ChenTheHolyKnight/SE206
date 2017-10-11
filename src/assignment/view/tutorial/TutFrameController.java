@@ -97,7 +97,7 @@ public class TutFrameController extends Controller{
 
     private int _num = 0;
 
-
+    private PopOver _popOver;
 
 
     //pop over boolean's
@@ -188,13 +188,20 @@ public class TutFrameController extends Controller{
             FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
             fadeout.setFromValue(1.0);
             fadeout.setToValue(0.0);
-            fadeout.setOnFinished(new EventHandler<ActionEvent>() {
+            fadeout.setOnFinished(  e->{
+            	_imageView1.setImage(null);
+                fadeout.stop();
+            }
+            		
+            		
+            		
+            		/*new EventHandler<ActionEvent>() {
                 @Override
                 public void handle(ActionEvent event) {
                     _imageView1.setImage(null);
                     fadeout.stop();
                 }
-            });
+            }*/);
             fadeout.playFromStart();
 
 			
@@ -216,7 +223,8 @@ public class TutFrameController extends Controller{
 
         //show the level layout
         makeFadeOut(_rootPane,_player,_mainApp,ControllerType.LEVEL);
-
+        
+        _popOver.hide();
     }
 
     /**
@@ -380,13 +388,19 @@ public class TutFrameController extends Controller{
            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
            popover.show(_playBtn);
 
-           _playBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+           _playBtn.setOnMouseExited(
+        		   e->{
+        			   fadeTransitionPopOver(popover);
+                       _isPopOverShown = false;                     
+        		   }
+        		   
+        		   /*new EventHandler<MouseEvent>() {
                @Override
                public void handle(MouseEvent event) {
                    fadeTransitionPopOver(popover);
                    _isPopOverShown = false;
                }
-           });
+           }*/);
 
        }
     }
@@ -407,13 +421,20 @@ public class TutFrameController extends Controller{
             popover.show(_reBtn);
 
             //when the mouse is not in the button radius it fades out the popOver
-            _reBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
+            _reBtn.setOnMouseExited(
+            		 e->{
+          			   fadeTransitionPopOver(popover);
+                         _isPopOverShown = false;                     
+          		   		}
+            		
+            		
+            		/*new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent event) {
                     fadeTransitionPopOver(popover);
                     _isPopOverShown = false;
                 }
-            });
+            }*/);
 
         }
 
@@ -434,13 +455,11 @@ public class TutFrameController extends Controller{
             popover.show(_submitBtn);
 
 
-            _submitBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            });
+            _submitBtn.setOnMouseExited( e->{
+   			   fadeTransitionPopOver(popover);
+               _isPopOverShown = false;                     
+		   		}
+            	);
 
         }
 
@@ -462,13 +481,11 @@ public class TutFrameController extends Controller{
             popover.show(_playerAnswer);
 
 
-            _playerAnswer.setOnMouseExited(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            });
+            _playerAnswer.setOnMouseExited( e->{
+   			   fadeTransitionPopOver(popover);
+               _isPopOverShown = false;                     
+		   		}
+  		);
 
         }
 
@@ -491,13 +508,11 @@ public class TutFrameController extends Controller{
             popover.show(_correctAnswer);
 
 
-            _correctAnswer.setOnMouseExited(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            });
+            _correctAnswer.setOnMouseExited( e->{
+   			   fadeTransitionPopOver(popover);
+               _isPopOverShown = false;                     
+		   		}
+  		);
 
         }
 
@@ -513,19 +528,18 @@ public class TutFrameController extends Controller{
             label.setText("press back to go to the level layout");
 
             //generating the popOver and setting the location
-            PopOver popover = new PopOver(label);
+            //PopOver popover = new PopOver(label);
+            _popOver = new PopOver(label);
             //popover.setFadeOutDuration(new Duration(3000));
-            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
-            popover.show(_backBtn);
+            _popOver.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
+            _popOver.show(_backBtn);
 
 
-            _backBtn.setOnMouseExited(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            });
+            _backBtn.setOnMouseExited( e->{
+   			   fadeTransitionPopOver(_popOver);
+               _isPopOverShown = false;                     
+		   		}
+  		);
 
         }
 
@@ -547,13 +561,11 @@ public class TutFrameController extends Controller{
             popover.show(_nextButton);
 
 
-            _nextButton.setOnMouseExited(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            });
+            _nextButton.setOnMouseExited( e->{
+   			   fadeTransitionPopOver(popover);
+               _isPopOverShown = false;                     
+		   		}
+  		);
 
         }
 
