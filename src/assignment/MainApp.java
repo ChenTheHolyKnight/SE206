@@ -193,7 +193,7 @@ public class MainApp extends Application{
 			_primaryStage.show();
 			CustomizeGameFrameController controller = loader.getController();
 			controller.setMainApp(this);
-			
+			controller.setPlayer(player);
 
 
 		} catch (IOException e) {

@@ -26,7 +26,7 @@
             <ToggleButton fx:id="_b1" layoutX="189.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleEasyButton" prefHeight="26.0" prefWidth="50.0" text="Easy" />
             <ToggleButton fx:id="_b2" layoutX="239.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleHardButton" prefHeight="26.0" prefWidth="50.0" text="Hard" />
             <ToggleButton fx:id="_b3" layoutX="288.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleArcade" prefHeight="26.0" prefWidth="70.0" text="Arcade" />
-            <ComboBox layoutX="43.0" layoutY="45.0" prefWidth="140.0" />
+            <ComboBox fx:id="_nameSelection" layoutX="43.0" layoutY="45.0" onAction="#handleSelectedItem" prefWidth="140.0" />
          </children>
       </Pane>
    </children>

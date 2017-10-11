@@ -1,5 +1,6 @@
 package assignment.model;
 
+import assignment.model.Level.Levels;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
@@ -12,32 +13,32 @@ public class Player {
 	private int _score=0;
 	private int _attempts=0;
 	private Level _level;
-	
-	
-	private ObservableList<Score> _scoreRecord=FXCollections.observableArrayList();
-	
-	
+
+
+	private ObservableList<Score> _easyScoreRecord=FXCollections.observableArrayList();
+
+
 	public String getName() {
 		return _name;
 	}
-	
+
 	public void setName(String name) {
 		_name=name;
 	}
 	public StringProperty getNameProperty() {
 		return new SimpleStringProperty(_name);
 	}
-	
-	
+
+
 	public int getScore() {
 		return _score; 
 	}
-	
+
 	public void setScore(int score) {
 		_score=score;
 		addScore(score);
 	}
-	
+
 	public StringProperty getScoreProperty() {
 		return new SimpleStringProperty(Integer.toString(_score)+" out of 10");
 	}
@@ -47,8 +48,8 @@ public class Player {
 		String s = ""+ integer;
 		return s;
 	}
-	
-	
+
+
 	public int getAttempts() {
 		return _attempts;
 	}
@@ -58,30 +59,32 @@ public class Player {
 	public StringProperty getAttemptProperty() {
 		return new SimpleStringProperty(Integer.toString(_attempts));
 	}
-	
-	
+
+
 	public Level getLevel() {
 		return _level;
 	}
-	
+
 	public void setLevel(Level level) {
 		_level=level;
 	}
-	
+
 	public void resetStats() {
 		_score=0;
 		_attempts=0;
 	}
-	
-	
-	
+
+
+
 	private void addScore(int score) {
 		Score s=new Score(score);
-		_scoreRecord.add(s);
+		if(_level.getLevels().equals(Levels.EASY)) {
+			_easyScoreRecord.add(s);
+		}
 	}
-	
+
 	public ObservableList<Score> getScoreRecord() {
-		return _scoreRecord;
+		return _easyScoreRecord;
 	}
 
 }

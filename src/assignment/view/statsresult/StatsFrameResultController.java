@@ -55,8 +55,18 @@ public class StatsFrameResultController extends Controller{
     }
 
     public void setPlayer(Player player) {
-    	ObservableList<Player> recorder=PlayerRecorder.getInstance();
-    	recorder.add(player);
+    	//Find repeated item and delete it in the observable list
+    	ObservableList<Player> rec=PlayerRecorder.getInstance();
+    	Player player2=new Player();
+    	for(Player player1:rec) {
+    		if(player1.getName().equals(player.getName())) {
+    			//rec.remove(player1);
+    			player2=player1;
+    		}
+    	}
+    	rec.remove(player2);
+    	rec.add(player);
+    	
         _players = player;
         _playerName.setText(_players.getName());
         _scoreResult.setText(Integer.toString(_players.getScore()));

@@ -73,6 +73,7 @@ public class UserNameFrameController extends Controller{
             
             
             //get the history list
+           
             ObservableList<Player> rec=PlayerRecorder.getInstance();
             
             //Searching for whether the user is in the history. If it's found, set the _player to the old one
