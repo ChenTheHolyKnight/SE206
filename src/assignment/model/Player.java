@@ -92,16 +92,16 @@ public class Player {
 		}
 	}
 
-	public ObservableList<Score> getScoreRecord() {
+	public ObservableList<Score> getScoreRecord(Levels level) {
 		
 		
-		if(_level.getLevels().equals(Levels.EASY)) {
+		if(level==Levels.EASY) {
 			return _easyScoreRecord;
 		}
-		if(_level.getLevels().equals(Levels.HARD)) {
+		if(level==Levels.HARD) {
 			return _hardScoreRecord;
 		}
-		if(_level.getLevels().equals(Levels.CUSTOMIZE)) {
+		if(level==Levels.CUSTOMIZE) {
 			return _customizeScoreRecord;
 		}
 		return null;
