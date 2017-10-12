@@ -55,7 +55,7 @@ public class Arithmatic {
 			
 			int result=(int)engine.eval(formula);
 			return result;
-		} catch (ScriptException e) {
+		} catch (Exception e) {
 			//e.printStackTrace();
 			return -1;
 		}		

@@ -230,7 +230,6 @@ public class GameFrameController extends Controller{
 	public void handleBackButton() {
 
 		//resetting the players stats
-		System.out.println(_round==null);
 		_round.resetStats();
 
 		//show the level layout

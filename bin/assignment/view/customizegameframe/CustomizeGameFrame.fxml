@@ -52,7 +52,7 @@
                </children>
             </GridPane>
             <JFXButton layoutX="14.0" layoutY="14.0" onAction="#handleBackButton" text="Back" />
-            <JFXButton fx:id="_nextButton" layoutX="425.0" layoutY="270.0" prefHeight="40.0" prefWidth="40.0" text="&gt;" />
+            <JFXButton fx:id="_nextButton" layoutX="425.0" layoutY="270.0" onAction="#handleNextButton" prefHeight="40.0" prefWidth="40.0" text="&gt;" />
             <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="420.0" onAction="#handleManualButton" prefHeight="50.0" prefWidth="150.0" text="Manual">
                <font>
                   <Font size="20.0" />
