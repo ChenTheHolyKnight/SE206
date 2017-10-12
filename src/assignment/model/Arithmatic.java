@@ -40,8 +40,8 @@ public class Arithmatic {
 			if(result>0&&result<=99) {
 				return false;
 			}			
-		} catch (ScriptException e) {
-			e.printStackTrace();
+		} catch (Exception e) {
+			return true;			
 		}
 		return true;		
 	}
@@ -51,12 +51,14 @@ public class Arithmatic {
 		ScriptEngineManager manager=new ScriptEngineManager();
 		ScriptEngine engine=manager.getEngineByName("js");
 		try {
+			formula=formula.replaceAll("x", "*");
+			
 			int result=(int)engine.eval(formula);
 			return result;
 		} catch (ScriptException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			return -1;
 		}		
-		return -1;
 		
 	}
 	
