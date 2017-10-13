@@ -54,12 +54,14 @@ public class StatsFrameResultController extends Controller{
     @FXML
     public void handlePlayAgainButton() {
         Level.Levels levels=_rounds.getLevel().getLevels();
-        System.out.println(levels.toString());
+        Round round=new Round();
+        round.setLevel(_rounds.getLevel());
+       // System.out.println(levels.toString());
         if(levels== Level.Levels.CUSTOMIZE){
-            makeFadeOut(_rootPane,_player,_rounds,_mainApp,ControllerType.CUSTOMIZEGAME);
+            makeFadeOut(_rootPane,_player,round,_mainApp,ControllerType.CUSTOMIZEGAME);
 
         }else {
-            makeFadeOut(_rootPane, _player, _rounds, _mainApp, ControllerType.GAME);
+            makeFadeOut(_rootPane, _player, round, _mainApp, ControllerType.GAME);
         }
     }
 
@@ -78,6 +80,8 @@ public class StatsFrameResultController extends Controller{
     	
         _player = player;
         _player.addRound(_rounds);
+        //System.out.println(" ");
+       // _player.dispEasyRounds(); //to be deleted
         _playerName.setText(_player.getName());
         _scoreResult.setText(Integer.toString(_rounds.getScore()));
         _attempts.setText(Integer.toString(_rounds.getAttempts()));

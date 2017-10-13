@@ -172,7 +172,7 @@ public class GameFrameController extends Controller{
 
 		//check if the counter value is above 10 if not then consider to move and change the labels
 		//if done then lock the buttons and move to the next frame
-		if (_frameCounter.getCounter() < 1) {
+		if (_frameCounter.getCounter() < 4) {
 
 
 			_correctnessImage.setImage(null);
@@ -376,7 +376,7 @@ public class GameFrameController extends Controller{
 
 	/**
 	 * setting the player
-	 * @param player
+	 * @param
 	 */
 	public void setRound(Round round) {
 		_round=round;
@@ -384,6 +384,7 @@ public class GameFrameController extends Controller{
 	
 	public void setPlayer(Player player) {
 		_player=player;
+		//_player.dispEasyRounds();
 	}
 	
 	

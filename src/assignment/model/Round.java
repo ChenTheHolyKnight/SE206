@@ -66,9 +66,17 @@ public class Round {
 		_score=0;
 		_attempts=0;
 	}
-
-
 	/*
+	@Override
+	public String toString() {
+		return "Round{" +
+				"_score=" + _score +
+				", _attempts=" + _attempts +
+				", _level=" + _level +
+				'}';
+	}*/
+
+/*
 	private void addScore(int score) {
 		Score s=new Score(score);
 		if(_level.getLevels().equals(Levels.EASY)) {
