@@ -12,16 +12,6 @@ public class Round {
 	private int _attempts=0;
 	private Level _level;
 
-	//set up the score recorders
-	/*
-	private ObservableList<Score> _easyScoreRecord=FXCollections.observableArrayList();
-	private ObservableList<Score> _hardScoreRecord=FXCollections.observableArrayList();
-	private ObservableList<Score> _customizeScoreRecord=FXCollections.observableArrayList();
-	*/
-	
-
-	
-
 
 	public int getScore() {
 		return _score; 
@@ -66,45 +56,7 @@ public class Round {
 		_score=0;
 		_attempts=0;
 	}
-	/*
-	@Override
-	public String toString() {
-		return "Round{" +
-				"_score=" + _score +
-				", _attempts=" + _attempts +
-				", _level=" + _level +
-				'}';
-	}*/
-
-/*
-	private void addScore(int score) {
-		Score s=new Score(score);
-		if(_level.getLevels().equals(Levels.EASY)) {
-			_easyScoreRecord.add(s);
-		}
-		if(_level.getLevels().equals(Levels.HARD)) {
-			_hardScoreRecord.add(s);
-		}
-		if(_level.getLevels().equals(Levels.CUSTOMIZE)) {
-			_customizeScoreRecord.add(s);
-		}
-	}
-
-	public ObservableList<Score> getScoreRecord(Levels level) {
-
-
-		if(level==Levels.EASY) {
-			return _easyScoreRecord;
-		}
-		if(level==Levels.HARD) {
-			return _hardScoreRecord;
-		}
-		if(level==Levels.CUSTOMIZE) {
-			return _customizeScoreRecord;
-		}
-		return null;
-	}
-	*/
+	
 	
 
 }
