@@ -64,6 +64,7 @@ public class CustomizeGameFrameController extends Controller{
 
 	@FXML
 	public void initialize() {
+		_questionList.clear();
 		_nextButton.setVisible(false);
 		_grid.setVisible(false);
 		_textField.setEditable(false);
@@ -100,6 +101,7 @@ public class CustomizeGameFrameController extends Controller{
 		if (num<1||num>99){
 			Notifications.create().position(Pos.CENTER).text("Please enter a valid formula").hideAfter(Duration.seconds(1)).showWarning();
 		}else {
+			System.out.println(s);
 			_questionList.add(s);
 			_nextButton.setVisible(true);
 		}
@@ -123,7 +125,8 @@ public class CustomizeGameFrameController extends Controller{
 		_textField.setText("");
 		_counter.increaseCounter();
 		if(_counter.getCounter()==10){
-			System.out.println("finish");
+			//System.out.println("finish");
+			makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.CUSTOMIZEGAME);
 		}
 		_textField.requestFocus();
 		_nextButton.setVisible(false);

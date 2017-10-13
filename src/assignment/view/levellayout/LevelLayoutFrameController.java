@@ -1,11 +1,7 @@
 package assignment.view.levellayout;
 
 import assignment.MainApp;
-import assignment.model.EasyLevel;
-import assignment.model.HardLevel;
-import assignment.model.Level;
-import assignment.model.Player;
-import assignment.model.Round;
+import assignment.model.*;
 import assignment.view.Controller;
 import javafx.fxml.FXML;
 import javafx.scene.layout.Pane;
@@ -91,7 +87,7 @@ public class LevelLayoutFrameController extends Controller{
      */
     public void ArcadeButtonAction() {
         //set the level to hard
-        _level = new HardLevel();
+        _level = new Customize();
         //set the level that the player chose
         _round.setLevel(_level);
         makeFadeOut(_pane,_player,_round,_mainapp,ControllerType.ARCADE);

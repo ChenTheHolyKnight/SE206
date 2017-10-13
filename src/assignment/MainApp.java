@@ -5,6 +5,7 @@ import java.io.IOException;
 import assignment.model.Level;
 import assignment.model.Player;
 import assignment.model.Round;
+import assignment.view.customizeGameStartFrame.CustomizeGameStartFrameController;
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
 import assignment.view.gameframe.GameFrameController;
@@ -200,6 +201,28 @@ public class MainApp extends Application{
 			controller.setMainApp(this);
 			controller.setPlayer(player);
 			controller.setRound(round);
+
+
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public void showCustomizeGameStartFrame(Round round,Player player) {
+		try {
+
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/customizeGameStartFrame/CustomizeGameFrame2.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			CustomizeGameStartFrameController controller = loader.getController();
+			controller.setMainApp(this);
+			controller.setPlayer(player);
+			controller.setRound(round);
+			controller.setLevel(round.getLevel());
 
 
 		} catch (IOException e) {

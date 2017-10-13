@@ -53,8 +53,14 @@ public class StatsFrameResultController extends Controller{
 
     @FXML
     public void handlePlayAgainButton() {
-        makeFadeOut(_rootPane,_player,_rounds,_mainApp,ControllerType.GAME);
+        Level.Levels levels=_rounds.getLevel().getLevels();
+        System.out.println(levels.toString());
+        if(levels== Level.Levels.CUSTOMIZE){
+            makeFadeOut(_rootPane,_player,_rounds,_mainApp,ControllerType.CUSTOMIZEGAME);
 
+        }else {
+            makeFadeOut(_rootPane, _player, _rounds, _mainApp, ControllerType.GAME);
+        }
     }
 
     public void setPlayer(Player player) {
