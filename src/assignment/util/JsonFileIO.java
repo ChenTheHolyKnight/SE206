@@ -1,5 +1,6 @@
 package assignment.util;
 
+import assignment.model.Level;
 import assignment.model.Player;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -15,7 +16,9 @@ public class JsonFileIO {
 
 
     public void writeFile(String fileName,Object object){
-        Gson gson=new GsonBuilder().registerTypeAdapterFactory(getObservableListTypeAdapterFactory())
+        Gson gson=new GsonBuilder()
+                .registerTypeAdapterFactory(getObservableListTypeAdapterFactory())
+                .registerTypeAdapter(Level.class,new InterfaceAdapter<Level>())
                 .create();
         String json=gson.toJson(object);
 
@@ -25,20 +28,24 @@ public class JsonFileIO {
             writter.close();
 
         }catch (Exception e){
-            e.printStackTrace();
+           // e.printStackTrace();
+            System.out.println("error");
         }
     }
 
-    public void readFile(String fileName,Object object){
+    public Player readFile(String fileName){
         Gson gson = new GsonBuilder()
                 .registerTypeAdapterFactory(getObservableListTypeAdapterFactory())
                 .create();
         try{
             BufferedReader br = new BufferedReader( new FileReader(new File(".").getAbsolutePath()+fileName));
             Player player=gson.fromJson(br,Player.class);
+            return player;
         }catch(Exception e){
             e.printStackTrace();
+            //System.out.println("error");
         }
+        return null;
     }
 }
 
