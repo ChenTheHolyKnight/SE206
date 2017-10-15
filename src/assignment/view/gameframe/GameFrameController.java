@@ -158,6 +158,7 @@ public class GameFrameController extends Controller{
 	 */
 	@FXML
 	public void handleNextButton() {
+		_reBtn.setDisable(false);
 		//initializing the record counter
 		_recCounter = new Counter();
 
@@ -285,7 +286,9 @@ public class GameFrameController extends Controller{
 
 		boolean isAnswerValid=answer.isGrammarCorrect(_num);
 		if(!isAnswerValid){
-			Notifications.create().text("Please check the connection of your microphone").position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
+			Notifications.create()
+						.text("Please check the connection of your microphone")
+						.position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
 		}
 
 		if (correctness) {
@@ -320,6 +323,7 @@ public class GameFrameController extends Controller{
 				String correct = answer.getAnswer();
 				_correctAnswer.setText(correct);
 				_label.setText(Integer.toString(_num));
+				_reBtn.setDisable(true);
 			}
 
 		}
@@ -521,17 +525,17 @@ public class GameFrameController extends Controller{
 					normaliseCursor();
 
 					//check for a Recording
-					Answer answer = new Answer();
+				/*	Answer answer = new Answer();
 					answer.checkAnswer(_num);
 
 					if (answer.getPLayerAnswer().isEmpty()) {
 						Notifications.create()
-								.text("no voice detected, Please try Again")
+								.text("no voice detected, Please check your microphone and try Again")
 								.position(Pos.CENTER)
 								.hideAfter(Duration.seconds(1))
 								.showWarning();
 					}
-
+				*/
 
 
 
