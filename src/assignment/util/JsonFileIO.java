@@ -28,8 +28,7 @@ public class JsonFileIO {
             writter.close();
 
         }catch (Exception e){
-           // e.printStackTrace();
-            System.out.println("error");
+            e.printStackTrace();
         }
     }
 
@@ -43,7 +42,6 @@ public class JsonFileIO {
             return player;
         }catch(Exception e){
             e.printStackTrace();
-            //System.out.println("error");
         }
         return null;
     }

@@ -34,6 +34,8 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
+
+import javax.management.Notification;
 //import sun.plugin.javascript.navig.Anchor;
 
 
@@ -172,7 +174,7 @@ public class GameFrameController extends Controller{
 
 		//check if the counter value is above 10 if not then consider to move and change the labels
 		//if done then lock the buttons and move to the next frame
-		if (_frameCounter.getCounter() < 4) {
+		if (_frameCounter.getCounter() < 10) {
 
 
 			_correctnessImage.setImage(null);
@@ -281,6 +283,11 @@ public class GameFrameController extends Controller{
 		Answer answer = new Answer();
 		boolean correctness = answer.checkAnswer(_num);
 
+		boolean isAnswerValid=answer.isGrammarCorrect(_num);
+		if(!isAnswerValid){
+			Notifications.create().text("Please check the connection of your microphone").position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
+		}
+
 		if (correctness) {
 			Image image = new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(), true);
 			_correctnessImage.setImage(image);
@@ -312,6 +319,7 @@ public class GameFrameController extends Controller{
 				//get the correct answer
 				String correct = answer.getAnswer();
 				_correctAnswer.setText(correct);
+				_label.setText(Integer.toString(_num));
 			}
 
 		}

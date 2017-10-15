@@ -52,6 +52,73 @@ public class Answer {
 			String list=String.join(" ", _list);
 			return list;
 	}
+
+
+	public boolean isGrammarCorrect(int num){
+		int answerLength=_list.size();
+		if(answerLength>4){
+			return false;
+		}
+		if(answerLength==1){
+			String first=_list.get(0);
+			boolean isValid=isInTheAnswerList(first);
+			return isValid;
+		}
+
+		if(answerLength==2){
+			String first=_list.get(0);
+			boolean isValid=isInTheAnswerList(first);
+			String second=_list.get(1);
+			if(isValid&&second.equals("tekau")){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		if(answerLength==3){
+			String first=_list.get(0);
+			String second=_list.get(1);
+			String third=_list.get(2);
+			boolean isValid=isInTheAnswerList(third);
+			if(isValid&&first.equals("tekau")&&second.equals("maa")){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		if(answerLength==4){
+			String first=_list.get(0);
+			boolean isValid=isInTheAnswerList(first);
+			String second=_list.get(1);
+			String third=_list.get(2);
+			String fourth=_list.get(3);
+			boolean isValid2=isInTheAnswerList(fourth);
+			if(isValid&&second.equals("tekau")&&third.equals("maa")&&isValid2){
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+
+
+
+		return false;
+	}
+
+
+
+
+	private boolean isInTheAnswerList(String s){
+		for(String s1:_answerList){
+			if(s1.equals(s)){
+				return true;
+			}
+		}
+		return false;
+	}
 	
 
 
