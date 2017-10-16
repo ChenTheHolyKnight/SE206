@@ -67,16 +67,16 @@
             </JFXButton>
             <HBox layoutX="73.0" layoutY="75.0" prefHeight="26.0" prefWidth="350.0">
                <children>
-                  <ProgressBar fx:id="_bar1" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar2" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar3" layoutX="45.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar4" layoutX="80.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar5" layoutX="115.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar6" layoutX="150.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar7" layoutX="185.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar8" layoutX="220.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar9" layoutX="255.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
-                  <ProgressBar fx:id="_bar0" layoutX="290.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="1.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar1" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar2" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar3" layoutX="45.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar4" layoutX="80.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar5" layoutX="115.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar6" layoutX="150.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar7" layoutX="185.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar8" layoutX="220.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar9" layoutX="255.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
+                  <ProgressBar fx:id="_bar0" layoutX="290.0" layoutY="10.0" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
                </children>
             </HBox>
          </children>

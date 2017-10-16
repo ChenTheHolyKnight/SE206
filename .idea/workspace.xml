@@ -8,6 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e234780c-77e8-46ce-88c1-802ec3ab6560" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foo.wav" afterPath="$PROJECT_DIR$/foo.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recout.mlf" afterPath="$PROJECT_DIR$/recout.mlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/Answer.java" afterPath="$PROJECT_DIR$/src/assignment/util/Answer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
     </list>
@@ -31,11 +35,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomizeGameFrameController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomizeGameFrameController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="136" column="64" lean-forward="true" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+            <state relative-caret-position="-441">
+              <caret line="155" column="38" lean-forward="true" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomizeGameStartFrameController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="314">
+              <caret line="284" column="9" lean-forward="false" selection-start-line="284" selection-start-column="9" selection-end-line="284" selection-end-column="9" />
+              <folding>
+                <element signature="method#setMainApp#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#fadeTransitionPopOver#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#releaseAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#lockAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#lockSomeBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#waitCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#normaliseCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="method#call#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+                <element signature="class#PlayWorker#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFrameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="287" column="27" lean-forward="true" selection-start-line="287" selection-start-column="27" selection-end-line="287" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -74,7 +108,6 @@
         <option value="$PROJECT_DIR$/src/assignment/view/Controller.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/GameFrame.css" />
         <option value="$PROJECT_DIR$/src/assignment/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Customize.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/levellayout/LevelLayoutFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Player.java" />
@@ -90,10 +123,11 @@
         <option value="$PROJECT_DIR$/src/assignment/model/Test.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/Test.java" />
         <option value="$PROJECT_DIR$/recout.mlf" />
-        <option value="$PROJECT_DIR$/src/assignment/util/Answer.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/util/Answer.java" />
       </list>
     </option>
   </component>
@@ -141,6 +175,13 @@
               <item name="Penis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Penis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -150,6 +191,22 @@
               <item name="assignment" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="customizegameframe" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Penis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="customizeGameStartFrame" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Penis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="gameframe" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -405,7 +462,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java</url>
-          <line>488</line>
+          <line>495</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -551,9 +608,7 @@
             <element signature="method#lockSomeBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
             <element signature="method#waitCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
             <element signature="method#normaliseCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
             <element signature="method#call#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#done#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
             <element signature="class#PlayWorker#0;class#CustomizeGameStartFrameController#0" expanded="false" />
           </folding>
         </state>
@@ -646,26 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="246">
           <caret line="81" column="4" lean-forward="true" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2844">
-          <caret line="164" column="0" lean-forward="true" selection-start-line="164" selection-start-column="0" selection-end-line="164" selection-end-column="0" />
-          <folding>
-            <element signature="method#setMainApp#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#fadeTransitionPopOver#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#releaseAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#lockAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#lockSomeBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#waitCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#normaliseCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#call#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="method#done#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-            <element signature="class#PlayWorker#0;class#CustomizeGameStartFrameController#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,18 +823,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/util/Answer.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1003">
-          <caret line="45" column="37" lean-forward="false" selection-start-line="45" selection-start-column="37" selection-end-line="45" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4624">
-          <caret line="536" column="21" lean-forward="true" selection-start-line="536" selection-start-column="21" selection-end-line="536" selection-end-column="21" />
+        <state relative-caret-position="129">
+          <caret line="231" column="4" lean-forward="false" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -815,19 +842,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="231" column="4" lean-forward="false" selection-start-line="231" selection-start-column="4" selection-end-line="231" selection-end-column="4" />
+        <state relative-caret-position="-441">
+          <caret line="155" column="38" lean-forward="true" selection-start-line="155" selection-start-column="38" selection-end-line="155" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="136" column="64" lean-forward="true" selection-start-line="136" selection-start-column="64" selection-end-line="136" selection-end-column="64" />
+        <state relative-caret-position="183">
+          <caret line="287" column="27" lean-forward="true" selection-start-line="287" selection-start-column="27" selection-end-line="287" selection-end-column="27" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/util/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="137" column="25" lean-forward="false" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="284" column="9" lean-forward="false" selection-start-line="284" selection-start-column="9" selection-end-line="284" selection-end-column="9" />
+          <folding>
+            <element signature="method#setMainApp#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#fadeTransitionPopOver#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#releaseAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#lockAllBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#lockSomeBtns#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#waitCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#normaliseCursor#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="method#call#0;class#DoWork#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+            <element signature="class#PlayWorker#0;class#CustomizeGameStartFrameController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

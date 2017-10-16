@@ -134,10 +134,14 @@ public class Answer {
 
 
 	private boolean isInTheAnswerList(String s){
+		if(s.equals("tekau")){
+			return false;
+		}
 		for(String s1:_answerList){
 			if(s1.equals(s)){
 				return true;
 			}
+
 		}
 		return false;
 	}

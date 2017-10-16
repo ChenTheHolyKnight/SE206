@@ -277,6 +277,13 @@ public class CustomizeGameStartFrameController extends Controller{
 		Answer answer = new Answer();
 		boolean correctness = answer.checkAnswer(_num);
 
+		boolean isAnswerValid=answer.isGrammarCorrect(_num);
+		if(!isAnswerValid){
+			Notifications.create()
+					.text("Please check the connection of your microphone")
+					.position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
+		}
+
 		if (correctness) {
 			Image image = new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(), true);
 			_correctnessImage.setImage(image);
@@ -512,7 +519,7 @@ public class CustomizeGameStartFrameController extends Controller{
 					normaliseCursor();
 
 					//check for a Recording
-					Answer answer = new Answer();
+					/*Answer answer = new Answer();
 					answer.checkAnswer(_num);
 
 					if (answer.getPLayerAnswer().isEmpty()) {
@@ -521,7 +528,7 @@ public class CustomizeGameStartFrameController extends Controller{
 								.position(Pos.CENTER)
 								.hideAfter(Duration.seconds(1))
 								.showWarning();
-					}
+					}*/
 
 
 

@@ -121,8 +121,9 @@ public class CustomizeGameFrameController extends Controller{
 			_questionList.add(s);
 			_nextButton.setVisible(true);
 			setProgress();
+			_enterBtn.setDisable(true);
 		}
-		_enterBtn.setDisable(true);
+
 	}
 
 	@FXML
@@ -153,7 +154,7 @@ public class CustomizeGameFrameController extends Controller{
 
 	private void setProgress(){
 		int num=_counter.getCounter();
-		_bars.get(num).setProgress(0);
+		_bars.get(num).setProgress(1);
 	}
 
 
