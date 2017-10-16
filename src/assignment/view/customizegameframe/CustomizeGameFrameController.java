@@ -3,6 +3,7 @@ package assignment.view.customizegameframe;
 
 
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.UnaryOperator;
 
@@ -21,6 +22,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
 import javafx.scene.layout.GridPane;
@@ -60,6 +62,18 @@ public class CustomizeGameFrameController extends Controller{
 	@FXML private Button _leftBracketBtn;
 	@FXML private Button _rightBracketBtn;
 	@FXML private Button _spaceBtn;
+	@FXML private Button _enterBtn;
+	@FXML private ProgressBar _bar1;
+	@FXML private ProgressBar _bar2;
+	@FXML private ProgressBar _bar3;
+	@FXML private ProgressBar _bar4;
+	@FXML private ProgressBar _bar5;
+	@FXML private ProgressBar _bar6;
+	@FXML private ProgressBar _bar7;
+	@FXML private ProgressBar _bar8;
+	@FXML private ProgressBar _bar9;
+	@FXML private ProgressBar _bar0;
+	private ArrayList<ProgressBar> _bars=new ArrayList<>();
 
 
 	@FXML
@@ -78,6 +92,9 @@ public class CustomizeGameFrameController extends Controller{
 		};
 		TextFormatter<String> formatter = new TextFormatter<String>(filter);
 		_textField.setTextFormatter(formatter);
+
+
+		addBars();
 	}
 
 	@FXML
@@ -101,11 +118,11 @@ public class CustomizeGameFrameController extends Controller{
 		if (num<1||num>99){
 			Notifications.create().position(Pos.CENTER).text("Please enter a valid formula").hideAfter(Duration.seconds(1)).showWarning();
 		}else {
-			System.out.println(s);
 			_questionList.add(s);
 			_nextButton.setVisible(true);
+			setProgress();
 		}
-
+		_enterBtn.setDisable(true);
 	}
 
 	@FXML
@@ -122,6 +139,7 @@ public class CustomizeGameFrameController extends Controller{
 
 	@FXML
 	public void handleNextButton(){
+		_enterBtn.setDisable(false);
 		_textField.setText("");
 		_counter.increaseCounter();
 		if(_counter.getCounter()==10){
@@ -132,6 +150,14 @@ public class CustomizeGameFrameController extends Controller{
 		_nextButton.setVisible(false);
 		//_textField.positionCaret(_textField.getText().length());
 	}
+
+	private void setProgress(){
+		int num=_counter.getCounter();
+		_bars.get(num).setProgress(0);
+	}
+
+
+
 
 
 	//handle the buttons inside the grid pane
@@ -214,6 +240,21 @@ public class CustomizeGameFrameController extends Controller{
 		}
 		_textField.positionCaret(_textField.getText().length());
 	}
+
+	private void addBars(){
+		_bars.add(_bar1);
+		_bars.add(_bar2);
+		_bars.add(_bar3);
+		_bars.add(_bar4);
+		_bars.add(_bar5);
+		_bars.add(_bar6);
+		_bars.add(_bar7);
+		_bars.add(_bar8);
+		_bars.add(_bar9);
+		_bars.add(_bar0);
+	}
+
+
 
 	public void setMainApp(MainApp mainApp) {
 		_mainApp=mainApp;
