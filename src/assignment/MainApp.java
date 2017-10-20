@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import assignment.model.Level;
 import assignment.model.Player;
+import assignment.model.PlayerRecorder;
 import assignment.model.Round;
+import assignment.util.JsonFileIO;
 import assignment.view.customizeGameStartFrame.CustomizeGameStartFrameController;
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
@@ -16,6 +18,7 @@ import assignment.view.statsresult.StatsFrameResultController;
 import assignment.view.tutorial.TutFrameController;
 import assignment.view.username.UserNameFrameController;
 import javafx.application.Application;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -31,6 +34,12 @@ public class MainApp extends Application{
 		_primaryStage=primaryStage;
 		_primaryStage.setTitle("Tātai");
 		_primaryStage.setResizable(false);
+
+		JsonFileIO jfw=new JsonFileIO();
+		PlayerRecorder playerRecorder=jfw.readRecorder("Players.json");
+		ObservableList<Player> list=PlayerRecorder.getInstance();
+		PlayerRecorder.setList(list);
+
 
 		initMainFrame();
 
@@ -258,6 +267,17 @@ public class MainApp extends Application{
 	public Stage getPrimaryStage() {
 		return _primaryStage;
 	}
+
+
+	@Override
+	public void stop(){
+		JsonFileIO jfw=new JsonFileIO();
+		jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
+		System.out.println("stop");
+
+	}
+
+
 
 	public static void main(String[] args) {
 		launch();

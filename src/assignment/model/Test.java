@@ -5,6 +5,7 @@ import assignment.util.InterfaceAdapter;
 import assignment.util.JsonFileIO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import javafx.collections.ObservableList;
 
 import java.io.*;
 
@@ -26,7 +27,7 @@ public class Test {
 		}catch(Exception e){
 			e.printStackTrace();
 		}*/
-
+/*
 		Player player=new Player();
 		player.setName("player2");
 		Round round =new Round();
@@ -41,12 +42,33 @@ public class Test {
 		player.addRound(round1);
 
 
-		JsonFileIO jfw=new JsonFileIO();
-		jfw.writeFile("First.json",player);
+		Player player1=new Player();
+		player1.setName("player1");
+
+
+
+		ObservableList<Player> _list=PlayerRecorder.getInstance();
+		_list.add(player);
+		_list.add(player1);
+
+
+
+
+*/		JsonFileIO jfw=new JsonFileIO();
+//		jfw.writeFile("First.json",PlayerRecorder.getPlayerRecorder());
+
+		PlayerRecorder playerRecorder=jfw.readRecorder("First.json");
+		//ObservableList<Player> players=playerRecorder.getPlayerList();
+		//System.out.println(players.get(0).getName()+"\n"+players.get(1).getName());
+		ObservableList<Player> list=PlayerRecorder.getInstance();
+		list=playerRecorder.getPlayerList();
+
+		System.out.println(PlayerRecorder.getInstance().get(0).getName());
+
 		//Player player1= (Player) jfw.readFile("First.json");
 		//System.out.println(player1.getName());
 
-
+		/*
 		Gson gson = new GsonBuilder()
 				.registerTypeAdapterFactory(getObservableListTypeAdapterFactory())
 				.registerTypeAdapter(Level.class,new InterfaceAdapter<Level>())
@@ -57,7 +79,8 @@ public class Test {
 			System.out.println(player1.getRounds(Level.Levels.CUSTOMIZE));
 		}catch(Exception e){
 			e.printStackTrace();
-		}
+		}*/
+
 
 
 
