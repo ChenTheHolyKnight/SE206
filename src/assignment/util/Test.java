@@ -19,16 +19,15 @@ public class Test {
 			Object result=engine.eval("58-65");
 			System.out.println(result);
 		} catch (ScriptException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
 
-		/*
+
 		Answer answer=new Answer();
 		answer.checkAnswer(10);
 		Boolean bool=answer.isGrammarCorrect(10);
 		System.out.println(bool);
-		*/
+
 
 		/*
 		SimpleDateFormat myFormat = new SimpleDateFormat("mm ss SS");
@@ -47,7 +46,7 @@ public class Test {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}*/
-
+		/*
 		Date date1=new Date();
 		try {
 			Thread.sleep(8000);
@@ -57,12 +56,12 @@ public class Test {
 
 		Date date2=new Date();
 		SimpleDateFormat myFormat = new SimpleDateFormat("mm ss SS");
-
+		*/
 
 		//long diff = date2.getTime() - date1.getTime();
-		long sec=date2.getSeconds()-date1.getSeconds();
+		/*long sec=date2.getSeconds()-date1.getSeconds();
 		long milli=date2.getMinutes()-date1.getMinutes();
-		System.out.println(sec);
+		System.out.println(sec);*/
 
 		//Date time=new Date(millis);
 		//System.out.println(time.toString());

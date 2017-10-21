@@ -24,6 +24,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.controlsfx.control.Notifications;
 
 public class MainApp extends Application{
 	private Stage _primaryStage;
@@ -234,6 +235,7 @@ public class MainApp extends Application{
 			controller.setLevel(round.getLevel());
 
 
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -273,7 +275,7 @@ public class MainApp extends Application{
 	public void stop(){
 		JsonFileIO jfw=new JsonFileIO();
 		jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
-		System.out.println("stop");
+		//System.out.println("stop");
 
 	}
 

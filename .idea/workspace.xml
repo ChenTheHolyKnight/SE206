@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/assignment/MainApp.java" line="55" />
+    <bookmark url="file://$PROJECT_DIR$/src/assignment/MainApp.java" line="56" />
     <bookmark url="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" line="120" />
     <bookmark url="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" line="111" />
     <bookmark url="file://$PROJECT_DIR$/src/assignment/model/Arithmatic.java" line="10" />
@@ -15,54 +15,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e234780c-77e8-46ce-88c1-802ec3ab6560" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/assignment/model/Time.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Penis.iml" afterPath="$PROJECT_DIR$/Project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Arithmatic.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Arithmatic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Attempts.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Attempts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Customize.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Customize.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/EasyLevel.class" afterPath="$PROJECT_DIR$/bin/assignment/model/EasyLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/HardLevel.class" afterPath="$PROJECT_DIR$/bin/assignment/model/HardLevel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Level$Levels.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Level$Levels.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Player.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Player.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/PlayerRecorder.class" afterPath="$PROJECT_DIR$/bin/assignment/model/PlayerRecorder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Round.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Round.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/model/Test.class" afterPath="$PROJECT_DIR$/bin/assignment/model/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/util/JsonFileIO.class" afterPath="$PROJECT_DIR$/bin/assignment/util/JsonFileIO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/MainApp.class" afterPath="$PROJECT_DIR$/bin/assignment/MainApp.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/util/Test.class" afterPath="$PROJECT_DIR$/bin/assignment/util/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$1.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/Controller$ControllerType.class" afterPath="$PROJECT_DIR$/bin/assignment/view/Controller$ControllerType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/Controller.class" afterPath="$PROJECT_DIR$/bin/assignment/view/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$DoWork$1.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$DoWork$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$DoWork.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$DoWork.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$PlayWorker$1.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$PlayWorker$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$PlayWorker.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController$PlayWorker.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController.class" afterPath="$PROJECT_DIR$/bin/assignment/view/gameframe/GameFrameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/mainframe/MainFrameController.class" afterPath="$PROJECT_DIR$/bin/assignment/view/mainframe/MainFrameController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/scoremenu/ScoreTableMenuController.class" afterPath="$PROJECT_DIR$/bin/assignment/view/scoremenu/ScoreTableMenuController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/statsresult/StatsFrameResultController.class" afterPath="$PROJECT_DIR$/bin/assignment/view/statsresult/StatsFrameResultController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foo.wav" afterPath="$PROJECT_DIR$/foo.wav" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.First.json" afterPath="$PROJECT_DIR$/.First.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/assignment/view/scoremenu/ScoreTableMenu.fxml" afterPath="$PROJECT_DIR$/bin/assignment/view/scoremenu/ScoreTableMenu.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recout.mlf" afterPath="$PROJECT_DIR$/recout.mlf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/MainApp.java" afterPath="$PROJECT_DIR$/src/assignment/MainApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Arithmatic.java" afterPath="$PROJECT_DIR$/src/assignment/model/Arithmatic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Attempts.java" afterPath="$PROJECT_DIR$/src/assignment/model/Attempts.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Customize.java" afterPath="$PROJECT_DIR$/src/assignment/model/Customize.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/EasyLevel.java" afterPath="$PROJECT_DIR$/src/assignment/model/EasyLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/HardLevel.java" afterPath="$PROJECT_DIR$/src/assignment/model/HardLevel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Level.java" afterPath="$PROJECT_DIR$/src/assignment/model/Level.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Player.java" afterPath="$PROJECT_DIR$/src/assignment/model/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/PlayerRecorder.java" afterPath="$PROJECT_DIR$/src/assignment/model/PlayerRecorder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Round.java" afterPath="$PROJECT_DIR$/src/assignment/model/Round.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/model/Test.java" afterPath="$PROJECT_DIR$/src/assignment/model/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" afterPath="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/Answer.java" afterPath="$PROJECT_DIR$/src/assignment/util/Answer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/Test.java" afterPath="$PROJECT_DIR$/src/assignment/util/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/Controller.java" afterPath="$PROJECT_DIR$/src/assignment/view/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/mainframe/MainFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/mainframe/MainFrameController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenu.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenu.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenuController.java" afterPath="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenuController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" afterPath="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,16 +47,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="500">
               <caret line="70" column="26" lean-forward="false" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/assignment/model/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="64" column="0" lean-forward="true" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,11 +75,64 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+            <state relative-caret-position="261">
+              <caret line="136" column="42" lean-forward="false" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/util/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recout.mlf" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recout.mlf">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Answer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/util/Answer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="212">
+              <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFrameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7956">
+              <caret line="471" column="7" lean-forward="true" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
+              <folding>
+                <element signature="class#DoWork#0;class#GameFrameController#0" expanded="false" />
+                <element signature="class#PlayWorker#0;class#GameFrameController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="356">
+              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -156,7 +167,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/customizeGameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameFrameController.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/Controller.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/GameFrame.css" />
         <option value="$PROJECT_DIR$/src/assignment/view/levellayout/LevelLayoutFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/ObservableListTypeAdapter.java" />
@@ -168,26 +178,27 @@
         <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" />
-        <option value="$PROJECT_DIR$/src/assignment/util/Answer.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Arithmatic.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Attempts.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Customize.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/EasyLevel.java" />
-        <option value="$PROJECT_DIR$/recout.mlf" />
         <option value="$PROJECT_DIR$/src/assignment/model/HardLevel.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Level.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Player.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Round.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenuController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" />
-        <option value="$PROJECT_DIR$/src/assignment/util/Test.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Time.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/Test.java" />
         <option value="$PROJECT_DIR$/src/assignment/model/PlayerRecorder.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/mainframe/MainFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/Controller.java" />
         <option value="$PROJECT_DIR$/src/assignment/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/assignment/util/Test.java" />
+        <option value="$PROJECT_DIR$/src/assignment/util/Answer.java" />
+        <option value="$PROJECT_DIR$/recout.mlf" />
       </list>
     </option>
   </component>
@@ -221,24 +232,6 @@
             <path>
               <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
               <item name="Penis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Penis" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Penis" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Penis" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="unnamed" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Penis" type="b2602c69:ProjectViewProjectNode" />
@@ -318,7 +311,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.Test1">
     <configuration name="Main" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="assignment.MainApp" />
@@ -478,6 +471,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1857" height="962" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -488,11 +482,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20363636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20363636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22940852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22940852" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -539,7 +533,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java</url>
+          <line>507</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -690,13 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="57" column="9" lean-forward="false" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/util/FileReader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -756,21 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recout.mlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/util/Answer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1997">
-          <caret line="137" column="25" lean-forward="false" selection-start-line="137" selection-start-column="25" selection-end-line="137" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/model/Level.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -823,13 +803,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="400" column="26" lean-forward="false" selection-start-line="400" selection-start-column="26" selection-end-line="400" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-109">
@@ -844,14 +817,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/util/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,10 +913,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7956">
+          <caret line="471" column="7" lean-forward="true" selection-start-line="471" selection-start-column="7" selection-end-line="471" selection-end-column="7" />
+          <folding>
+            <element signature="class#DoWork#0;class#GameFrameController#0" expanded="false" />
+            <element signature="class#PlayWorker#0;class#GameFrameController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="40" column="37" lean-forward="false" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
+        <state relative-caret-position="261">
+          <caret line="136" column="42" lean-forward="false" selection-start-line="136" selection-start-column="42" selection-end-line="136" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/util/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/util/Answer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="86" column="34" lean-forward="false" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recout.mlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="3" lean-forward="false" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
           <folding />
         </state>
       </provider>

@@ -5,8 +5,11 @@ import assignment.MainApp;
 import assignment.model.Player;
 import assignment.model.Round;
 import javafx.animation.FadeTransition;
+import javafx.event.EventHandler;
 import javafx.scene.Node;
 import javafx.util.Duration;
+
+import java.awt.event.WindowEvent;
 
 abstract public class Controller {
 
@@ -70,7 +73,6 @@ abstract public class Controller {
 		}
 		fadeout.play();
 	}
-
 
 
 

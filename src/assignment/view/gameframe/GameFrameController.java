@@ -497,6 +497,10 @@ public class GameFrameController extends Controller{
 		}
 
 
+
+
+
+
 	/**
 	 * this is a worker class which shall do the recording in the background
 	 * whenever the record button is presed

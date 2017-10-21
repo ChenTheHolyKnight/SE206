@@ -84,6 +84,9 @@ public class Answer {
 		if(answerLength==1){
 			String first=_list.get(0);
 			boolean isValid=isInTheAnswerList(first);
+			if(first.equals("tekau")){
+				isValid=true;
+			}
 			return isValid;
 		}
 
