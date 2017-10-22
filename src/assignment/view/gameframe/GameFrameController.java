@@ -98,6 +98,8 @@ public class GameFrameController extends Controller{
 
 	private Counter _recCounter;
 
+	private boolean _isIncreased=false;
+
 	//other vars
 	private Round _round;
 	
@@ -157,9 +159,12 @@ public class GameFrameController extends Controller{
 	 */
 	@FXML
 	public void handleNextButton() {
+		_isIncreased=false;
+
 		_reBtn.setDisable(false);
 		//initializing the record counter
 		_recCounter = new Counter();
+
 
 		//setting the record button graphic
 		Image reimage = new Image(getClass().getClassLoader().getResource("resources/record1.png").toString());
@@ -274,9 +279,10 @@ public class GameFrameController extends Controller{
 	public void handleSubmitBtn() {
 		//increase attempt counter
 		_attemptCounter.increaseCounter();
-
+		_submitBtn.setDisable(true);
 		//disable the other buttons
 		_nextButton.setDisable(false);
+		_nextButton.requestFocus();
 		_playBtn.setDisable(true);
 
 		//checking the answer is correct
@@ -295,7 +301,8 @@ public class GameFrameController extends Controller{
 			_correctnessImage.setImage(image);
 
 			//checking if the recording has been acquired
-			if (_recCounter.getCounter() == 1) {
+			if (!_isIncreased) {
+				_isIncreased=true;
 				_scoreCounter.increaseCounter();
 			}
 
@@ -314,6 +321,8 @@ public class GameFrameController extends Controller{
 			_correctnessImage.setImage(image);
 			String s = answer.getPLayerAnswer();
 			_playerAnswer.setText(s);
+
+
 
 			//if the player is stuck on the same frame 3 times then it shall
 			//show the correct answer
