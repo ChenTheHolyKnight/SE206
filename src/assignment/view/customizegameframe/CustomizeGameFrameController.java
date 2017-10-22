@@ -18,10 +18,12 @@ import assignment.MainApp;
 import assignment.model.Player;
 import assignment.model.Round;
 import assignment.view.Controller;
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
@@ -74,6 +76,7 @@ public class CustomizeGameFrameController extends Controller{
 	@FXML private ProgressBar _bar9;
 	@FXML private ProgressBar _bar0;
 	private ArrayList<ProgressBar> _bars=new ArrayList<>();
+	@FXML private ListView<String> _listView;
 
 
 	@FXML
@@ -93,8 +96,9 @@ public class CustomizeGameFrameController extends Controller{
 		TextFormatter<String> formatter = new TextFormatter<String>(filter);
 		_textField.setTextFormatter(formatter);
 
-
 		addBars();
+
+
 	}
 
 	@FXML
@@ -122,6 +126,8 @@ public class CustomizeGameFrameController extends Controller{
 			_nextButton.setVisible(true);
 			setProgress();
 			_enterBtn.setDisable(true);
+			ObservableList<String> questions=FXCollections.observableArrayList(_questionList);
+			_listView.setItems(questions);
 		}
 
 	}
