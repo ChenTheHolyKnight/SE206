@@ -26,7 +26,7 @@ public class FileReader {
 			}
 
 		}catch(IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 	}
 	

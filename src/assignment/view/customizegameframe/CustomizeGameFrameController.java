@@ -3,13 +3,20 @@ package assignment.view.customizegameframe;
 
 
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.function.UnaryOperator;
 
 import assignment.model.Arithmatic;
 import assignment.model.QuestionList;
 import assignment.util.Counter;
+import assignment.util.FileReader;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
@@ -29,6 +36,7 @@ import javafx.scene.control.TextFormatter;
 import javafx.scene.control.TextFormatter.Change;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 import org.omg.CORBA.PUBLIC_MEMBER;
@@ -157,6 +165,57 @@ public class CustomizeGameFrameController extends Controller{
 		_nextButton.setVisible(false);
 		//_textField.positionCaret(_textField.getText().length());
 	}
+
+
+	@FXML
+	public void handleLoadButton(){
+		FileChooser fc=new FileChooser();
+		fc.setTitle("FileChooser");
+		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+		File selectedFile = fc.showOpenDialog(_mainApp.getPrimaryStage());
+		if (selectedFile != null) {
+			String fileName = selectedFile.getName();
+			String fileExtension = fileName.substring(fileName.indexOf(".") + 1, selectedFile.getName().length());
+			//System.out.println(fileExtension.equals("txt"));
+			if(fileExtension.equals("txt")){
+				try (Scanner scanner=new Scanner(selectedFile)){
+					while(scanner.hasNextLine()) {
+						_questionList.add(scanner.nextLine());
+					}
+
+
+				}catch(IOException e) {
+					//e.printStackTrace();
+				}
+
+				System.out.println(isValidQustionList(_questionList));
+
+				if(isValidQustionList(_questionList)){
+					_listView.setItems(FXCollections.observableList(_questionList));
+					_nextButton.setVisible(true);
+				}
+
+			}
+		}
+	}
+
+	private boolean isValidQustionList(List<String> list){
+		if(list==null){
+			return false;
+		}
+		if(list.size()!=10){
+			return false;
+		}
+		Arithmatic arithmatic=new Arithmatic();
+		for(String s:list){
+			if(arithmatic.isOutOfBound(s)){
+				return false;
+			}
+		}
+		return true;
+	}
+
+
 
 	private void setProgress(){
 		int num=_counter.getCounter();

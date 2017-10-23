@@ -274,7 +274,7 @@ public class MainApp extends Application{
 	@Override
 	public void stop(){
 		JsonFileIO jfw=new JsonFileIO();
-		//jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
+		jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
 		//System.out.println("stop");
 
 	}
