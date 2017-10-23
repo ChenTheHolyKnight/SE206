@@ -35,6 +35,13 @@ public class MainApp extends Application{
 		_primaryStage=primaryStage;
 		_primaryStage.setTitle("Tātai");
 		_primaryStage.setResizable(false);
+		_primaryStage.setOnCloseRequest(event -> {
+			showExitDialog();
+			event.consume();
+
+
+
+		});
 
 		JsonFileIO jfw=new JsonFileIO();
 		PlayerRecorder playerRecorder=jfw.readRecorder("Players.json");
@@ -68,10 +75,11 @@ public class MainApp extends Application{
 			AnchorPane anchorPane=(AnchorPane) loader.load();
 
 			Stage dialog=new Stage();
-			dialog.setTitle("Deletion Dialog");
+			dialog.setTitle("Exit Dialog");
 			dialog.initModality(Modality.WINDOW_MODAL);
 			dialog.initOwner(_primaryStage);
 			dialog.setResizable(false);
+			
 
 			Scene scene = new Scene(anchorPane);
 			dialog.setScene(scene);

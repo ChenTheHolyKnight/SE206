@@ -19,12 +19,12 @@
             <JFXButton fx:id="_submitBtn" layoutX="359.0" layoutY="26.0" onAction="#handleSubmitBtn" prefHeight="55.0" prefWidth="84.0" styleClass="buttonN_B" />
             <AnchorPane layoutX="92.0" layoutY="130.0" prefHeight="55.0" prefWidth="388.0" styleClass="box2" stylesheets="@GameFrame.css">
                <children>
-                  <JFXTextField fx:id="_playerAnswer" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="366.0" promptText="Your Answer" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
+                  <JFXTextField fx:id="_playerAnswer" alignment="CENTER" editable="false" focusColor="WHITE" layoutX="14.0" layoutY="8.0" prefHeight="39.0" prefWidth="321.0" promptText="Your Answer" style="-fx-text-fill: white; -fx-prompt-text-fill: white;" unFocusColor="WHITE">
                      <font>
                         <Font name="DejaVu Sans Bold" size="23.0" />
                      </font>
                   </JFXTextField>
-                  <ImageView fx:id="_correctnessImage" fitHeight="39.0" fitWidth="41.0" layoutX="321.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="_correctnessImage" fitHeight="42.0" fitWidth="42.0" layoutX="339.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="97.0" layoutY="468.0" prefHeight="55.0" prefWidth="388.0" styleClass="box2" stylesheets="@GameFrame.css">
