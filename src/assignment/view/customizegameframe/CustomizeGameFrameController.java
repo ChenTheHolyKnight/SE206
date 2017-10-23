@@ -17,6 +17,8 @@ import assignment.model.Arithmatic;
 import assignment.model.QuestionList;
 import assignment.util.Counter;
 import assignment.util.FileReader;
+import assignment.util.JsonFileIO;
+import com.google.gson.Gson;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
@@ -55,6 +57,8 @@ public class CustomizeGameFrameController extends Controller{
 	@FXML private Pane _rootPane;
 	@FXML private GridPane _grid;
 	@FXML private JFXButton _nextButton;
+	@FXML private JFXButton _manualButton;
+	@FXML private JFXButton _loadButton;
 	@FXML private Button _btn0;
 	@FXML private Button _btn1;
 	@FXML private Button _btn2;
@@ -87,10 +91,13 @@ public class CustomizeGameFrameController extends Controller{
 	@FXML private ListView<String> _listView;
 
 
+
 	@FXML
 	public void initialize() {
 		_questionList.clear();
 		_nextButton.setVisible(false);
+		_loadButton.setDisable(false);
+		_manualButton.setDisable(false);
 		_grid.setVisible(false);
 		_textField.setEditable(false);
 		UnaryOperator<Change> filter = change -> {
@@ -103,9 +110,10 @@ public class CustomizeGameFrameController extends Controller{
 		};
 		TextFormatter<String> formatter = new TextFormatter<String>(filter);
 		_textField.setTextFormatter(formatter);
+		_textField.setEditable(false);
 
 		addBars();
-
+		setBarsVisiblity(false);
 
 	}
 
@@ -119,7 +127,8 @@ public class CustomizeGameFrameController extends Controller{
 		_textField.setEditable(true);
 		_textField.requestFocus();
 		_grid.setVisible(true);
-		
+		_loadButton.setDisable(true);
+		setBarsVisiblity(true);
 	}
 
 	@FXML
@@ -159,6 +168,8 @@ public class CustomizeGameFrameController extends Controller{
 		_counter.increaseCounter();
 		if(_counter.getCounter()==10){
 			//System.out.println("finish");
+			JsonFileIO jf=new JsonFileIO();
+			jf.writeFile("Question.json",_questionList);
 			makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.CUSTOMIZEGAME);
 		}
 		_textField.requestFocus();
@@ -169,33 +180,49 @@ public class CustomizeGameFrameController extends Controller{
 
 	@FXML
 	public void handleLoadButton(){
+		_manualButton.setDisable(true);
 		FileChooser fc=new FileChooser();
 		fc.setTitle("FileChooser");
 		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Text Files", "*.txt"));
+		fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("Json Files", "*.json"));
 		File selectedFile = fc.showOpenDialog(_mainApp.getPrimaryStage());
 		if (selectedFile != null) {
 			String fileName = selectedFile.getName();
 			String fileExtension = fileName.substring(fileName.indexOf(".") + 1, selectedFile.getName().length());
-			//System.out.println(fileExtension.equals("txt"));
 			if(fileExtension.equals("txt")){
 				try (Scanner scanner=new Scanner(selectedFile)){
 					while(scanner.hasNextLine()) {
 						_questionList.add(scanner.nextLine());
 					}
-
-
 				}catch(IOException e) {
-					//e.printStackTrace();
-				}
 
-				System.out.println(isValidQustionList(_questionList));
-
-				if(isValidQustionList(_questionList)){
-					_listView.setItems(FXCollections.observableList(_questionList));
-					_nextButton.setVisible(true);
 				}
+			}else{
+					JsonFileIO jf=new JsonFileIO();
+					List<String> questionList=jf.readQuestionFile(selectedFile);
+					for(String s:questionList){
+						_questionList.add(s);
+					}
 
 			}
+
+
+
+
+			if(isValidQustionList(_questionList)){
+
+				_listView.setItems(FXCollections.observableList(_questionList));
+				_nextButton.setVisible(true);
+				_counter.setCounter(9);
+				_textField.setEditable(false);
+			}else{
+				Notifications.create().text("Invalid input questions.").position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
+				_manualButton.setDisable(false);
+				_nextButton.setVisible(false);
+				_questionList.clear();
+			}
+		}else{
+			_manualButton.setDisable(false);
 		}
 	}
 
@@ -318,6 +345,13 @@ public class CustomizeGameFrameController extends Controller{
 		_bars.add(_bar8);
 		_bars.add(_bar9);
 		_bars.add(_bar0);
+	}
+
+
+	private void setBarsVisiblity(boolean b){
+		for(ProgressBar bar:_bars){
+			bar.setVisible(b);
+		}
 	}
 
 

@@ -42,4 +42,6 @@ public class Counter {
 	public int getCounter() {
 		return _counter;
 	}
+
+	public void setCounter(int num){ _counter=num;}
 }

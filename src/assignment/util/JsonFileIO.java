@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.lang.reflect.Modifier;
+import java.util.List;
 
 import static assignment.util.ObservableListTypeAdapterFactory.getObservableListTypeAdapterFactory;
 
@@ -28,7 +29,7 @@ public class JsonFileIO {
 
 
         try{
-            FileWriter writter =new FileWriter(new File(".").getAbsolutePath()+fileName);
+            FileWriter writter =new FileWriter(new File(" ").getAbsolutePath()+fileName);
             writter.write(json);
             writter.close();
 
@@ -37,17 +38,17 @@ public class JsonFileIO {
         }
     }
 
-    public Player readFile(String fileName){
+    public List<String> readQuestionFile(File file){
         Gson gson = new GsonBuilder()
                 .registerTypeAdapterFactory(getObservableListTypeAdapterFactory())
                 .registerTypeAdapter(Level.class,new InterfaceAdapter<Level>())
                 .create();
         try{
-            BufferedReader br = new BufferedReader( new FileReader(new File(".").getAbsolutePath()+fileName));
-            Player player=gson.fromJson(br,Player.class);
-            return player;
+            BufferedReader br = new BufferedReader( new FileReader(file));
+            List<String> questions=gson.fromJson(br,List.class);
+            return questions;
         }catch(Exception e){
-            e.printStackTrace();
+           // e.printStackTrace();
         }
         return null;
     }
@@ -59,11 +60,11 @@ public class JsonFileIO {
                 .excludeFieldsWithModifiers(Modifier.TRANSIENT)
                 .create();
         try{
-            BufferedReader br = new BufferedReader( new FileReader(new File(".").getAbsolutePath()+fileName));
+            BufferedReader br = new BufferedReader( new FileReader(new File(" ").getAbsolutePath()+fileName));
             PlayerRecorder recorder=gson.fromJson(br,PlayerRecorder.class);
             return recorder;
         }catch(Exception e){
-            e.printStackTrace();
+          //  e.printStackTrace();
         }
         return null;
     }

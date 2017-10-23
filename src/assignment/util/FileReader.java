@@ -24,7 +24,6 @@ public class FileReader {
 			while(scanner.hasNextLine()) {
 				_recordFile.add(scanner.nextLine());
 			}
-
 		}catch(IOException e) {
 			//e.printStackTrace();
 		}

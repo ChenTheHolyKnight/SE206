@@ -11,13 +11,17 @@ import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 
 import java.io.*;
+import java.util.ArrayList;
 
 import static assignment.util.ObservableListTypeAdapterFactory.getObservableListTypeAdapterFactory;
 
 public class Test {
 	public static void main(String[] args) {
 
-
+		ArrayList<String> _list=new ArrayList<>();
+		_list.add("1");
+		JsonFileIO jf=new JsonFileIO();
+		jf.writeFile("Question.json",_list);
 
 
 
