@@ -206,9 +206,6 @@ public class CustomizeGameFrameController extends Controller{
 
 			}
 
-
-
-
 			if(isValidQustionList(_questionList)){
 
 				_listView.setItems(FXCollections.observableList(_questionList));

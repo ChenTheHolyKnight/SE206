@@ -67,7 +67,7 @@
                   <Font size="20.0" />
                </font>
             </JFXButton>
-            <HBox layoutX="73.0" layoutY="75.0" prefHeight="26.0" prefWidth="350.0">
+            <HBox layoutX="73.0" layoutY="80.0" prefHeight="26.0" prefWidth="350.0">
                <children>
                   <ProgressBar fx:id="_bar1" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />
                   <ProgressBar fx:id="_bar2" prefHeight="25.0" prefWidth="35.0" progress="0.0" style="-fx-accent: green;" />

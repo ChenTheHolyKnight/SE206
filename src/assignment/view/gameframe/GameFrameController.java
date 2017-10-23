@@ -4,6 +4,7 @@ package assignment.view.gameframe;
 
 
 import assignment.model.*;
+import javafx.scene.control.ProgressBar;
 import org.controlsfx.control.Notifications;
 import org.controlsfx.control.PopOver;
 
@@ -33,55 +34,59 @@ import javafx.scene.layout.Pane;
 import javafx.util.Duration;
 
 import javax.management.Notification;
+import java.util.ArrayList;
+import java.util.List;
 //import sun.plugin.javascript.navig.Anchor;
 
 
 public class GameFrameController extends Controller{
 
 	//private variables for FXML file
-	@FXML
-	private Pane _Pane;
+	@FXML private Pane _Pane;
 
-	@FXML
-	private ImageView _imageView;
+	@FXML private ImageView _imageView;
 
-	@FXML
-	private ImageView _imageView1;
+	@FXML private ImageView _imageView1;
 
 	//buttons -> FXML file
-	@FXML
-	private Button _nextButton;
+	@FXML private Button _nextButton;
 
-	@FXML
-	private Button _reBtn;
+	@FXML private Button _reBtn;
 
-	@FXML
-	private Button _submitBtn;
+	@FXML private Button _submitBtn;
 
-	@FXML
-	private Button _playBtn;
+	@FXML private Button _playBtn;
 
-	@FXML
-	private Button _backBtn;
+	@FXML private Button _backBtn;
 
 	//vars for TextFields
-	@FXML
-	private JFXTextField _playerAnswer;
+	@FXML private JFXTextField _playerAnswer;
 
-	@FXML
-	private JFXTextField _correctAnswer;
+	@FXML private JFXTextField _correctAnswer;
 
-	@FXML
-	private ImageView _correctnessImage;
+	@FXML private ImageView _correctnessImage;
 
-	@FXML
-	private Label _label;
+	@FXML private Label _label;
 
-	@FXML
-	private AnchorPane _anchorPane;
+	@FXML private AnchorPane _anchorPane;
 
-	@FXML
-	private Pane _rootPane;
+	@FXML private Pane _rootPane;
+
+	@FXML private ProgressBar _bar0;
+	@FXML private ProgressBar _bar1;
+	@FXML private ProgressBar _bar2;
+	@FXML private ProgressBar _bar3;
+	@FXML private ProgressBar _bar4;
+	@FXML private ProgressBar _bar5;
+	@FXML private ProgressBar _bar6;
+	@FXML private ProgressBar _bar7;
+	@FXML private ProgressBar _bar8;
+	@FXML private ProgressBar _bar9;
+	private List<ProgressBar> _bars=new ArrayList<>();
+
+
+
+
 
 
 	//private variables for functionality
@@ -150,7 +155,21 @@ public class GameFrameController extends Controller{
 		//locks the base buttons before the record button is pressed
 		lockSomeBtns();
 
+		addBars();
 
+	}
+
+	private void addBars() {
+		_bars.add(_bar0);
+		_bars.add(_bar1);
+		_bars.add(_bar2);
+		_bars.add(_bar3);
+		_bars.add(_bar4);
+		_bars.add(_bar5);
+		_bars.add(_bar6);
+		_bars.add(_bar7);
+		_bars.add(_bar8);
+		_bars.add(_bar9);
 	}
 
 	/**
@@ -296,10 +315,13 @@ public class GameFrameController extends Controller{
 						.position(Pos.CENTER).hideAfter(Duration.seconds(1)).showWarning();
 		}
 
+		ProgressBar bar=_bars.get(_frameCounter.getCounter());
+		bar.setProgress(1);
+
 		if (correctness) {
 			Image image = new Image(getClass().getClassLoader().getResource("resources/correct.png").toString(), true);
 			_correctnessImage.setImage(image);
-
+			bar.setStyle("-fx-accent:green");
 			//checking if the recording has been acquired
 			if (!_isIncreased) {
 				_isIncreased=true;
@@ -315,6 +337,8 @@ public class GameFrameController extends Controller{
 			_correctAnswer.setText(correct);
 
 		} else {
+			if(!_isIncreased)
+			bar.setStyle("-fx-accent:red");
 			//setting the wrong icon if the answer is incorrect
 			Image image = new Image(getClass().getClassLoader().getResource("resources/wrong.png").toString(), true);
 
