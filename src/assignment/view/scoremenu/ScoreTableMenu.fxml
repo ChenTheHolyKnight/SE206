@@ -16,9 +16,10 @@
             <JFXButton layoutX="14.0" layoutY="14.0" onAction="#backAction" text="Back" />
             <TableView fx:id="_table" layoutX="35.0" layoutY="72.0" prefHeight="253.0" prefWidth="324.0">
               <columns>
-                <TableColumn fx:id="_scoreColumn" prefWidth="115.0" text="Score" />
-                  <TableColumn fx:id="_attemptsColumn" prefWidth="107.0" text="Attempts" />
-                  <TableColumn fx:id="_timeColumn" prefWidth="101.0" text="Time" />
+                  <TableColumn fx:id="_startTimeColumn" prefWidth="92.0" text="Date" />
+                <TableColumn fx:id="_scoreColumn" prefWidth="93.0" text="Score" />
+                  <TableColumn fx:id="_attemptsColumn" prefWidth="79.0" text="Attempts" />
+                  <TableColumn fx:id="_timeColumn" prefWidth="59.0" text="Time" />
               </columns>
             </TableView>
             <SegmentedButton fx:id="_segmentedButton" layoutX="190.0" layoutY="45.0" prefHeight="26.0" prefWidth="179.0" />

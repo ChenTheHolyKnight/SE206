@@ -17,13 +17,17 @@ import static assignment.util.ObservableListTypeAdapterFactory.getObservableList
 
 public class Test {
 	public static void main(String[] args) {
-
+		/*
 		ArrayList<String> _list=new ArrayList<>();
 		_list.add("1");
 		JsonFileIO jf=new JsonFileIO();
 		jf.writeFile("Question.json",_list);
+		*/
 
-
+		Time time=new Time();
+		time.start();
+		String s=time.getStart();
+		System.out.println(s);
 
 
 	}

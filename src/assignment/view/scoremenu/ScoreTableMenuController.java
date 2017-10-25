@@ -31,6 +31,8 @@ public class ScoreTableMenuController extends Controller{
 	@FXML
 	private TableView<Round> _table;
 	@FXML
+	private TableColumn<Round,String> _startTimeColumn;
+	@FXML
 	private TableColumn<Round,String> _scoreColumn;
 	@FXML
 	private TableColumn<Round,String> _attemptsColumn;
@@ -76,7 +78,8 @@ public class ScoreTableMenuController extends Controller{
 		}
 	
 		_nameSelection.getItems().addAll(names);
-		
+
+		_startTimeColumn.setCellValueFactory(cellData->cellData.getValue().getStartTimeProperty());
 		_scoreColumn.setCellValueFactory(cellData-> cellData.getValue().getScoreProperty());
 		_attemptsColumn.setCellValueFactory(cellData-> cellData.getValue().getAttemptProperty());
 		_timeColumn.setCellValueFactory(cellDate->cellDate.getValue().getTimeProperty());

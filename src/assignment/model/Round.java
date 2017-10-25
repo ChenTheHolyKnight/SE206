@@ -24,6 +24,10 @@ public class Round {
 		String time=_time.calculate();
 		return new SimpleStringProperty(time);
 	}
+	public StringProperty getStartTimeProperty(){
+		String time=_time.getStart();
+		return new SimpleStringProperty(time);
+	}
 
 
 

@@ -1,5 +1,7 @@
 package assignment.model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
@@ -29,5 +31,11 @@ public class Time {
         //long minute=_endTime.getMinutes()-_startTime.getMinutes();
         String s=minuteStr+":"+secondStr;
         return s;
+    }
+
+    public String getStart(){
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        return dateFormat.format(_startTime);
+       // return _startTime.toString();
     }
 }
