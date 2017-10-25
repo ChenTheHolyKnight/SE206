@@ -10,8 +10,6 @@ public class Player {
 
 	private String _name;
 
-
-
 	private ObservableList<Round> _easyRoundRecords=FXCollections.observableArrayList();
 	private ObservableList<Round> _hardRoundRecords=FXCollections.observableArrayList();
 	private ObservableList<Round> _customizeRoundRecords=FXCollections.observableArrayList();
@@ -30,10 +28,7 @@ public class Player {
 
 	public void addRound(Round round) {
 		if(round.getLevel().getLevels()==Levels.EASY) {
-			//System.out.println(_easyRoundRecords.get(0).getScore());
 			_easyRoundRecords.add(round);
-			System.out.println(_easyRoundRecords.get(0).getScore());
-			System.out.println(_easyRoundRecords.toString());
 		}
 		if(round.getLevel().getLevels()==Levels.HARD) {
 			_hardRoundRecords.add(round);
@@ -54,14 +49,6 @@ public class Player {
 			return _customizeRoundRecords;
 		}
 		return null;
-		
 	}
-
-	public void dispEasyRounds(){
-		for (Round round:_easyRoundRecords){
-			System.out.print(round.getScore());
-		}
-	}
-
 
 }

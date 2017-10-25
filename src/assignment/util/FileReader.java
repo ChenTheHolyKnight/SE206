@@ -30,8 +30,6 @@ public class FileReader {
 	}
 	
 	private void trimFile() throws Exception{
-		//need to catch no input exception
-		
 		_recordFile.remove(0);
 		_recordFile.remove(0);
 		_recordFile.remove(0);

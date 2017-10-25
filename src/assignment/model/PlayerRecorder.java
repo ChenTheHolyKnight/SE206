@@ -27,10 +27,5 @@ public class PlayerRecorder {
 		return _playerRecorderObj;
 	}
 
-	public ObservableList<Player> getPlayerList(){
-		return _playerRecorder;
-	}
-
-
 	
 }

@@ -22,21 +22,16 @@ public class Arithmatic {
 	}
 	
 
-	/**
-	 * This only generates + or - for the easy levels
-	 */
-	public String getEasyExpression() {
-		Random rand =new Random();
-		int index=rand.nextInt(2);
-		return _list.get(index);
-	}
 
-	/**
-	 * This is to generate +,- and * operands for the hard level
-	 */
-	public String getHardExpression() {
+	public String getExpression(Level.Levels levels) {
+		int num=0;
+		if(levels.equals(Level.Levels.EASY)){
+			num=2;
+		}else{
+			num=3;
+		}
 		Random rand =new Random();
-		int index=rand.nextInt(3);
+		int index=rand.nextInt(num);
 		return _list.get(index);
 	}
 
@@ -66,11 +61,9 @@ public class Arithmatic {
 		ScriptEngine engine=manager.getEngineByName("js");
 		try {
 			formula=formula.replaceAll("x", "*");
-			
 			int result=(int)engine.eval(formula);
 			return result;
 		} catch (Exception e) {
-			//e.printStackTrace();
 			return -1;
 		}		
 		

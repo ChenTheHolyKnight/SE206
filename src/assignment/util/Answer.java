@@ -9,12 +9,11 @@ public class Answer {
 	private List<String> _list;
 
 	public Answer() {
-		_answer=new ArrayList<String>();
+		_answer= new ArrayList<>();
 		loadAnswerList();
 	}
 
 	public boolean checkAnswer(int num) {
-
 		FileReader reader=new FileReader();
 		_list=reader.getRecordFile();
 		buildAnswer(num);
@@ -24,30 +23,10 @@ public class Answer {
 		}else if(_list.size()==0) {
 			return false;
 		}
-
-		/*
-		if(num<10) {
-			_answer.add(_answerList.get(num-1));
-			return _answer.equals(_list);
-		}else {
-			int tenth=num/10;
-			int oneth=num%10;
-			if(tenth==1) {
-			}else {
-				_answer.add(_answerList.get(tenth-1));
-			}
-			_answer.add("tekau");
-			if(oneth!=0) {
-				_answer.add("maa");
-				_answer.add(_answerList.get(oneth-1));
-			}
-			return _answer.equals(_list);
-		}*/
 		return _answer.equals(_list);
 	}
 
 	private void buildAnswer(int num){
-
 		if(num<10) {
 			_answer.add(_answerList.get(num-1));
 		}else {
@@ -126,10 +105,6 @@ public class Answer {
 				return false;
 			}
 		}
-
-
-
-
 		return false;
 	}
 
@@ -144,7 +119,6 @@ public class Answer {
 			if(s1.equals(s)){
 				return true;
 			}
-
 		}
 		return false;
 	}

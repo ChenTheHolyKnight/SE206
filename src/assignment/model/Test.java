@@ -23,13 +23,15 @@ public class Test {
 		JsonFileIO jf=new JsonFileIO();
 		jf.writeFile("Question.json",_list);
 		*/
-
+		/*
 		Time time=new Time();
 		time.start();
 		String s=time.getStart();
 		System.out.println(s);
-
-
+		*/
+		Level level=new HardLevel();
+		String s=level.generateFormula();
+		System.out.println(s);
 	}
 
 }

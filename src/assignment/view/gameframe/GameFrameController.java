@@ -112,11 +112,6 @@ public class GameFrameController extends Controller{
 
 	private int _num = 0;
 
-	
-	
-	
-	//pop over is not shown currently
-	//private boolean _isPopOverShown = false;
 
 	/**
 	 * initialize method for the GameFrame , initializes the counters and
@@ -209,23 +204,16 @@ public class GameFrameController extends Controller{
 			WritableImage image = _Pane.snapshot(new SnapshotParameters(), null);
 			_imageView1.setImage(image);
 			_imageView1.toFront();
-
-			//generate the number which is to be said by the player
-			//_num = _level.generateNumber();
-			//_label.setText(Integer.toString(_num));
 			setEquation(_level);
 
 			//fade transition cause it looks cooler :P
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
 			fadeout.setFromValue(1.0);
 			fadeout.setToValue(0.0);
-			fadeout.setOnFinished(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(ActionEvent event) {
-					_imageView1.setImage(null);
-					fadeout.stop();
-				}
-			});
+			fadeout.setOnFinished(event -> {
+                _imageView1.setImage(null);
+                fadeout.stop();
+            });
 			fadeout.playFromStart();
 
 
@@ -235,7 +223,6 @@ public class GameFrameController extends Controller{
 			//the game
 			_round.setScore(_scoreCounter.getCounter());
 			_round.setAttempts(_attemptCounter.getCounter());
-
 			_round.setLevel(_level);
 
 			//this leads to the stats frame which shall show the values
@@ -332,22 +319,16 @@ public class GameFrameController extends Controller{
 			//to show the player
 			String s = answer.getPLayerAnswer();
 			_playerAnswer.setText(s);
-
 			String correct = answer.getAnswer();
 			_correctAnswer.setText(correct);
-
 		} else {
 			if(!_isIncreased)
 			bar.setStyle("-fx-accent:red");
 			//setting the wrong icon if the answer is incorrect
 			Image image = new Image(getClass().getClassLoader().getResource("resources/wrong.png").toString(), true);
-
 			_correctnessImage.setImage(image);
 			String s = answer.getPLayerAnswer();
 			_playerAnswer.setText(s);
-
-
-
 			//if the player is stuck on the same frame 3 times then it shall
 			//show the correct answer
 			if (_recCounter.getCounter() == 3) {
@@ -388,12 +369,7 @@ public class GameFrameController extends Controller{
 	 */
 	public void setLevel(Level level) {
 		_level = level;
-
-		//generating the number to set to the label
-		//_num = level.generateNumber();
-		//_label.setText(Integer.toString(_num));
 		setEquation(level);
-
 	}
 	
 	/**
@@ -431,41 +407,12 @@ public class GameFrameController extends Controller{
 	
 	public void setPlayer(Player player) {
 		_player=player;
-		//_player.dispEasyRounds();
 	}
-	
-	
-	//idea we can use the popOver in the tutorial frame which i shall
-	//implement after getting the gameFrameController done
-	
-	//need to be refactored -> split the to another method
-
-	/**
-	 * using the popOver which is from the controls fx library which basically
-	 * gives a pop up message plan to use for the tutorial screen
-	 */
-
-
-
-	/**
-	 * this is method which which carries out the FadeTransition by taking the
-	 * parameter of Popover
-	 */
-	public void fadeTransitionPopOver(PopOver popover) {
-
-		FadeTransition fade = new FadeTransition(Duration.seconds(1.0), popover.getRoot());
-		fade.setFromValue(1);
-		fade.setToValue(0);
-		fade.setOnFinished(e->popover.hide());
-		fade.play();
-	}
-
 
 	/**
 	 * this method releases all the buttons
 	 */
 	public void releaseAllBtns() {
-
 		//disable all buttons
 		_playBtn.setDisable(false);
 		_reBtn.setDisable(false);
@@ -477,7 +424,6 @@ public class GameFrameController extends Controller{
 	 * this method locks all the buttons
 	 */
 	public void lockAllBtns() {
-
 		//lock every button
 		_playBtn.setDisable(true);
 		_reBtn.setDisable(true);
@@ -503,8 +449,7 @@ public class GameFrameController extends Controller{
 	 * change the cursor to a wait state when the recording occurs such that
 	 * it can't be used to disrupt the entire program
 	 */
-	public void waitCursor() {		
-
+	public void waitCursor() {
 		//do this to the components of the scene
 		_mainApp.getPrimaryStage().getScene().setCursor(Cursor.WAIT);
 		_anchorPane.setCursor(Cursor.WAIT);
@@ -542,7 +487,6 @@ public class GameFrameController extends Controller{
 
 		@Override
 		protected Void call() throws Exception {
-
 			//set the record to store the recording
 			Recorder recorder = new Recorder();
 			recorder.record();
@@ -555,36 +499,13 @@ public class GameFrameController extends Controller{
 			Platform.runLater(new Runnable() {
 				@Override
 				public void run() {
-
 					//setting the new image which is replay
 					Image image = new Image(getClass().getClassLoader().getResource("resources/replay1.png").toString());
 					_reBtn.setGraphic(new ImageView(image));
-
 					releaseAllBtns();
 					normaliseCursor();
-
-					//check for a Recording
-				/*	Answer answer = new Answer();
-					answer.checkAnswer(_num);
-
-					if (answer.getPLayerAnswer().isEmpty()) {
-						Notifications.create()
-								.text("no voice detected, Please check your microphone and try Again")
-								.position(Pos.CENTER)
-								.hideAfter(Duration.seconds(1))
-								.showWarning();
-					}
-				*/
-
-
-
-
-
 				}
 			});
-
-
-
 		}
 
 
@@ -596,7 +517,6 @@ public class GameFrameController extends Controller{
 	 * recording when the play button is pressed in the background
 	 */
 	class PlayWorker extends Task<Void>{
-
 		@Override
 		protected Void call() throws Exception {
 			Recorder recorder = new Recorder();
@@ -606,23 +526,11 @@ public class GameFrameController extends Controller{
 
 		@Override
 		protected  void done() {
-
-			Platform.runLater(new Runnable() {
-				@Override
-				public void run() {
-
-					//make this for doing other methods
-					normaliseCursor();
-					releaseAllBtns();
-
-
-				}
-			});
-
-
+			Platform.runLater(() -> {
+                normaliseCursor();
+                releaseAllBtns();
+            });
 		}
-		
-		
 	}
 
 }

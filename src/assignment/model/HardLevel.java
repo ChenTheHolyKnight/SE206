@@ -31,13 +31,13 @@ public class HardLevel implements Level{
 	public String generateFormula() {
 		int num1=generateNumber();
 		String num1Str=Integer.toString(num1);
-		String sign1=new Arithmatic().getHardExpression();
+		String sign1=new Arithmatic().getExpression(_levelStrs);
 		int num2=generateNumber();
 		String num2Str=Integer.toString(num2);
-		String sign2=new Arithmatic().getHardExpression();
+		String sign2=new Arithmatic().getExpression(_levelStrs);
 		int num3=generateNumber();
 		String num3Str=Integer.toString(num3);
-		String sign3=new Arithmatic().getHardExpression();
+		String sign3=new Arithmatic().getExpression(_levelStrs);
 		int num4=generateNumber();
 		String num4Str=Integer.toString(num4);
 		String formula=num1Str+sign1+num2Str+sign2+num3Str+sign3+num4;

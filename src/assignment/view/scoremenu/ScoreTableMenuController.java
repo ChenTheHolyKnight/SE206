@@ -7,8 +7,6 @@ import org.controlsfx.control.SegmentedButton;
 import assignment.MainApp;
 import assignment.model.Round;
 import assignment.model.PlayerRecorder;
-import assignment.model.Score;
-import assignment.model.Attempts;
 import assignment.model.Level.Levels;
 import assignment.model.Player;
 import assignment.view.Controller;
