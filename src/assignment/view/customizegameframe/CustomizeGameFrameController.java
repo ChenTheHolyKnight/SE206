@@ -29,6 +29,7 @@ import assignment.model.Round;
 import assignment.view.Controller;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -41,9 +42,7 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
-import org.omg.CORBA.PUBLIC_MEMBER;
 
-import javax.management.Notification;
 
 
 public class CustomizeGameFrameController extends Controller{
@@ -59,23 +58,6 @@ public class CustomizeGameFrameController extends Controller{
 	@FXML private JFXButton _nextButton;
 	@FXML private JFXButton _manualButton;
 	@FXML private JFXButton _loadButton;
-	@FXML private Button _btn0;
-	@FXML private Button _btn1;
-	@FXML private Button _btn2;
-	@FXML private Button _btn3;
-	@FXML private Button _btn4;
-	@FXML private Button _btn5;
-	@FXML private Button _btn6;
-	@FXML private Button _btn7;
-	@FXML private Button _btn8;
-	@FXML private Button _btn9;
-	@FXML private Button _multiBtn;
-	@FXML private Button _addBtn;
-	@FXML private Button _minusBtn;
-	@FXML private Button _divisionBtn;
-	@FXML private Button _leftBracketBtn;
-	@FXML private Button _rightBracketBtn;
-	@FXML private Button _spaceBtn;
 	@FXML private Button _enterBtn;
 	@FXML private ProgressBar _bar1;
 	@FXML private ProgressBar _bar2;
@@ -167,14 +149,12 @@ public class CustomizeGameFrameController extends Controller{
 		_textField.setText("");
 		_counter.increaseCounter();
 		if(_counter.getCounter()==10){
-			//System.out.println("finish");
 			JsonFileIO jf=new JsonFileIO();
 			jf.writeFile("Question.json",_questionList);
 			makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.CUSTOMIZEGAME);
 		}
 		_textField.requestFocus();
 		_nextButton.setVisible(false);
-		//_textField.positionCaret(_textField.getText().length());
 	}
 
 
@@ -250,77 +230,9 @@ public class CustomizeGameFrameController extends Controller{
 
 
 
-	//handle the buttons inside the grid pane
 	@FXML
-	public void handleBtn1() {
-		handleButtonsInTheGridPane(_btn1);
-	}
-	@FXML
-	public void handleBtn2() {
-		handleButtonsInTheGridPane(_btn2);
-	}
-	@FXML
-	public void handleBtn3() {
-		handleButtonsInTheGridPane(_btn3);
-	}
-	@FXML
-	public void handleBtn4() {
-		handleButtonsInTheGridPane(_btn4);
-	}
-	@FXML
-	public void handleBtn5() {
-		handleButtonsInTheGridPane(_btn5);
-	}
-	@FXML
-	public void handleBtn6() {
-		handleButtonsInTheGridPane(_btn6);
-	}
-	@FXML
-	public void handleBtn7() {
-		handleButtonsInTheGridPane(_btn7);
-	}
-	@FXML
-	public void handleBtn8() {
-		handleButtonsInTheGridPane(_btn8);
-	}
-	@FXML
-	public void handleBtn9() {
-		handleButtonsInTheGridPane(_btn9);
-	}
-	@FXML
-	public void handleBtn0() {
-		handleButtonsInTheGridPane(_btn0);
-	}
-	@FXML
-	public void handleMultiBtn() {
-		handleButtonsInTheGridPane(_multiBtn);
-	}
-	@FXML
-	public void handleAddBtn() {
-		handleButtonsInTheGridPane(_addBtn);
-	}
-	@FXML
-	public void handleMinusBtn() {
-		handleButtonsInTheGridPane(_minusBtn);
-	}
-	@FXML
-	public void handleDivisionBtn() {
-		handleButtonsInTheGridPane(_divisionBtn);
-	}
-	@FXML
-	public void handleLeftBracketBtn() {
-		handleButtonsInTheGridPane(_leftBracketBtn);
-	}
-	@FXML
-	public void handleRightBracketBtn() {
-		handleButtonsInTheGridPane(_rightBracketBtn);
-	}
-	@FXML
-	public void handleSpaceBtn() {
-		handleButtonsInTheGridPane(_spaceBtn);
-	}
-
-	private void handleButtonsInTheGridPane(Button button) {
+	public void handleButtonsInTheGridPane(Event event) {
+		Button button= (Button) event.getSource();
 		String text=_textField.getText();
 		_textField.requestFocus();
 		if(button.getText().equals("Space")) {

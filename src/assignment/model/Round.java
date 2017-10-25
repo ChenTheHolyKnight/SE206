@@ -38,7 +38,6 @@ public class Round {
 
 	public void setScore(int score) {
 		_score=score;
-		//addScore(score);
 	}
 
 	public StringProperty getScoreProperty() {

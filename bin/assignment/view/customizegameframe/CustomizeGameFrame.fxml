@@ -34,25 +34,25 @@
                   <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="_btn7" mnemonicParsing="false" onAction="#handleBtn7" prefHeight="40.0" prefWidth="40.0" text="7" />
-                  <Button fx:id="_btn8" mnemonicParsing="false" onAction="#handleBtn8" prefHeight="40.0" prefWidth="40.0" text="8" GridPane.columnIndex="1" />
-                  <Button fx:id="_btn9" mnemonicParsing="false" onAction="#handleBtn9" prefHeight="40.0" prefWidth="40.0" text="9" GridPane.columnIndex="2" />
-                  <Button fx:id="_addBtn" mnemonicParsing="false" onAction="#handleAddBtn" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="3" />
-                  <Button fx:id="_btn4" mnemonicParsing="false" onAction="#handleBtn4" prefHeight="40.0" prefWidth="40.0" text="4" GridPane.rowIndex="1" />
-                  <Button fx:id="_btn5" mnemonicParsing="false" onAction="#handleBtn5" prefHeight="40.0" prefWidth="40.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Button fx:id="_btn6" mnemonicParsing="false" onAction="#handleBtn6" prefHeight="40.0" prefWidth="40.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                  <Button fx:id="_minusBtn" mnemonicParsing="false" onAction="#handleMinusBtn" prefHeight="40.0" prefWidth="40.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Button fx:id="_btn1" mnemonicParsing="false" onAction="#handleBtn1" prefHeight="40.0" prefWidth="40.0" text="1" GridPane.rowIndex="2" />
-                  <Button fx:id="_btn2" mnemonicParsing="false" onAction="#handleBtn2" prefHeight="40.0" prefWidth="40.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <Button fx:id="_btn3" mnemonicParsing="false" onAction="#handleBtn3" prefHeight="40.0" prefWidth="40.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                  <Button fx:id="_multiBtn" mnemonicParsing="false" onAction="#handleMultiBtn" prefHeight="40.0" prefWidth="40.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <Button fx:id="_btn0" mnemonicParsing="false" onAction="#handleBtn0" prefHeight="40.0" prefWidth="40.0" text="0" GridPane.rowIndex="3" />
-                  <Button fx:id="_divisionBtn" mnemonicParsing="false" onAction="#handleDivisionBtn" prefHeight="40.0" prefWidth="40.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                  <Button fx:id="_leftBracketBtn" mnemonicParsing="false" onAction="#handleLeftBracketBtn" prefHeight="40.0" prefWidth="40.0" text="(" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button fx:id="_rightBracketBtn" layoutX="60.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleRightBracketBtn" prefHeight="40.0" prefWidth="40.0" text=")" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="7" />
+                  <Button fx:id="_btn8" mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="8" GridPane.columnIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="9" GridPane.columnIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="+" GridPane.columnIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="4" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="0" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text="(" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button layoutX="60.0" layoutY="100.0" mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="40.0" text=")" GridPane.columnIndex="2" GridPane.rowIndex="3" />
                   <Button mnemonicParsing="false" onAction="#handleBackSpaceButton" prefHeight="40.0" prefWidth="96.0" text="Backspace" GridPane.columnIndex="4" />
                   <Button fx:id="_enterBtn" layoutX="210.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleEnterButton" prefHeight="40.0" prefWidth="96.0" text="Enter" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                  <Button fx:id="_spaceBtn" layoutX="218.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleSpaceBtn" prefHeight="40.0" prefWidth="96.0" text="Space" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Button layoutX="218.0" layoutY="15.0" mnemonicParsing="false" onAction="#handleButtonsInTheGridPane" prefHeight="40.0" prefWidth="96.0" text="Space" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                </children>
             </GridPane>
             <JFXButton layoutX="14.0" layoutY="14.0" onAction="#handleBackButton" text="Back" />
