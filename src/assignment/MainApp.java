@@ -7,7 +7,6 @@ import assignment.model.Player;
 import assignment.model.PlayerRecorder;
 import assignment.model.Round;
 import assignment.util.JsonFileIO;
-import assignment.view.customizeGameStartFrame.CustomizeGameStartFrameController;
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
 import assignment.view.gameframe.GameFrameController;
@@ -26,7 +25,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import org.controlsfx.control.Notifications;
 
 public class MainApp extends Application{
 	private Stage _primaryStage;
@@ -225,28 +223,7 @@ public class MainApp extends Application{
 		}
 	}
 
-	public void showCustomizeGameStartFrame(Round round,Player player) {
-		try {
 
-			FXMLLoader loader =new FXMLLoader();
-			loader.setLocation(getClass().getResource("view/customizeGameStartFrame/CustomizeGameFrame2.fxml"));
-			AnchorPane anchorPane = (AnchorPane) loader.load();
-
-			Scene scene=new Scene(anchorPane);
-			_primaryStage.setScene(scene);
-			_primaryStage.show();
-			CustomizeGameStartFrameController controller = loader.getController();
-			controller.setMainApp(this);
-			controller.setPlayer(player);
-			controller.setRound(round);
-			controller.setLevel(round.getLevel());
-
-
-
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
 	
 		
 

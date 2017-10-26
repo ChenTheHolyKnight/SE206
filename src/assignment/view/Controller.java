@@ -14,7 +14,7 @@ import java.awt.event.WindowEvent;
 abstract public class Controller {
 
 	public enum ControllerType{
-		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS,ARCADE, LEADERBORAD, CUSTOMIZEGAME, AWARD, SCORE
+		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS,ARCADE, LEADERBORAD, AWARD, SCORE
 	}
 
 
@@ -67,9 +67,6 @@ abstract public class Controller {
 		}
 		if(type==ControllerType.ARCADE) {
 			fadeout.setOnFinished(event->mainApp.showCustomizeGameFrame(round,players));
-		}
-		if(type==ControllerType.CUSTOMIZEGAME) {
-			fadeout.setOnFinished(event -> mainApp.showCustomizeGameStartFrame(round, players));
 		}
 		if(type==ControllerType.LEADERBORAD) {
 			fadeout.setOnFinished(event -> mainApp.showLeaderBoardFrame());

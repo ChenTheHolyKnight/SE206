@@ -2,12 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9811be68-bb27-4998-ad1c-e72e7ffa4185" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/util/Test.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/assignment/util/FileReader.java" afterPath="$PROJECT_DIR$/src/assignment/util/HTKFileReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/Answer.java" afterPath="$PROJECT_DIR$/src/assignment/util/Answer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" afterPath="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/util/Recorder.java" afterPath="$PROJECT_DIR$/src/assignment/util/Recorder.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/model/Score.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/model/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/util/FileReader.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/util/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameFrame2.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController$DoWork$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController$DoWork.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController$PlayWorker$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController$PlayWorker.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizeGameStartFrame/GameFrame.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameFrame2.fxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/GameFrame.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/view/exitdialog/ExitDialogController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrame.fxml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/foo.wav" afterPath="$PROJECT_DIR$/foo.wav" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/MainApp.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/MainApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/model/PlayerRecorder.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/model/PlayerRecorder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/model/Round.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/model/Round.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/model/Time.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/model/Time.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/util/Answer.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/util/Answer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/util/JsonFileIO.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/util/JsonFileIO.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/util/Recorder.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/util/Recorder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/Controller$ControllerType.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/Controller$ControllerType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/Controller.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/Controller.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizegameframe/CustomizeGameFrameController.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizegameframe/CustomizeGameFrameController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$DoWork$1.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$DoWork$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$DoWork.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$DoWork.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$PlayWorker$1.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$PlayWorker$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$PlayWorker.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController$PlayWorker.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/gameframe/GameFrameController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/statsresult/StatsFrameResultController.class" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/statsresult/StatsFrameResultController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizegameframe/CustomizeGameFrame.fxml" afterPath="$PROJECT_DIR$/out/production/SE206/assignment/view/customizegameframe/CustomizeGameFrame.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recout.mlf" afterPath="$PROJECT_DIR$/recout.mlf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/MainApp.java" afterPath="$PROJECT_DIR$/src/assignment/MainApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/Controller.java" afterPath="$PROJECT_DIR$/src/assignment/view/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" afterPath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrame.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" afterPath="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" afterPath="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,11 +57,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="HTKFileReader.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/assignment/util/HTKFileReader.java">
+      <file leaf-file-name="MainApp.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state relative-caret-position="-4559">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExitFrameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/exitdialog/ExitFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameFrameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="396" column="12" lean-forward="false" selection-start-line="396" selection-start-column="12" selection-end-line="396" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomizeGameFrameController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-108">
+              <caret line="164" column="77" lean-forward="false" selection-start-line="164" selection-start-column="77" selection-end-line="164" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -64,12 +146,9 @@
         <option value="$PROJECT_DIR$/src/assignment/view/username/UserNameFrame.fxml" />
         <option value="$PROJECT_DIR$/src/assignment/view/scoremenu/ScoreTableMenu.fxml" />
         <option value="$PROJECT_DIR$/src/assignment/view/mainframe/MainFrame2.fxml" />
-        <option value="$PROJECT_DIR$/src/assignment/view/exitdialog/ExitFrameController.java" />
         <option value="$PROJECT_DIR$/ Players.json" />
         <option value="$PROJECT_DIR$/src/assignment/view/leaderboard/LeaderBoard.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/leaderboard/LeaderBoard.fxml" />
-        <option value="$PROJECT_DIR$/src/assignment/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/Controller.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/rewardframe/Reward.fxml" />
         <option value="$PROJECT_DIR$/src/assignment/view/leaderboard/LeaderBoardController.java" />
         <option value="$PROJECT_DIR$/src/assignment/view/rewardframe/RewardController.java" />
@@ -84,9 +163,15 @@
         <option value="$PROJECT_DIR$/src/assignment/model/Time.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/Answer.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/FileReader.java" />
-        <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/JsonFileIO.java" />
         <option value="$PROJECT_DIR$/src/assignment/util/Recorder.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/Controller.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/exitdialog/ExitFrameController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java" />
+        <option value="$PROJECT_DIR$/src/assignment/MainApp.java" />
       </list>
     </option>
   </component>
@@ -296,23 +381,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="251" y="-4" width="1857" height="962" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32848486" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32848486" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19568823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24267551" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969698" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -339,14 +423,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/8-bit-landscape-1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -465,25 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-995">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/exitdialog/ExitDialogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding>
-            <element signature="e#194#195#0" expanded="false" />
-            <element signature="e#215#216#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/leaderboard/LeaderBoard.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -495,14 +552,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/exitdialog/ExitFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/view/mainframe/MainFrameController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -510,14 +559,6 @@
           <folding>
             <element signature="e#986#987#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -539,14 +580,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -694,14 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="253" column="6" lean-forward="false" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assignment/util/Counter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -714,14 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="17" column="41" lean-forward="false" selection-start-line="17" selection-start-column="41" selection-end-line="17" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -763,6 +780,74 @@
         <state relative-caret-position="630">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizeGameStartFrame/CustomizeGameStartFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="362" column="63" lean-forward="true" selection-start-line="362" selection-start-column="63" selection-end-line="362" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/gameframe/GameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="396" column="12" lean-forward="false" selection-start-line="396" selection-start-column="12" selection-end-line="396" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/exitdialog/ExitFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/statsresult/StatsFrameResultController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="67" column="60" lean-forward="false" selection-start-line="67" selection-start-column="60" selection-end-line="67" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="71" lean-forward="false" selection-start-line="16" selection-start-column="71" selection-end-line="16" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/customizegameframe/CustomizeGameFrameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-108">
+          <caret line="164" column="77" lean-forward="false" selection-start-line="164" selection-start-column="77" selection-end-line="164" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/view/exitdialog/ExitDialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assignment/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4559">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

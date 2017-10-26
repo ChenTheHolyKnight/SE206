@@ -57,12 +57,7 @@ public class StatsFrameResultController extends Controller{
         Level.Levels levels=_rounds.getLevel().getLevels();
         Round round=new Round();
         round.setLevel(_rounds.getLevel());
-        if(levels== Level.Levels.CUSTOMIZE){
-            makeFadeOut(_rootPane,_player,round,_mainApp,ControllerType.CUSTOMIZEGAME);
-
-        }else {
-            makeFadeOut(_rootPane, _player, round, _mainApp, ControllerType.GAME);
-        }
+        makeFadeOut(_rootPane, _player, round, _mainApp, ControllerType.GAME);
     }
 
     public void setPlayer(Player player) {
@@ -71,7 +66,6 @@ public class StatsFrameResultController extends Controller{
     	Player player2=new Player();
     	for(Player player1:rec) {
     		if(player1.getName().equals(player.getName())) {
-    			//rec.remove(player1);
     			player2=player1;
     		}
     	}
@@ -80,7 +74,6 @@ public class StatsFrameResultController extends Controller{
     	
         _player = player;
         _player.addRound(_rounds);
-       // _player.dispEasyRounds(); //to be deleted
         _playerName.setText(_player.getName());
         _scoreResult.setText(Integer.toString(_rounds.getScore()));
         _attempts.setText(Integer.toString(_rounds.getAttempts()));

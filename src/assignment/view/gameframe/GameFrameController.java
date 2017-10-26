@@ -211,21 +211,16 @@ public class GameFrameController extends Controller{
 			_imageView1.toFront();
 
 			//generate the number which is to be said by the player
-			//_num = _level.generateNumber();
-			//_label.setText(Integer.toString(_num));
 			setEquation(_level);
 
 			//fade transition cause it looks cooler :P
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
 			fadeout.setFromValue(1.0);
 			fadeout.setToValue(0.0);
-			fadeout.setOnFinished(new EventHandler<ActionEvent>() {
-				@Override
-				public void handle(ActionEvent event) {
-					_imageView1.setImage(null);
-					fadeout.stop();
-				}
-			});
+			fadeout.setOnFinished(event -> {
+                _imageView1.setImage(null);
+                fadeout.stop();
+            });
 			fadeout.playFromStart();
 
 
@@ -368,15 +363,11 @@ public class GameFrameController extends Controller{
 	 */
 	@FXML
 	public void handlePlayBtn() {
-		//lock the buttons
 		lockAllBtns();
-
-		//swing Worker methods
 		waitCursor();
 		PlayWorker playWorker = new PlayWorker();
 		Thread thread = new Thread(playWorker);
 		thread.start();
-
 	}
 
 	//setter methods
@@ -389,9 +380,6 @@ public class GameFrameController extends Controller{
 	public void setLevel(Level level) {
 		_level = level;
 
-		//generating the number to set to the label
-		//_num = level.generateNumber();
-		//_label.setText(Integer.toString(_num));
 		setEquation(level);
 
 	}
@@ -401,9 +389,15 @@ public class GameFrameController extends Controller{
 	 */
 	private void setEquation(Level level) {
 		Arithmatic arith=new Arithmatic();
-		String formula=level.generateFormula();
-		while(arith.isOutOfBound(formula)) {
-			formula=level.generateFormula();
+		String formula;
+		if(level.getLevels().equals(Level.Levels.CUSTOMIZE)){
+			ArrayList<String> formulas= QuestionList.getInstance();
+			formula=formulas.get(_frameCounter.getCounter());
+		}else {
+			formula = level.generateFormula();
+			while (arith.isOutOfBound(formula)) {
+				formula = level.generateFormula();
+			}
 		}
 		_label.setText(formula);
 		_num=arith.formulaToNumber(formula);
