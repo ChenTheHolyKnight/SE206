@@ -13,7 +13,6 @@ public class Recorder {
 			if(exitValue==0) {
 				process.destroy();
 			}else {
-				System.out.println("PENIS");
 				process.destroy();
 			}
 		}catch(Exception e) {
@@ -30,30 +29,12 @@ public class Recorder {
 			if(exitValue==0) {
 				process.destroy();
 			}else {
-				System.out.println("PENIS");
 				process.destroy();
 			}
 		}catch(Exception e){
 			
 		}
 	}
-	/*
-	public void deleteRecord() {
-		try {
-			String cmd="rm foo.wav";
-			ProcessBuilder pb=new ProcessBuilder("bash","-c",cmd);
-			Process process=pb.start();
-			int exitValue=process.waitFor();
-			if(exitValue==0) {
-				process.destroy();
-			}else {
-				System.out.println("PENIS");
-				process.destroy();
-			}
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-	}*/
 	
 	public void playRecord() {
 		try {
@@ -64,7 +45,6 @@ public class Recorder {
 			if(exitValue==0) {
 				process.destroy();
 			}else {
-				System.out.println("PENIS");
 				process.destroy();
 			}
 		}catch(Exception e) {

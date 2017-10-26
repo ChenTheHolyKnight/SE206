@@ -6,11 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader {
-	
+public class HTKFileReader {
 	private List<String> _recordFile;
-	public FileReader() {
-		_recordFile=new ArrayList<String>();
+	public HTKFileReader() {
+		_recordFile= new ArrayList<>();
 		readFile();
 		try {
 			trimFile();
@@ -25,13 +24,10 @@ public class FileReader {
 				_recordFile.add(scanner.nextLine());
 			}
 		}catch(IOException e) {
-			//e.printStackTrace();
 		}
 	}
 	
 	private void trimFile() throws Exception{
-		//need to catch no input exception
-		
 		_recordFile.remove(0);
 		_recordFile.remove(0);
 		_recordFile.remove(0);

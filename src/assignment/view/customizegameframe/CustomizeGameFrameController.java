@@ -3,11 +3,8 @@ package assignment.view.customizegameframe;
 
 
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,9 +13,7 @@ import java.util.function.UnaryOperator;
 import assignment.model.Arithmatic;
 import assignment.model.QuestionList;
 import assignment.util.Counter;
-import assignment.util.FileReader;
 import assignment.util.JsonFileIO;
-import com.google.gson.Gson;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
@@ -41,9 +36,6 @@ import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
-import org.omg.CORBA.PUBLIC_MEMBER;
-
-import javax.management.Notification;
 
 
 public class CustomizeGameFrameController extends Controller{
