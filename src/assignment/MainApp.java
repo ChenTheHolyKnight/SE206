@@ -11,6 +11,7 @@ import assignment.view.customizeGameStartFrame.CustomizeGameStartFrameController
 import assignment.view.customizegameframe.CustomizeGameFrameController;
 import assignment.view.exitdialog.ExitFrameController;
 import assignment.view.gameframe.GameFrameController;
+import assignment.view.leaderboard.LeaderBoardController;
 import assignment.view.levellayout.LevelLayoutFrameController;
 import assignment.view.mainframe.MainFrameController;
 import assignment.view.scoremenu.ScoreTableMenuController;
@@ -260,6 +261,24 @@ public class MainApp extends Application{
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
 			ScoreTableMenuController controller = loader.getController();
+			controller.setMainApp(this);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+	}
+
+	public void showLeaderBoardFrame() {
+		try {
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/leaderboard/LeaderBoard.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			LeaderBoardController controller = loader.getController();
 			controller.setMainApp(this);
 
 		} catch (IOException e) {
