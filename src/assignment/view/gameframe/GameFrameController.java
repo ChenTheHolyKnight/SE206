@@ -125,8 +125,6 @@ public class GameFrameController extends Controller{
 		_rootPane.setOpacity(0);
 		makeFadeIn(_rootPane);
 
-
-
 		//initialize the counters which is are required
 		_frameCounter = new Counter(10);
 		_attemptCounter = new Counter();
@@ -194,10 +192,7 @@ public class GameFrameController extends Controller{
 		//check if the counter value is above 10 if not then consider to move and change the labels
 		//if done then lock the buttons and move to the next frame
 		if (_frameCounter.getCounter() < 10) {
-
-
 			_correctnessImage.setImage(null);
-
 			//locks the default buttons such as play , record
 			lockSomeBtns();
 
@@ -206,7 +201,7 @@ public class GameFrameController extends Controller{
 			_imageView1.toFront();
 			setEquation(_level);
 
-			//fade transition cause it looks cooler :P
+			//fade transition cause it looks cooler
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
 			fadeout.setFromValue(1.0);
 			fadeout.setToValue(0.0);
@@ -351,13 +346,10 @@ public class GameFrameController extends Controller{
 	public void handlePlayBtn() {
 		//lock the buttons
 		lockAllBtns();
-
-		//swing Worker methods
 		waitCursor();
 		PlayWorker playWorker = new PlayWorker();
 		Thread thread = new Thread(playWorker);
 		thread.start();
-
 	}
 
 	//setter methods
@@ -377,9 +369,15 @@ public class GameFrameController extends Controller{
 	 */
 	private void setEquation(Level level) {
 		Arithmatic arith=new Arithmatic();
-		String formula=level.generateFormula();
-		while(arith.isOutOfBound(formula)) {
-			formula=level.generateFormula();
+		String formula;
+		if(level.getLevels()== Level.Levels.CUSTOMIZE){
+			ArrayList<String> formulas= QuestionList.getInstance();
+			formula=formulas.get(_frameCounter.getCounter());
+		}else {
+			formula = level.generateFormula();
+			while (arith.isOutOfBound(formula)) {
+				formula = level.generateFormula();
+			}
 		}
 		_label.setText(formula);
 		_num=arith.formulaToNumber(formula);

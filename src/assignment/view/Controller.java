@@ -69,7 +69,7 @@ abstract public class Controller {
 			fadeout.setOnFinished(event->mainApp.showCustomizeGameFrame(round,players));
 		}
 		if(type==ControllerType.CUSTOMIZEGAME) {
-			fadeout.setOnFinished(event -> mainApp.showCustomizeGameStartFrame(round, players));
+			fadeout.setOnFinished(event->mainApp.showGameFrame(players,round));
 		}
 		fadeout.play();
 	}

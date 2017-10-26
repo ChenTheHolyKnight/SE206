@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class FileReader {
+public class HTKFileReader {
 	
 	private List<String> _recordFile;
-	public FileReader() {
+	public HTKFileReader() {
 		_recordFile=new ArrayList<String>();
 		readFile();
 		try {

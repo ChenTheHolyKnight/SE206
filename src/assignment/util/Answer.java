@@ -14,7 +14,7 @@ public class Answer {
 	}
 
 	public boolean checkAnswer(int num) {
-		FileReader reader=new FileReader();
+		HTKFileReader reader=new HTKFileReader();
 		_list=reader.getRecordFile();
 		buildAnswer(num);
 

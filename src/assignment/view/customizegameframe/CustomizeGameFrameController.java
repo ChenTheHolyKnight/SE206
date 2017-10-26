@@ -3,11 +3,8 @@ package assignment.view.customizegameframe;
 
 
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,9 +13,7 @@ import java.util.function.UnaryOperator;
 import assignment.model.Arithmatic;
 import assignment.model.QuestionList;
 import assignment.util.Counter;
-import assignment.util.FileReader;
 import assignment.util.JsonFileIO;
-import com.google.gson.Gson;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 
@@ -151,7 +146,8 @@ public class CustomizeGameFrameController extends Controller{
 		if(_counter.getCounter()==10){
 			JsonFileIO jf=new JsonFileIO();
 			jf.writeFile("Question.json",_questionList);
-			makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.CUSTOMIZEGAME);
+			//makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.CUSTOMIZEGAME);
+			makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.GAME);
 		}
 		_textField.requestFocus();
 		_nextButton.setVisible(false);
