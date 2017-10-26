@@ -32,10 +32,10 @@
                   <Font size="26.0" />
                </font>
             </Label>
-            <ComboBox layoutX="200.0" layoutY="117.0" prefHeight="30.0" prefWidth="200.0" />
-            <JFXTextField layoutX="200.0" layoutY="187.0" prefHeight="30.0" prefWidth="200.0" />
-            <JFXTextField layoutX="200.0" layoutY="260.0" prefHeight="30.0" prefWidth="200.0" />
+            <ComboBox fx:id="_nameSelection" layoutX="200.0" layoutY="117.0" onAction="#handleNameSelection" prefHeight="30.0" prefWidth="200.0" />
+            <JFXTextField fx:id="_textField" editable="false" layoutX="200.0" layoutY="260.0" prefHeight="30.0" prefWidth="200.0" />
             <JFXButton layoutX="20.0" layoutY="17.0" onAction="#handleBackButton" text="Back" />
+            <ComboBox fx:id="_levelSelection" layoutX="200.0" layoutY="190.0" onAction="#handleLevelSelection" prefHeight="30.0" prefWidth="200.0" />
          </children>
       </Pane>
    </children>

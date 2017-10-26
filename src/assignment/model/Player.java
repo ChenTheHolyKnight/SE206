@@ -30,10 +30,7 @@ public class Player {
 
 	public void addRound(Round round) {
 		if(round.getLevel().getLevels()==Levels.EASY) {
-			//System.out.println(_easyRoundRecords.get(0).getScore());
 			_easyRoundRecords.add(round);
-			System.out.println(_easyRoundRecords.get(0).getScore());
-			System.out.println(_easyRoundRecords.toString());
 		}
 		if(round.getLevel().getLevels()==Levels.HARD) {
 			_hardRoundRecords.add(round);
@@ -57,11 +54,17 @@ public class Player {
 		
 	}
 
-	public void dispEasyRounds(){
-		for (Round round:_easyRoundRecords){
-			System.out.print(round.getScore());
+	public int getHighestScore(Levels levels){
+		ObservableList<Round> rounds=getRounds(levels);
+		int high=0;
+		for(Round round:rounds){
+			if(round.getScore()>high){
+				high=round.getScore();
+			}
 		}
+		return high;
 	}
+
 
 
 }

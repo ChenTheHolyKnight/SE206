@@ -30,8 +30,7 @@ import javafx.scene.layout.Pane;
 
 public class ScoreTableMenuController extends Controller{
 
-	//observable list for all the dates that the player has played
-	private ObservableList<String> startDates = FXCollections.observableArrayList();
+
 
 	private ObservableList<Player> _recorder=PlayerRecorder.getInstance();
 	private MainApp _mainApp;
@@ -132,12 +131,14 @@ public class ScoreTableMenuController extends Controller{
 	public void handleHardButton() {
 		_b2.setSelected(true);
 		setTables(Levels.HARD);
+		setBarChart(Levels.HARD);
 	}
 
 	@FXML
 	public void handleArcade() {
 		_b3.setSelected(true);
 		setTables(Levels.CUSTOMIZE);
+		setBarChart(Levels.CUSTOMIZE);
 	}
 
 	@FXML
