@@ -145,6 +145,13 @@ public class ScoreTableMenuController extends Controller{
 	public void handleLeaderBoard(){
 		makeFadeOut(_pane,null,null,_mainApp,ControllerType.LEADERBORAD);
 	}
+
+	@FXML
+	public void handleReward(){
+		makeFadeOut(_pane,null,null,_mainApp,ControllerType.AWARD);
+	}
+
+
 	
 	private void setTables(Levels level) {
 		_rounds=_player.getRounds(level);

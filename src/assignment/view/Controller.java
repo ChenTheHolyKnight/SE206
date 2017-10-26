@@ -14,7 +14,7 @@ import java.awt.event.WindowEvent;
 abstract public class Controller {
 
 	public enum ControllerType{
-		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS,ARCADE, LEADERBORAD, CUSTOMIZEGAME,SCORE
+		MAINMENU,USERNAME,LEVEL,TUTORIAL,GAME,STATS,ARCADE, LEADERBORAD, CUSTOMIZEGAME, AWARD, SCORE
 	}
 
 
@@ -77,6 +77,10 @@ abstract public class Controller {
 		if(type==ControllerType.SCORE){
 			fadeout.setOnFinished(event -> mainApp.showScoreFrame());
 		}
+		if(type==ControllerType.AWARD){
+			fadeout.setOnFinished(event -> mainApp.showRewardFrame());
+		}
+
 
 		fadeout.play();
 	}

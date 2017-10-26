@@ -14,6 +14,7 @@ import assignment.view.gameframe.GameFrameController;
 import assignment.view.leaderboard.LeaderBoardController;
 import assignment.view.levellayout.LevelLayoutFrameController;
 import assignment.view.mainframe.MainFrameController;
+import assignment.view.rewardframe.RewardController;
 import assignment.view.scoremenu.ScoreTableMenuController;
 import assignment.view.statsresult.StatsFrameResultController;
 import assignment.view.tutorial.TutFrameController;
@@ -279,6 +280,24 @@ public class MainApp extends Application{
 			_primaryStage.setScene(scene);
 			_primaryStage.show();
 			LeaderBoardController controller = loader.getController();
+			controller.setMainApp(this);
+
+		} catch (IOException e) {
+			e.printStackTrace();
+
+		}
+	}
+
+	public void showRewardFrame() {
+		try {
+			FXMLLoader loader =new FXMLLoader();
+			loader.setLocation(getClass().getResource("view/rewardframe/Reward.fxml"));
+			AnchorPane anchorPane = (AnchorPane) loader.load();
+
+			Scene scene=new Scene(anchorPane);
+			_primaryStage.setScene(scene);
+			_primaryStage.show();
+			RewardController controller = loader.getController();
 			controller.setMainApp(this);
 
 		} catch (IOException e) {

@@ -26,7 +26,6 @@ public class LeaderBoardController extends Controller{
 
     @FXML
     public void initialize(){
-        makeFadeIn(_pane);
 
         ArrayList<String> names=new ArrayList<String>();
         for(Player player: _recorder) {

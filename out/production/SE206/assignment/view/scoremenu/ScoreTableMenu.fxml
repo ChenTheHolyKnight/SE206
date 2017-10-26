@@ -39,7 +39,7 @@
               </yAxis>
             </BarChart>
             <JFXButton layoutX="200.0" layoutY="340.0" onAction="#handleLeaderBoard" prefHeight="40.0" prefWidth="120.0" text="Leader Board" />
-            <JFXButton layoutX="400.0" layoutY="340.0" prefHeight="40.0" prefWidth="120.0" text="Awards" />
+            <JFXButton layoutX="400.0" layoutY="340.0" onAction="#handleReward" prefHeight="40.0" prefWidth="120.0" text="Awards" />
          </children>
       </Pane>
    </children>
