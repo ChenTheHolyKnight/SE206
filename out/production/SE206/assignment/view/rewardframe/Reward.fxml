@@ -24,7 +24,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <ComboBox fx:id="_nameSelection" layoutX="161.0" layoutY="107.0" prefWidth="150.0" />
+            <ComboBox fx:id="_nameSelection" layoutX="161.0" layoutY="107.0" onAction="#handleSelectedItem" prefWidth="150.0" />
             <Label layoutX="40.0" layoutY="370.0" prefHeight="30.0" prefWidth="340.0" text="Get full marks in hard mode to unlock your reward" />
          </children>
       </Pane>

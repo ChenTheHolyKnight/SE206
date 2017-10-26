@@ -9,8 +9,6 @@ public class Time {
     private Date _startTime;
     private Date _endTime;
 
-
-
     public void start(){
         _startTime=new Date();
     }
@@ -27,8 +25,6 @@ public class Time {
         long seconds=sec%60;
         String minuteStr=String.format("%02d",minute);
         String secondStr=String.format("%02d",seconds);
-        //long sec=_endTime.getSeconds()-_startTime.getSeconds();
-        //long minute=_endTime.getMinutes()-_startTime.getMinutes();
         String s=minuteStr+":"+secondStr;
         return s;
     }
@@ -36,6 +32,5 @@ public class Time {
     public String getStart(){
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         return dateFormat.format(_startTime);
-       // return _startTime.toString();
     }
 }

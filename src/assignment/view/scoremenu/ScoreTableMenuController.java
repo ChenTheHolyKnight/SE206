@@ -1,22 +1,14 @@
 package assignment.view.scoremenu;
 
-import java.text.DateFormatSymbols;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Locale;
-
-import javafx.collections.FXCollections;
-import javafx.scene.chart.Axis;
 import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
+
 import org.controlsfx.control.SegmentedButton;
 
 import assignment.MainApp;
 import assignment.model.Round;
 import assignment.model.PlayerRecorder;
-import assignment.model.Score;
-import assignment.model.Attempts;
+
 import assignment.model.Level.Levels;
 import assignment.model.Player;
 import assignment.view.Controller;

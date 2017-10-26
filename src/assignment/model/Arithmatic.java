@@ -22,23 +22,15 @@ public class Arithmatic {
 	}
 	
 
-	/**
-	 * This only generates + or - for the easy levels
-	 */
-	public String getEasyExpression() {
+
+
+	public String getExpression(int num) {
 		Random rand =new Random();
-		int index=rand.nextInt(2);
+		int index=rand.nextInt(num);
 		return _list.get(index);
 	}
 
-	/**
-	 * This is to generate +,- and * operands for the hard level
-	 */
-	public String getHardExpression() {
-		Random rand =new Random();
-		int index=rand.nextInt(3);
-		return _list.get(index);
-	}
+
 
 	/**
 	 * This is to detect whether the formula generated is out of the bound from 1-99
@@ -61,16 +53,13 @@ public class Arithmatic {
 	 * This is to get the answer of the formula. ie 4 will be output if the input formula is 2+2
 	 */
 	public int formulaToNumber(String formula) {
-		
 		ScriptEngineManager manager=new ScriptEngineManager();
 		ScriptEngine engine=manager.getEngineByName("js");
 		try {
 			formula=formula.replaceAll("x", "*");
-			
 			int result=(int)engine.eval(formula);
 			return result;
 		} catch (Exception e) {
-			//e.printStackTrace();
 			return -1;
 		}		
 		

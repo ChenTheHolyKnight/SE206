@@ -10,9 +10,7 @@ public class PlayerRecorder {
 	private PlayerRecorder() {
 		
 	}
-	
-	
-	
+
 	public static ObservableList<Player> getInstance(){
 		if(_playerRecorderObj==null){
 			_playerRecorderObj=new PlayerRecorder();
@@ -27,10 +25,4 @@ public class PlayerRecorder {
 		return _playerRecorderObj;
 	}
 
-	public ObservableList<Player> getPlayerList(){
-		return _playerRecorder;
-	}
-
-
-	
 }

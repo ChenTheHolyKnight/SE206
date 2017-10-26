@@ -1,7 +1,7 @@
 package assignment.model;
 
 public class Customize implements Level{
-    //This class will be deleted later
+
     private Levels _levels=Levels.CUSTOMIZE;
 
 

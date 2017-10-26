@@ -24,9 +24,7 @@ public class Player {
 	public void setName(String name) {
 		_name=name;
 	}
-	public StringProperty getNameProperty() {
-		return new SimpleStringProperty(_name);
-	}
+
 
 	public void addRound(Round round) {
 		if(round.getLevel().getLevels()==Levels.EASY) {
