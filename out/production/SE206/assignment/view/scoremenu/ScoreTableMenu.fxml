@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import org.controlsfx.control.SegmentedButton?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@../mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.scoremenu.ScoreTableMenuController">
+   <children>
+      <Pane fx:id="_pane" layoutX="300.0" layoutY="100.0" prefHeight="400.0" prefWidth="400.0" styleClass="box">
+         <children>
+            <JFXButton layoutX="14.0" layoutY="14.0" onAction="#backAction" text="Back" />
+            <TableView fx:id="_table" layoutX="35.0" layoutY="72.0" prefHeight="253.0" prefWidth="324.0">
+              <columns>
+                  <TableColumn fx:id="_startTimeColumn" prefWidth="92.0" text="Date" />
+                <TableColumn fx:id="_scoreColumn" prefWidth="93.0" text="Score" />
+                  <TableColumn fx:id="_attemptsColumn" prefWidth="79.0" text="Attempts" />
+                  <TableColumn fx:id="_timeColumn" prefWidth="59.0" text="Time" />
+              </columns>
+            </TableView>
+            <SegmentedButton fx:id="_segmentedButton" layoutX="190.0" layoutY="45.0" prefHeight="26.0" prefWidth="179.0" />
+            <ToggleButton fx:id="_b1" layoutX="192.0" layoutY="46.0" mnemonicParsing="false" onAction="#handleEasyButton" prefHeight="26.0" prefWidth="50.0" text="Easy" />
+            <ToggleButton fx:id="_b2" layoutX="240.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleHardButton" prefHeight="26.0" prefWidth="50.0" text="Hard" />
+            <ToggleButton fx:id="_b3" layoutX="290.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleArcade" prefHeight="26.0" prefWidth="70.0" text="Arcade" />
+            <ComboBox fx:id="_nameSelection" layoutX="35.0" layoutY="46.0" onAction="#handleSelectedItem" prefHeight="26.0" prefWidth="155.0" promptText="Choose a player" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

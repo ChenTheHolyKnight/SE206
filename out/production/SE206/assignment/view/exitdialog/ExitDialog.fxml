@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="120.0" prefWidth="500.0" stylesheets="@../mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.exitdialog.ExitFrameController">
+   <children>
+      <Label layoutX="20.0" layoutY="10.0" prefHeight="40.0" prefWidth="346.0" text="Leaving may lose your data." textAlignment="CENTER" textFill="#0072ff" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="127.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="250.0" layoutY="80.0" prefHeight="50.0" prefWidth="200.0">
+         <buttons>
+            <JFXButton buttonType="RAISED" onAction="#okController" text="Yes">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#cancelController" text="No">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </buttons>
+      </ButtonBar>
+      <Label layoutX="25.0" layoutY="45.0" prefHeight="40.0" prefWidth="309.0" text="Do you still want to leave?" textAlignment="CENTER" textFill="#0072ff">
+         <font>
+            <Font name="DejaVu Sans Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

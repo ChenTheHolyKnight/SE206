@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@../mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.mainframe.MainFrameController">
+   <children>
+      <Label layoutX="366.0" layoutY="103.0" prefHeight="138.0" prefWidth="306.0" text="Tātai" textFill="#f7f9fc">
+         <font>
+            <Font name="DejaVu Sans Bold" size="96.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="386.0" layoutY="517.0" onAction="#handleStartButton" prefHeight="54.0" prefWidth="228.0" stylesheets="@mainFrame2.css" text="Start" textFill="#deebdf">
+         <font>
+            <Font name="DejaVu Sans Bold" size="27.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="521.0" onAction="#handleScoreButton" prefHeight="46.0" prefWidth="187.0" text="Score" textFill="#e9e4f0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="788.0" layoutY="521.0" onAction="#handleExitButton" prefHeight="46.0" prefWidth="187.0" text="Quit" textFill="#e9e4f0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
