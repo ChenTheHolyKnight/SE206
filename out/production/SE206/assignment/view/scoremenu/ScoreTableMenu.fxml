@@ -38,6 +38,8 @@
                 <NumberAxis autoRanging="false" label="Score" minorTickCount="1" minorTickLength="1.0" prefHeight="171.0" prefWidth="44.0" side="LEFT" tickLabelGap="1.0" tickLength="4.0" tickUnit="1.0" upperBound="10.0" />
               </yAxis>
             </BarChart>
+            <JFXButton layoutX="200.0" layoutY="340.0" onAction="#backAction" prefHeight="40.0" prefWidth="120.0" text="Leader Board" />
+            <JFXButton layoutX="400.0" layoutY="340.0" onAction="#backAction" prefHeight="40.0" prefWidth="120.0" text="Awards" />
          </children>
       </Pane>
    </children>

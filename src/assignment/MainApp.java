@@ -280,8 +280,6 @@ public class MainApp extends Application{
 	public void stop(){
 		JsonFileIO jfw=new JsonFileIO();
 		jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
-
-
 	}
 
 

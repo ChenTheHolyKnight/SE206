@@ -98,7 +98,7 @@ public class ScoreTableMenuController extends Controller{
 
 	}
 
-	
+
 	@FXML
 	public void handleSelectedItem() {
 		
