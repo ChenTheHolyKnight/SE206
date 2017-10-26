@@ -1,5 +1,7 @@
 package assignment.view.exitdialog;
 
+import assignment.model.PlayerRecorder;
+import assignment.util.JsonFileIO;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
@@ -20,6 +22,8 @@ public class ExitFrameController {
     public void okController() {
 
         //exit the application
+        JsonFileIO jfw=new JsonFileIO();
+        jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
         System.exit(0);
     }
 
@@ -28,7 +32,7 @@ public class ExitFrameController {
      */
     public void cancelController() {
 
-        //exit the dialog
+        //exit the dialo
         _dialogStage.close();
 
     }

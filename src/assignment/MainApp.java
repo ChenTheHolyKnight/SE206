@@ -38,9 +38,6 @@ public class MainApp extends Application{
 		_primaryStage.setOnCloseRequest(event -> {
 			showExitDialog();
 			event.consume();
-
-
-
 		});
 
 		JsonFileIO jfw=new JsonFileIO();
@@ -283,7 +280,7 @@ public class MainApp extends Application{
 	public void stop(){
 		JsonFileIO jfw=new JsonFileIO();
 		jfw.writeFile("Players.json", PlayerRecorder.getPlayerRecorder());
-		//System.out.println("stop");
+
 
 	}
 

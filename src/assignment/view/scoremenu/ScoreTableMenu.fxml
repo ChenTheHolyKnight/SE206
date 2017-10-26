@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import org.controlsfx.control.SegmentedButton?>
 
-<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@../mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.scoremenu.ScoreTableMenuController">
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="pane" stylesheets="@../mainFrame2.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment.view.scoremenu.ScoreTableMenuController">
    <children>
       <Pane fx:id="_pane" layoutX="92.0" layoutY="39.0" prefHeight="398.0" prefWidth="817.0" styleClass="box">
          <children>
@@ -30,12 +30,12 @@
             <ToggleButton fx:id="_b2" layoutX="240.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleHardButton" prefHeight="26.0" prefWidth="50.0" text="Hard" />
             <ToggleButton fx:id="_b3" layoutX="290.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleArcade" prefHeight="26.0" prefWidth="70.0" text="Arcade" />
             <ComboBox fx:id="_nameSelection" layoutX="35.0" layoutY="46.0" onAction="#handleSelectedItem" prefHeight="26.0" prefWidth="155.0" promptText="Choose a player" />
-            <BarChart layoutX="393.0" layoutY="45.0" prefHeight="284.0" prefWidth="363.0">
+            <BarChart fx:id="_barChart" layoutX="393.0" layoutY="45.0" prefHeight="326.0" prefWidth="388.0" title="Progress">
               <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis label="Date" prefHeight="45.0" prefWidth="314.0" side="BOTTOM" />
               </xAxis>
               <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis autoRanging="false" label="Score" minorTickCount="1" minorTickLength="1.0" prefHeight="171.0" prefWidth="44.0" side="LEFT" tickLabelGap="1.0" tickLength="4.0" tickUnit="1.0" upperBound="10.0" />
               </yAxis>
             </BarChart>
          </children>

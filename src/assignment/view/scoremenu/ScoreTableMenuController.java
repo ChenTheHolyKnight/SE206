@@ -6,8 +6,10 @@ import java.util.Arrays;
 import java.util.Locale;
 
 import javafx.collections.FXCollections;
+import javafx.scene.chart.Axis;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import org.controlsfx.control.SegmentedButton;
 
 import assignment.MainApp;
@@ -27,13 +29,6 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.Pane;
 
 public class ScoreTableMenuController extends Controller{
-
-	@FXML
-	private BarChart<String, Integer> barChart;
-
-	//this the x axis of the code
-	@FXML
-	private CategoryAxis xAxis;
 
 	//observable list for all the dates that the player has played
 	private ObservableList<String> startDates = FXCollections.observableArrayList();
@@ -71,15 +66,15 @@ public class ScoreTableMenuController extends Controller{
 	@FXML
 	private Pane _pane;
 
+	@FXML
+	private  BarChart<String,Number> _barChart;
+
 	
 	
 	
 	
 	@FXML
 	public void initialize() {
-
-
-
 		_pane.setOpacity(0);
 		makeFadeIn(_pane);
 
@@ -101,42 +96,9 @@ public class ScoreTableMenuController extends Controller{
 		_attemptsColumn.setCellValueFactory(cellData-> cellData.getValue().getAttemptProperty());
 		_timeColumn.setCellValueFactory(cellDate->cellDate.getValue().getTimeProperty());
 
-		//I grabbed all the months since i couldn't really grab all the start times
-		String[] months = DateFormatSymbols.getInstance(Locale.ENGLISH).getMonths();
-
-		//convert the array into a list to add all the months to the observable list of months
-		startDates.addAll(Arrays.asList(months));
-
 	}
 
-	@FXML
-	/**
-	 * Sets the player that is shown for the graph
-	 */
-	public void setPlayerData(ArrayList players) {
-		//make a counter for the months
-		int[] monthCounter = new int[12];
-
-		//iterate across each player and check the start dates for each of the players we check for that particular date
-		//then thats the date that the player played the game and it shows the players
-		//score corresponding the dates that had been played at
-
-		//having trouble getting the date and core values out the classes since the table has the property methods but
-		//i have been trying heaps to get the values but i can't get anything
-
-		//NEEEED HEEELLP
-
-
-		
-
-
-
-
-	}
-
-
-
-
+	
 	@FXML
 	public void handleSelectedItem() {
 		
@@ -162,7 +124,8 @@ public class ScoreTableMenuController extends Controller{
 	@FXML
 	public void handleEasyButton() {
 		_b1.setSelected(true);
-		setTables(Levels.EASY);		
+		setTables(Levels.EASY);
+		setBarChart(Levels.EASY);
 	}
 
 	@FXML
@@ -182,6 +145,20 @@ public class ScoreTableMenuController extends Controller{
 		_rounds=_player.getRounds(level);
 		_table.setItems(null);
 		_table.setItems(_rounds);
+	}
+
+
+	private void setBarChart(Levels level){
+		BarChart.Series<String,Number> series=new BarChart.Series();
+		series.setName(_player.getName());
+		ObservableList<Round> rounds=_player.getRounds(level);
+		for(Round round:rounds){
+			series.getData().add(new BarChart.Data<>(round.getTime().getStart(), round.getScore()));
+		}
+		_barChart.getData().clear();
+		_barChart.setAnimated(false);
+		_barChart.getData().add(series);
+
 	}
 
 	public void setMainApp(MainApp mainApp) {
