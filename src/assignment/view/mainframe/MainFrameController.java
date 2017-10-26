@@ -7,12 +7,7 @@ import java.util.ResourceBundle;
 
 
 import assignment.MainApp;
-import assignment.model.Player;
-import assignment.model.PlayerRecorder;
-import assignment.util.JsonFileIO;
 import assignment.view.Controller;
-import assignment.view.Controller.ControllerType;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.layout.Pane;
@@ -40,11 +35,7 @@ public class MainFrameController extends Controller implements Initializable {
 	public void handleExitButton() {
 		_mainApp.showExitDialog();
 	}
-	
-	/**@FXML
-	public void handleTutorialButton() {
-		_mainApp.showTutorialFrame();
-	}*/
+
 	
 	
 	@FXML

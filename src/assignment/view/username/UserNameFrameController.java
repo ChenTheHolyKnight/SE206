@@ -68,13 +68,7 @@ public class UserNameFrameController extends Controller{
         if ((_textfield.getText() != null) && (!_textfield.getText().equals(""))) {
             //set the button disable to false that means the button is now on
             _button.setDisable(false);
-            //sets the text that is inputted into the field as the name of the player
-           // _player.setName(_textfield.getText());
-            
-            
-            
-            //get the history list
-           
+
             ObservableList<Player> rec=PlayerRecorder.getInstance();
             
             //Searching for whether the user is in the history. If it's found, set the _player to the old one
@@ -95,15 +89,13 @@ public class UserNameFrameController extends Controller{
             	//create a notification that asks the user whether he/she is the user that is already in the record list
             	Notifications.create().text("Are you \""+_textfield.getText()+"\"?").position(Pos.CENTER)
             	.action(
-            			//create two buttons in the notification. If the user chooses yes, it goes to the next scene
             			new Action("Yes",e->{
         					Button btn=(Button) e.getSource();
         					Popup popup=(Popup) btn.getScene().getWindow();
         					popup.hide();       					
         					makeFadeOut(_pane,_player,null,_mainapp,ControllerType.LEVEL);       					
         				}),
-            			
-            			//If the user chooses no, it will show another notification to ask user to choose another name
+
             			new Action("No",e->{
         					Button btn=(Button) e.getSource();
         					Popup popup=(Popup) btn.getScene().getWindow();

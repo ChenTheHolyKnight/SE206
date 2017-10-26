@@ -6,7 +6,6 @@ package assignment.view.gameframe;
 import assignment.model.*;
 import javafx.scene.control.ProgressBar;
 import org.controlsfx.control.Notifications;
-import org.controlsfx.control.PopOver;
 
 import com.jfoenix.controls.JFXTextField;
 
@@ -18,8 +17,6 @@ import assignment.view.Controller;
 import javafx.animation.FadeTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
@@ -32,11 +29,8 @@ import javafx.scene.image.WritableImage;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.util.Duration;
-
-import javax.management.Notification;
 import java.util.ArrayList;
 import java.util.List;
-//import sun.plugin.javascript.navig.Anchor;
 
 
 public class GameFrameController extends Controller{
@@ -112,11 +106,7 @@ public class GameFrameController extends Controller{
 
 	private int _num = 0;
 
-	
-	
-	
-	//pop over is not shown currently
-	//private boolean _isPopOverShown = false;
+
 
 	/**
 	 * initialize method for the GameFrame , initializes the counters and
@@ -196,24 +186,20 @@ public class GameFrameController extends Controller{
 
 		_frameCounter.increaseCounter();
 
-		//check if the counter value is above 10 if not then consider to move and change the labels
-		//if done then lock the buttons and move to the next frame
+
 		if (_frameCounter.getCounter() < 10) {
 
 
 			_correctnessImage.setImage(null);
 
-			//locks the default buttons such as play , record
 			lockSomeBtns();
 
 			WritableImage image = _Pane.snapshot(new SnapshotParameters(), null);
 			_imageView1.setImage(image);
 			_imageView1.toFront();
 
-			//generate the number which is to be said by the player
 			setEquation(_level);
 
-			//fade transition cause it looks cooler :P
 			FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
 			fadeout.setFromValue(1.0);
 			fadeout.setToValue(0.0);
@@ -226,15 +212,11 @@ public class GameFrameController extends Controller{
 
 		} else {
 
-			//get the values which the player got from playing
-			//the game
 			_round.setScore(_scoreCounter.getCounter());
 			_round.setAttempts(_attemptCounter.getCounter());
 
 			_round.setLevel(_level);
 
-			//this leads to the stats frame which shall show the values
-			//of the player
 			_mainApp.showStatsFrame(_round,_player);
 
 		}
@@ -249,13 +231,8 @@ public class GameFrameController extends Controller{
 	 */
 	@FXML
 	public void handleBackButton() {
-
-		//resetting the players stats
 		_round.resetStats();
-
-		//show the level layout
 		makeFadeOut(_rootPane,_player,_round,_mainApp,ControllerType.LEVEL);
-
 	}
 
 	/**
@@ -265,20 +242,14 @@ public class GameFrameController extends Controller{
 	 */
 	@FXML
 	public void handleRecordButton() {
-		//increase record counter
 		_recCounter.increaseCounter();
 
-		//text values to empty strings to erase prompt text
 		_correctAnswer.setText("");
 		_playerAnswer.setText("");
 
-		//locks all the buttons
 		lockAllBtns();
-
-		//deset any correct image graphics and start the thread
 		_correctnessImage.setImage(null);
 
-		//swingWorker methods
 		waitCursor();
 		DoWork doWork = new DoWork();
 		Thread thread = new Thread(doWork);
@@ -341,12 +312,9 @@ public class GameFrameController extends Controller{
 			String s = answer.getPLayerAnswer();
 			_playerAnswer.setText(s);
 
-
-
 			//if the player is stuck on the same frame 3 times then it shall
 			//show the correct answer
 			if (_recCounter.getCounter() == 3) {
-				//get the correct answer
 				String correct = answer.getAnswer();
 				_correctAnswer.setText(correct);
 				_label.setText(Integer.toString(_num));
@@ -370,18 +338,13 @@ public class GameFrameController extends Controller{
 		thread.start();
 	}
 
-	//setter methods
 
 	/**
-	 * this method sets the level which is used to set the text based on the
-	 * easy (1-10) and hard (11 - 99)
-	 * @param level
+	 * this method sets the level which is used to set the equations on the screen
 	 */
 	public void setLevel(Level level) {
 		_level = level;
-
 		setEquation(level);
-
 	}
 	
 	/**
@@ -405,7 +368,6 @@ public class GameFrameController extends Controller{
 
 	/**
 	 * setting the MainApp.
-	 * @param mainApp
 	 */
 	public void setMainApp(MainApp mainApp){
 		_mainApp=mainApp;
@@ -414,53 +376,24 @@ public class GameFrameController extends Controller{
 
 	/**
 	 * setting the player
-	 * @param
 	 */
 	public void setRound(Round round) {
 		_round=round;
-		//start the timer
 		_round.setTime(new Time());
 		_round.getTime().start();
 	}
 	
 	public void setPlayer(Player player) {
 		_player=player;
-		//_player.dispEasyRounds();
 	}
 	
-	
-	//idea we can use the popOver in the tutorial frame which i shall
-	//implement after getting the gameFrameController done
-	
-	//need to be refactored -> split the to another method
 
-	/**
-	 * using the popOver which is from the controls fx library which basically
-	 * gives a pop up message plan to use for the tutorial screen
-	 */
-
-
-
-	/**
-	 * this is method which which carries out the FadeTransition by taking the
-	 * parameter of Popover
-	 */
-	public void fadeTransitionPopOver(PopOver popover) {
-
-		FadeTransition fade = new FadeTransition(Duration.seconds(1.0), popover.getRoot());
-		fade.setFromValue(1);
-		fade.setToValue(0);
-		fade.setOnFinished(e->popover.hide());
-		fade.play();
-	}
 
 
 	/**
 	 * this method releases all the buttons
 	 */
 	public void releaseAllBtns() {
-
-		//disable all buttons
 		_playBtn.setDisable(false);
 		_reBtn.setDisable(false);
 		_submitBtn.setDisable(false);
@@ -471,8 +404,6 @@ public class GameFrameController extends Controller{
 	 * this method locks all the buttons
 	 */
 	public void lockAllBtns() {
-
-		//lock every button
 		_playBtn.setDisable(true);
 		_reBtn.setDisable(true);
 		_submitBtn.setDisable(true);
@@ -484,14 +415,11 @@ public class GameFrameController extends Controller{
 	 * all other buttons are locked except the back button
 	 */
 	public void lockSomeBtns(){
-
-		//setting the buttons to disabled state
 		_playBtn.setDisable(true);
 		_submitBtn.setDisable(true);
 		_nextButton.setDisable(true);
 	}
 	
-	//a method to change the cursor to wait state
 
 	/**
 	 * change the cursor to a wait state when the recording occurs such that
@@ -507,8 +435,7 @@ public class GameFrameController extends Controller{
 	}
 
 
-	
-	//a method to change the cursor to normal state
+
 
 	/**
 	 * changing the cursor back to the normalise state where the cursor can be used
@@ -556,33 +483,9 @@ public class GameFrameController extends Controller{
 
 					releaseAllBtns();
 					normaliseCursor();
-
-					//check for a Recording
-				/*	Answer answer = new Answer();
-					answer.checkAnswer(_num);
-
-					if (answer.getPLayerAnswer().isEmpty()) {
-						Notifications.create()
-								.text("no voice detected, Please check your microphone and try Again")
-								.position(Pos.CENTER)
-								.hideAfter(Duration.seconds(1))
-								.showWarning();
-					}
-				*/
-
-
-
-
-
 				}
 			});
-
-
-
 		}
-
-
-
 	}
 
 	/**
@@ -601,17 +504,13 @@ public class GameFrameController extends Controller{
 		@Override
 		protected  void done() {
 
-			Platform.runLater(new Runnable() {
-				@Override
-				public void run() {
-
-					//make this for doing other methods
-					normaliseCursor();
-					releaseAllBtns();
+			Platform.runLater(() -> {
+                //make this for doing other methods
+                normaliseCursor();
+                releaseAllBtns();
 
 
-				}
-			});
+            });
 
 
 		}

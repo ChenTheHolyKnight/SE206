@@ -114,7 +114,6 @@ public class TutFrameController extends Controller{
     public void initialize() {
         //setting the fade in transition
         _rootPane.setOpacity(0);
-        //makeFadeIn();
         makeFadeIn(_rootPane);
 
 
@@ -180,28 +179,13 @@ public class TutFrameController extends Controller{
             _num = _level.generateNumber();
             _label.setText(Integer.toString(_num));
 
-
-            //fade transition cause it looks cooler :P
-            
-           
-            
             FadeTransition fadeout = new FadeTransition(Duration.millis(500), _imageView1);
             fadeout.setFromValue(1.0);
             fadeout.setToValue(0.0);
             fadeout.setOnFinished(  e->{
             	_imageView1.setImage(null);
                 fadeout.stop();
-            }
-            		
-            		
-            		
-            		/*new EventHandler<ActionEvent>() {
-                @Override
-                public void handle(ActionEvent event) {
-                    _imageView1.setImage(null);
-                    fadeout.stop();
-                }
-            }*/);
+            });
             fadeout.playFromStart();
 
 			
@@ -365,15 +349,6 @@ public class TutFrameController extends Controller{
     }
 
 
-    //idea we can use the popOver in the tutorial frame which i shall
-    //implement after getting the gameFrameController done
-
-    //need to be refactored -> split the to another method
-
-    /**
-     * using the popOver which is from the controls fx library which basically
-     * gives a pop up message plan to use for the tutorial screen
-     */
 
     /**
      * popover methods for the rest of the PopOvers that are used which is for play, record
@@ -389,7 +364,6 @@ public class TutFrameController extends Controller{
 
            //generating the popOver and setting the location
            PopOver popover = new PopOver(label);
-           //popover.setFadeOutDuration(new Duration(3000));
            popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
            popover.show(_playBtn);
 
@@ -397,15 +371,7 @@ public class TutFrameController extends Controller{
         		   e->{
         			   fadeTransitionPopOver(popover);
                        _isPopOverShown = false;                     
-        		   }
-        		   
-        		   /*new EventHandler<MouseEvent>() {
-               @Override
-               public void handle(MouseEvent event) {
-                   fadeTransitionPopOver(popover);
-                   _isPopOverShown = false;
-               }
-           }*/);
+        		   });
 
        }
     }
@@ -421,7 +387,6 @@ public class TutFrameController extends Controller{
 
             //generating the popOver and setting the location
             PopOver popover = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             popover.show(_reBtn);
 
@@ -430,17 +395,7 @@ public class TutFrameController extends Controller{
             		 e->{
           			   fadeTransitionPopOver(popover);
                          _isPopOverShown = false;                     
-          		   		}
-            		
-            		
-            		/*new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent event) {
-                    fadeTransitionPopOver(popover);
-                    _isPopOverShown = false;
-                }
-            }*/);
-
+          		   		});
         }
 
     }
@@ -455,7 +410,6 @@ public class TutFrameController extends Controller{
 
             //generating the popOver and setting the location
             PopOver popover = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             popover.show(_submitBtn);
 
@@ -481,7 +435,6 @@ public class TutFrameController extends Controller{
 
             //generating the popOver and setting the location
             PopOver popover = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             popover.show(_playerAnswer);
 
@@ -508,7 +461,6 @@ public class TutFrameController extends Controller{
 
             //generating the popOver and setting the location
             PopOver popover = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             popover.show(_correctAnswer);
 
@@ -520,22 +472,16 @@ public class TutFrameController extends Controller{
   		);
 
         }
-
-
     }
 
     public void showPopOverBackBtn() {
         if (_isPopOverShown == false) {
             _isPopOverShown = true;
 
-            //set the label which is too be used by the popover
             Label label = new Label();
             label.setText("press back to go to the level layout");
 
-            //generating the popOver and setting the location
-            //PopOver popover = new PopOver(label);
             _popOver = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             _popOver.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             _popOver.show(_backBtn);
 
@@ -561,7 +507,6 @@ public class TutFrameController extends Controller{
 
             //generating the popOver and setting the location
             PopOver popover = new PopOver(label);
-            //popover.setFadeOutDuration(new Duration(3000));
             popover.setArrowLocation(PopOver.ArrowLocation.TOP_CENTER);
             popover.show(_nextButton);
 
@@ -586,7 +531,6 @@ public class TutFrameController extends Controller{
      */
     
     public void fadeTransitionPopOver(PopOver popover) {
-
         FadeTransition fade = new FadeTransition(Duration.seconds(0), popover.getRoot());
         fade.setFromValue(1);
         fade.setToValue(0);
@@ -633,7 +577,7 @@ public class TutFrameController extends Controller{
         _nextButton.setDisable(true);
     }
 
-    //a method to change the cursor to wait state
+
 
     /**
      * change the cursor to a wait state when the recording occurs such that
@@ -706,20 +650,9 @@ public class TutFrameController extends Controller{
                                 .hideAfter(Duration.seconds(1))
                                 .showWarning();
                     }
-
-
-
-
-
                 }
             });
-
-
-
         }
-
-
-
     }
 
     /**
@@ -727,7 +660,6 @@ public class TutFrameController extends Controller{
      * recording when the play button is pressed in the background
      */
     class PlayWorker extends Task<Void>{
-
         @Override
         protected Void call() throws Exception {
             Recorder recorder = new Recorder();
@@ -738,25 +670,10 @@ public class TutFrameController extends Controller{
         @Override
         protected  void done() {
 
-            Platform.runLater(new Runnable() {
-                @Override
-                public void run() {
-
-                    //make this for doing other methods
-                    normaliseCursor();
-                    releaseAllBtns();
-
-
-                }
+            Platform.runLater(() -> {
+                normaliseCursor();
+                releaseAllBtns();
             });
-
-
         }
-
-
     }
-
-
-
-
 }
